@@ -1,7 +1,7 @@
 --- 
 title: "The threatened flora of Sao Tomé y Principe"
 author: "Gilles Dauby"
-date: "`r Sys.Date()`"
+date: "2021-10-29"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -15,7 +15,8 @@ csl: chicago-fullnote-bibliography.csl
 
 # Intro
 
-```{r, eval=FALSE}
+
+```r
 bookdown::render_book()
 ```
 
@@ -25,14 +26,10 @@ To render this example to PDF as a `bookdown::pdf_book`, you'll need to install 
 
 As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
 
-```{r eval=FALSE}
+
+```r
 bookdown::serve_book()
 ```
 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+

@@ -3,59 +3,26 @@
 
 
 
-```{r loadPack, echo=FALSE, message=FALSE, warning=FALSE}
-library(dplyr)
-library(sf)
-library(mapview)
-library(raster)
-library(shiny)
-library(ggplot2)
-```
-
-
-```{r loadData, echo=FALSE, message=FALSE, warning=FALSE}
-
-# ST <- st_read("D:/MonDossierR/sao_tome_principe/ST_cast.shp")
-# P <- st_read("D:/MonDossierR/sao_tome_principe/P_cast.shp")
-
-combined_dataset <- 
-  readxl::read_excel("combined_dataset_2021-10-21.xlsx")
-
-endemic_list <-
-  combined_dataset %>%
-  filter(EndemicTS == "E") %>%
-  dplyr::select(
-    idtax_f,
-    tax_infra_level,
-    tax_fam,
-    tax_gen,
-    tax_famclass,
-    starts_with("traitvalue"),
-    taxo_unclear,
-    status_revision_needed
-  ) %>%
-  distinct() %>%
-  arrange(tax_fam, tax_infra_level)
 
 
 
-```
 
-```{r species1}
+
+
+```r
 
 id_sp <- endemic_list$idtax_f[1]
 
-
-
 ```
 
 
-## *`r  endemic_list$tax_infra_level[1]`*
+## *Brachystephanus occidentalis*
 
 
 
 
-```{r eval=FALSE}
+
+```r
 
 
 
@@ -91,10 +58,6 @@ sampling_records_grid_A <-
                    transform = TRUE, model = "WGS84", 
                    x.min = 5.61, x.max = 5.63, y.min = -1.481, y.max = -1.44, 
                  st.dist = 0.1)
-
-
-
-
 
 ```
 

@@ -1,15 +1,10 @@
-fig:nice-fig
-tab:nice-tab
 eq:binom
 thm:tri
-about
-usage
-render-book
+intro
 preview-book
 introduction
 sp-list
-chapters-and-sub-chapters
-captioned-figures-and-tables
+brachystephanus-occidentalis
 parts
 footnotes-and-citations
 footnotes

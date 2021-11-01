@@ -175,7 +175,7 @@ knitr::include_url("https://cepf-stp-threat-flora.netlify.app/img/leaflet")
 
 
 ```{r imgTrop, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_url("http://legacy.tropicos.org/Image/100574123")
+knitr::include_url("http://legacy.tropicos.org/ImageFullView.aspx?imageid=100793776")
 ```
 
 

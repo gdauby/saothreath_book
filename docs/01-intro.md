@@ -28,7 +28,7 @@
 <iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet" width="672" height="400px"></iframe>
 
 
-<iframe src="http://legacy.tropicos.org/Image/100574123" width="672" height="400px"></iframe>
+<iframe src="http://legacy.tropicos.org/ImageFullView.aspx?imageid=100793776" width="672" height="400px"></iframe>
 
 
 

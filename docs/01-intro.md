@@ -56,3 +56,8 @@ Even widespread in São Tomé, the species appears locally rare.
 
 
 
+```r
+knitr::include_graphics("http://legacy.tropicos.org/ImageFullView.aspx?imageid=100574124")
+```
+
+<img src="http://legacy.tropicos.org/ImageFullView.aspx?imageid=100574124" width="50%" />

@@ -55,10 +55,17 @@ st_crs(combined_dataset_sf) <- 4326
 ```
 #> png 
 #>   2
+#> [1] TRUE
 ```
 
 
 <img src="02-taxa_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet" width="672" height="400px"></iframe>
+
+
+
 
 
 

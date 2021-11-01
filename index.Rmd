@@ -6,7 +6,7 @@ site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 url: https://github.com/gdauby/saothreath_book
-# cover-image: path to the social sharing image like images/cover.jpg
+cover-image: path to the social sharing image like images/forest.jpg
 description: |
   Red List data book of plant species from Sao Tomé and Principe
 biblio-style: apalike

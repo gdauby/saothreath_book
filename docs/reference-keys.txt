@@ -5,4 +5,11 @@ threatened-species
 sp-list
 brachystephanus-occidentalis
 conservation
+fig:unnamed-chunk-2
+fig:leaflet
 url-your-book-url-like-httpsbookdown.orgyihuibookdown
+status
+rationale
+habitat-and-ecology
+use-and-trade
+population

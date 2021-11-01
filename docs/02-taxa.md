@@ -7,18 +7,58 @@
 
 
 
+```
+#> Reading layer `ST_cast' from data source 
+#>   `D:\MonDossierR\saothreat\ST_cast.shp' 
+#>   using driver `ESRI Shapefile'
+#> Simple feature collection with 26 features and 1 field
+#> Geometry type: POLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 6.460192 ymin: -0.0139216 xmax: 6.760987 ymax: 0.413398
+#> Geodetic CRS:  WGS 84
+#> Reading layer `P_cast' from data source 
+#>   `D:\MonDossierR\saothreat\P_cast.shp' using driver `ESRI Shapefile'
+#> Simple feature collection with 1150 features and 1 field
+#> Geometry type: POLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 7.33 ymin: 1.508757 xmax: 7.469974 ymax: 1.701
+#> Geodetic CRS:  WGS 84
+#> Reading layer `obo_np_stp' from data source 
+#>   `D:\MonDossierR\saothreat\obo_np_stp.shp' 
+#>   using driver `ESRI Shapefile'
+#> Simple feature collection with 2 features and 1 field
+#> Geometry type: POLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 6.474362 ymin: 0.1058553 xmax: 7.427745 ymax: 1.616458
+#> Geodetic CRS:  WGS 84
+```
 
 
 ```r
 
 id_sp <- endemic_list$idtax_f[1]
 
+combined_dataset_sf <- 
+  combined_dataset %>%
+  filter(georef_final == 1, idtax_f == id_sp) %>%
+  st_as_sf(coords = c("ddlon", "ddlat"))
+
+st_crs(combined_dataset_sf) <- 4326
 ```
 
 
 ## *Brachystephanus occidentalis*
 
 
+
+
+```
+#> png 
+#>   2
+```
+
+
+<img src="02-taxa_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 
 

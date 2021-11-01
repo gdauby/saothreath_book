@@ -18,7 +18,7 @@
 
 _Vulnerable_
 
-<img src="./images/VU.png" width="5%" />
+<img src="./images/VU.png" width="20%" />
 
 ### Rationale
 
@@ -55,9 +55,3 @@ Even widespread in São Tomé, the species appears locally rare.
 </div>
 
 
-
-```r
-knitr::include_graphics("http://legacy.tropicos.org/ImageFullView.aspx?imageid=100574124")
-```
-
-<img src="http://legacy.tropicos.org/ImageFullView.aspx?imageid=100574124" width="50%" />

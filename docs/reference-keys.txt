@@ -11,8 +11,7 @@ rationale
 habitat-and-ecology
 use-and-trade
 population
-conservation
-conservation-1
-cover-image-path-to-the-social-sharing-image-like-imagescover.jpg
 distribution
+conservation
 acknowledgments
+cover-image-path-to-the-social-sharing-image-like-imagescover.jpg

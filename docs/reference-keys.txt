@@ -1,12 +1,8 @@
-intro
-preview-book
 introduction
-sp-list
-brachystephanus-occidentalis
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
-brachystephanus-occidentalis-1
-synthesis
-conservation
 flora
 endemism
 threatened-species
+sp-list
+brachystephanus-occidentalis
+conservation
+url-your-book-url-like-httpsbookdown.orgyihuibookdown

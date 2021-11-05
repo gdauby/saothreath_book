@@ -1,0 +1,639 @@
+# Checklist {#sp-list}
+
+
+
+```{r loadPack, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(sf)
+library(mapview)
+library(raster)
+library(shiny)
+library(ggplot2)
+library(leaflet)
+library(knitr)
+opts_knit$set(eval.after = "fig.cap")
+source("function_map_leaflet.R")
+source("function_map_ggplot.R")
+load("base_plot_ST")
+load("base_plot_P")
+
+
+
+```
+
+
+```{r loadData, echo=FALSE, message=FALSE, warning=FALSE}
+
+ST <- st_read("ST_cast.shp", quiet = TRUE)
+P <- st_read("P_cast.shp", quiet = TRUE)
+protected_areas <- st_read("obo_np_stp.shp", quiet = TRUE)
+
+combined_dataset <- 
+  readxl::read_excel("combined_dataset_2021-11-03.xlsx", guess_max = 40000)
+
+endemic_list <-
+  combined_dataset %>%
+  filter(EndemicTS == "E") %>%
+  dplyr::select(
+    idtax_f,
+    tax_infra_level,
+    tax_infra_level_auth,
+    tax_fam,
+    tax_gen,
+    tax_famclass,
+    starts_with("traitvalue"),
+    taxo_unclear,
+    status_revision_needed,
+    Island
+  ) %>%
+  distinct() %>%
+  arrange(tax_fam, tax_infra_level) %>% 
+  filter(Island != "A")
+
+endemic_list_tree <- 
+  endemic_list %>% 
+  filter(grepl("tree", traitvalue_char_growth_form_level_1_1_3),
+         is.na(taxo_unclear)) %>% 
+  arrange(tax_fam, tax_infra_level)
+
+
+layers_env <-
+  stack("D:/MonDossierR/sao_tome_principe/all_layers_STP.tif")
+names(layers_env) <-
+  c("elevation_STP", "rainfall_STP", "cloud_cover_STP", "cloud_intra_sd__STP")
+
+layers_env_ST <- crop(layers_env, ST)
+layers_env_P <- crop(layers_env, P)
+
+```
+
+# Pteropsida {.unnumbered}
+
+```{r, echo=FALSE, message=FALSE}
+
+list_fam <-
+  endemic_list %>% filter(tax_famclass == "Pteropsida") %>%
+  distinct(tax_fam) %>% arrange(tax_fam)
+
+```
+
+
+## ```r list_fam %>% slice(1)```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+list_tax <-
+  endemic_list %>% filter(tax_fam == list_fam %>% slice(1) %>% pull()) %>%
+  distinct(tax_infra_level, tax_infra_level_auth) %>% arrange(tax_infra_level)
+
+```
+
+### ```r list_tax %>% slice(1) %>% pull(tax_infra_level_auth)```
+
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+
+taxa_name <- list_tax %>% slice(1) %>% pull(tax_infra_level)
+
+id_sp <- endemic_list %>% 
+  filter(tax_infra_level == taxa_name) %>% 
+  pull(idtax_f)
+
+combined_dataset_sf <- 
+  combined_dataset %>%
+  filter(georef_final == 1, 
+         idtax_f == id_sp) %>%
+  st_as_sf(coords = c("ddlon", "ddlat"))
+
+st_crs(combined_dataset_sf) <- 4326
+
+
+transect_data <- combined_dataset %>% filter(!is.na(id_n), tax_infra_level == taxa_name) %>% dplyr::select(stem_diameter) 
+
+if (nrow(transect_data) >= 20) {
+  eval_diameter_plot <- TRUE
+} else {
+  eval_diameter_plot <- FALSE
+}
+
+
+```
+
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+
+range_ddlat <- range(combined_dataset %>%
+  filter(georef_final == 1, 
+         idtax_f == id_sp) %>% 
+    pull(ddlat))
+
+if (range_ddlat[1] < 1) {
+  map_ST <- ggmap_species(dataset = combined_dataset_sf,
+                          country = ST,
+                          protected_areas = protected_areas, size.legend.txt = 7, size.pts = 5)
+  map_for_ST <- TRUE
+} else {
+    map_for_ST <- FALSE
+}
+
+if (range_ddlat[2] > 1) {
+  
+  map_P <- ggmap_species(dataset = combined_dataset_sf,
+                          country = P,
+                          protected_areas = protected_areas, size.legend.txt = 7, size.pts = 5)
+  map_for_P <- TRUE
+  
+} else {
+  
+    map_for_P <- FALSE
+    
+}
+
+
+# png(paste0(gsub(" ", "_", endemic_list$tax_infra_level[1]), "_", "ST", ".png"), 
+#     width = 30, height = 15, units = "cm", res = 400)
+# map_ST
+# invisible(dev.off())
+
+```
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+selected_sf <- generate_sp_leaflet(taxa = taxa_name, dataset = combined_dataset_sf)
+
+```
+
+
+#### Status {.unnumbered}
+
+```{r, echo=FALSE, out.width="20%"}
+knitr::include_graphics("./images/VU.png")
+```
+
+#### Rationale {.unnumbered}
+
+*```r taxa_name```* is an epiphyte fern. The species is known from Gabon and the islands of São Tomé and Príncipe. It occurs frequently within dense, tall, very wet forests with submontane affinity on rock faces in terra firme forest on ridge, between 160 and 1,987 m in elevation. It was previously assessed as VU (D2) by Figueiredo and  Gascoigne (2001), as the population was present in two locations, São Tomé and Príncipe (D2). This assessment was never published on the Red List and its date and the collection of new information justify its reassessment.
+*```r taxa_name```* is known from 31 collections made between 1853 (*Welwitsch* 14; Watt 14) and 2018 (*Bidault* 3983). One collection (*Barter* 1896) does not have precise coordinates and was not taken into account for estimate the assessment parameters. The 30 remaining collections represent 19 occurrences. In São Tomé, there are fifteen occurrences, eight of which are located within the Ôbo Natural Park of São Tomé (PNOST), one outside PNOST to the southeast, and the six others to the northeast outside PNOST. However, the occurrence of São Pedro-Lagoa Amélia (*Monod* 11714) is considered extirpated and therefore was not taken into account for this assessment. In Príncipe, there are three occurrences, two inside the Ôbo Natural Park of Príncipe (PNOST) and one outside. The occurrence in Gabon is located within the Ramsar site of Birougou. The 18 remaining occurrences represent 3 subpopulations (the seeds of the species are mainly dispersed by wind). Based on a 2 x 2 km cell size, the AOO is estimated as 64 km², below the upper threshold of the "Endangered" status under subcriterion B2. The EOO is calculated as 65,392.750 km², above the upper threshold of the “Vulnerable” status under subcriterion B1. The two occurrences south of PNOST (*Oliveira* 424 and *Espirito Santo* 5139) are threatened by old cocoa plantations and represent one location. The occurrence that is southeast of São Tomé (*Oliveira* 1419) is threatened by small-scale agriculture and represents one location. The two occurrences between Zampalma and Calvario (*Oliveira* 1461 and Espirito Santo 5070) are threatened by small-scale agriculture and illegal logging and represent one location. The occurrence of Macambrara (*Exell* 132) is threatened by vegetable agriculture and represents one location. We infer a future disappearance of this occurrence. All occurrences that are in the path of tourists in the PNOST (*Gascoigne* 10, *Oliveira* 1212, *Paiva* 883, *Sousa* 1267, *Stévart* 1267, *Moller* 28, *Lejoly* 1, *Matos* 7382) are indirectly threatened by ecotourism and invasive plants and represent one location. The occurrence in the north, on the periphery of the PNOST (*Paiva* 467) is threatened by small-scale agriculture and illegal logging and represents one location. The occurrence between São Joaquim and São Carlos de Fundão (*Gascoigne* 35) in the PNOP is not threatened and represents one location. The occurrence at Pico Papagaio (*Watt* 24, *Welwitsch* 14 and *Paiva* 595) is indirectly threatened by ecotourism and represents one location. The third occurrence of Príncipe at Ôquê Nazaré (*Newton* 27) is threatened by old cocoa plantations and quarries and represents one location. The occurrence of Gabon (*Bidault* 3983) is not threatened and represents one location. Therefore, these 18 occurrences represent 10 locations (*sensu* IUCN, 2019), with regards to the most important threat (small-scale agriculture). We infer a continuing decline in the extent and quality of its habitat. We also infer a continuing decline in its AOO, the number of mature individuals, and the number of subpopulations based on inferred future disappearance of one occurrence situated at Macambrara. Therefore, *```r taxa_name```* is assessed as VU B2ab(ii,iii,iv,v).
+
+#### Habitat and ecology {.unnumbered}
+
+The species occurs frequently within dense, tall, very wet forests with submontane affinity on rock faces in *terra firme* forest on ridge, between 160 and 1,987 m in elevation.
+
+
+```{r, eval=map_for_ST, echo=FALSE, fig.cap=paste("Distribution of", taxa_name, "in São Tomé.")}
+
+map_ST
+```
+
+```{r, eval=map_for_P, echo=FALSE, fig.cap=paste("Distribution of", taxa_name, "in Príncipe.")}
+
+map_P
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="An interactive distribution map."}
+knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet_", 
+                          gsub(" ", "_", taxa_name), ".html"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+# extract_poly <- raster::extract(layers_env_ST, selected_sf$selected_poly)
+
+# lapply(extract_poly, FUN = function(x) range(x[,1]))
+# lapply(extract_poly, FUN = function(x) range(x[,2]))
+# selected_poly %>%
+#   st_set_geometry(NULL) %>%
+#   mutate(accuracy_f = ifelse(is.na(accuracy), calc_accuracy, accuracy)) %>%
+#   dplyr::select(accuracy_f)
+
+if (map_for_ST) {
+  
+  extract_pts <-
+    raster::extract(layers_env_ST, selected_sf$selected_pts)
+  
+  base_plot_ST_spec <-
+    base_plot_ST +
+    geom_point(
+      data = as_tibble(extract_pts),
+      mapping = aes(x = rainfall_STP, y = elevation_STP),
+      shape = 17
+  )
+}
+
+
+if (map_for_P) {
+    
+  extract_pts <-
+    raster::extract(layers_env_P, selected_sf$selected_pts)
+  
+  base_plot_P_spec <- base_plot_P +
+    geom_point(
+      data = as_tibble(extract_pts),
+      mapping = aes(x = rainfall_STP, y = elevation_STP),
+      shape = 17
+    )
+
+  
+}
+
+
+```
+
+
+
+```{r, eval=map_for_ST, warning=FALSE, echo=FALSE, fig.cap=paste("Occurrences of", taxa_name, "in the climate conditions of São Tomé.")}
+
+base_plot_ST_spec
+```
+
+```{r, eval=map_for_P, warning=FALSE, echo=FALSE, fig.cap=paste("Occurrences of", taxa_name, "in the climate conditions of Príncipe.")}
+
+base_plot_P_spec
+```
+
+```{r, eval=eval_diameter_plot, echo=FALSE, fig.cap=paste("Histogram of diameters of all stems identified as", taxa_name)}
+
+combined_dataset %>% 
+  filter(!is.na(id_n), tax_infra_level == taxa_name) %>% 
+  dplyr::select(stem_diameter) %>% 
+  ggplot() + 
+  geom_histogram(mapping = aes(stem_diameter), binwidth = 1)
+
+
+```
+
+
+#### Use and trade {.unnumbered}
+There are no known uses of this species.
+
+#### Population {.unnumbered}
+The species has been collected more in São Tomé than in Príncipe and Gabon where it is under-collected. Its current distribution represents 3 subpopulations.
+
+
+
+
+
+
+
+### ```r list_tax %>% slice(2) %>% pull(tax_infra_level_auth)```
+
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+
+taxa_name <- list_tax %>% slice(2) %>% pull(tax_infra_level)
+
+id_sp <- endemic_list %>% 
+  filter(tax_infra_level == taxa_name) %>% 
+  pull(idtax_f)
+
+combined_dataset_sf <- 
+  combined_dataset %>%
+  filter(georef_final == 1, 
+         idtax_f == id_sp) %>%
+  st_as_sf(coords = c("ddlon", "ddlat"))
+
+st_crs(combined_dataset_sf) <- 4326
+
+
+transect_data <- combined_dataset %>% filter(!is.na(id_n), tax_infra_level == taxa_name) %>% dplyr::select(stem_diameter) 
+
+if (nrow(transect_data) >= 20) {
+  eval_diameter_plot <- TRUE
+} else {
+  eval_diameter_plot <- FALSE
+}
+
+
+```
+
+
+
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+
+range_ddlat <- range(combined_dataset %>%
+  filter(georef_final == 1, 
+         idtax_f == id_sp) %>% 
+    pull(ddlat))
+
+if (range_ddlat[1] < 1) {
+  map_ST <- ggmap_species(dataset = combined_dataset_sf,
+                          country = ST,
+                          protected_areas = protected_areas, size.legend.txt = 7, size.pts = 5)
+  map_for_ST <- TRUE
+} else {
+    map_for_ST <- FALSE
+}
+
+if (range_ddlat[2] > 1) {
+  
+  map_P <- ggmap_species(dataset = combined_dataset_sf,
+                          country = P,
+                          protected_areas = protected_areas, size.legend.txt = 7, size.pts = 5)
+  map_for_P <- TRUE
+  
+} else {
+  
+    map_for_P <- FALSE
+    
+}
+
+
+```
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+selected_sf <- generate_sp_leaflet(taxa = taxa_name, dataset = combined_dataset_sf)
+
+```
+
+
+#### Status {.unnumbered}
+
+```{r, echo=FALSE, out.width="20%"}
+knitr::include_graphics("./images/VU.png")
+```
+
+#### Rationale {.unnumbered}
+
+[*```r taxa_name```*](https://tropicos.org/name/100487131) is an epiphytic fern, most often found in old plantations and also in secondary forests, between 110 and 1,120 m in elevation. It is an endemic species of São Tomé. A preliminary evaluation was already made by *Figueiredo* and *Gascoigne* in 2001, who evaluated it as EN. The species is known from 13 collections made between 1905 (*Chevalier* 14587) and 2008 (*Oliveira* 1348, 1432). Five of these collections do not have precise coordinates and were not taken into account for estimate the assessment parameters. The seven remaining collections represent 6 occurrences and 1 subpopulation (the seeds of the species are mainly dispersed by wind). Based on a 2 x 2 km cell size, the AOO is estimated as 24 km², below the upper threshold of the “Endangered” status under subcriterion B2. The EOO is calculated as 146.357 km², below the upper threshold of the “Endangered” status under subcriterion B1. The occurrence (*Oliveira* 1348) in the south of the Ôbo to São Tomé Natural Park (PNOST) is not threatened and represents one location. The occurrence that is located between Valcarmo and Roça S. João (*Oliveira* 1432) is threatened by small-scale agriculture and oil palm plantations and represents one location. We infer a future disappearance of this occurrence due to the oil palm plantation project in this locality. The Roça Cruzeiro occurrence (*Thorold* 2072 and *Strickland* 2072) is threatened by small-scale agriculture and illegal logging and represents one location. The area around the Ecofac Center (*Oliveira* 98) and the area between Boom sucesso and Bombaim are threatened by small-scale agriculture and illegal logging and represent one location. The pico occurrence (*Chevalier* 14587) is threatened indirectly by invasive plants and represents one location. Therefore, the 6 occurrences represent 5 locations (sensu IUCN, 2019). We infer a continuing decline in EOO, AOO, habitat extent, and quality, number of locations, and number of mature individuals. The species is therefore assessed as EN B1ab(i,ii,iii,iv,v)+2 ab(i,ii,iii,iv,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species is most often found in old plantations, as well as in secondary forests, between 110 and 1,120 m in elevation.
+
+
+```{r, eval=map_for_ST, echo=FALSE, fig.cap=paste("Distribution of", taxa_name, "in São Tomé.")}
+
+map_ST
+```
+
+```{r, eval=map_for_P, echo=FALSE, fig.cap=paste("Distribution of", taxa_name, "in Príncipe.")}
+
+map_P
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.cap="An interactive distribution map."}
+knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet_", 
+                          gsub(" ", "_", taxa_name), ".html"))
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+# extract_poly <- raster::extract(layers_env_ST, selected_sf$selected_poly)
+
+# lapply(extract_poly, FUN = function(x) range(x[,1]))
+# lapply(extract_poly, FUN = function(x) range(x[,2]))
+# selected_poly %>%
+#   st_set_geometry(NULL) %>%
+#   mutate(accuracy_f = ifelse(is.na(accuracy), calc_accuracy, accuracy)) %>%
+#   dplyr::select(accuracy_f)
+
+if (map_for_ST) {
+  
+  extract_pts <-
+    raster::extract(layers_env_ST, selected_sf$selected_pts)
+  
+  base_plot_ST_spec <-
+    base_plot_ST +
+    geom_point(
+      data = as_tibble(extract_pts),
+      mapping = aes(x = rainfall_STP, y = elevation_STP),
+      shape = 17
+  )
+}
+
+
+if (map_for_P) {
+    
+  extract_pts <-
+    raster::extract(layers_env_P, selected_sf$selected_pts)
+  
+  base_plot_P_spec <- base_plot_P +
+    geom_point(
+      data = as_tibble(extract_pts),
+      mapping = aes(x = rainfall_STP, y = elevation_STP),
+      shape = 17
+    )
+
+  
+}
+
+
+```
+
+
+
+```{r, eval=map_for_ST, warning=FALSE, echo=FALSE, fig.cap=paste("Occurrences of", taxa_name, "in the climate conditions of São Tomé.")}
+
+base_plot_ST_spec
+```
+
+```{r, eval=map_for_P, warning=FALSE, echo=FALSE, fig.cap=paste("Occurrences of", taxa_name, "in the climate conditions of Príncipe.")}
+
+base_plot_P_spec
+```
+
+
+```{r, eval=eval_diameter_plot, echo=FALSE, fig.cap=paste("Histogram of diameters of all stems identified as", taxa_name)}
+
+combined_dataset %>% 
+  filter(!is.na(id_n), tax_infra_level == taxa_name) %>% 
+  dplyr::select(stem_diameter) %>% 
+  ggplot() + 
+  geom_histogram(mapping = aes(stem_diameter), binwidth = 1)
+
+
+```
+
+
+#### Use and trade {.unnumbered}
+There are no known uses of this species.
+
+#### Population {.unnumbered}
+Population information is not precisely known for this species.
+
+
+## ```r list_fam %>% slice(2)```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+list_tax <-
+  endemic_list %>% filter(tax_fam == list_fam %>% slice(2) %>% pull()) %>%
+  distinct(tax_infra_level, tax_infra_level_auth) %>% arrange(tax_infra_level)
+
+```
+
+### ```r list_tax %>% slice(1) %>% pull(tax_infra_level_auth)```
+
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+
+taxa_name <- list_tax %>% slice(1) %>% pull(tax_infra_level)
+
+id_sp <- endemic_list %>% 
+  filter(tax_infra_level == taxa_name) %>% 
+  pull(idtax_f)
+
+combined_dataset_sf <- 
+  combined_dataset %>%
+  filter(georef_final == 1, 
+         idtax_f == id_sp) %>%
+  st_as_sf(coords = c("ddlon", "ddlat"))
+
+st_crs(combined_dataset_sf) <- 4326
+
+
+transect_data <- combined_dataset %>% filter(!is.na(id_n), tax_infra_level == taxa_name) %>% dplyr::select(stem_diameter) 
+
+if (nrow(transect_data) >= 20) {
+  eval_diameter_plot <- TRUE
+} else {
+  eval_diameter_plot <- FALSE
+}
+
+
+```
+
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+
+range_ddlat <- range(combined_dataset %>%
+  filter(georef_final == 1, 
+         idtax_f == id_sp) %>% 
+    pull(ddlat))
+
+if (range_ddlat[1] < 1) {
+  map_ST <- ggmap_species(dataset = combined_dataset_sf,
+                          country = ST,
+                          protected_areas = protected_areas, size.legend.txt = 7, size.pts = 5)
+  map_for_ST <- TRUE
+} else {
+    map_for_ST <- FALSE
+}
+
+if (range_ddlat[2] > 1) {
+  
+  map_P <- ggmap_species(dataset = combined_dataset_sf,
+                          country = P,
+                          protected_areas = protected_areas, size.legend.txt = 7, size.pts = 5)
+  map_for_P <- TRUE
+  
+} else {
+  
+    map_for_P <- FALSE
+    
+}
+
+
+```
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+selected_sf <- generate_sp_leaflet(taxa = taxa_name, dataset = combined_dataset_sf)
+
+```
+
+
+#### Status {.unnumbered}
+
+```{r, echo=FALSE, out.width="20%"}
+knitr::include_graphics("./images/VU.png")
+```
+
+#### Rationale {.unnumbered}
+
+#### Habitat and ecology {.unnumbered}
+
+
+```{r, eval=map_for_ST, echo=FALSE, fig.cap=paste("Distribution of", taxa_name, "in São Tomé.")}
+
+map_ST
+```
+
+```{r, eval=map_for_P, echo=FALSE, fig.cap=paste("Distribution of", taxa_name, "in Príncipe.")}
+
+map_P
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="An interactive distribution map."}
+knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet_", 
+                          gsub(" ", "_", taxa_name), ".html"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+if (map_for_ST) {
+  
+  extract_pts <-
+    raster::extract(layers_env_ST, selected_sf$selected_pts)
+  
+  base_plot_ST_spec <-
+    base_plot_ST +
+    geom_point(
+      data = as_tibble(extract_pts),
+      mapping = aes(x = rainfall_STP, y = elevation_STP),
+      shape = 17
+  )
+}
+
+
+if (map_for_P) {
+    
+  extract_pts <-
+    raster::extract(layers_env_P, selected_sf$selected_pts)
+  
+  base_plot_P_spec <- base_plot_P +
+    geom_point(
+      data = as_tibble(extract_pts),
+      mapping = aes(x = rainfall_STP, y = elevation_STP),
+      shape = 17
+    )
+
+  
+}
+
+
+```
+
+
+
+```{r, eval=map_for_ST, warning=FALSE, echo=FALSE, fig.cap=paste("Occurrences of", taxa_name, "in the climate conditions of São Tomé.")}
+
+base_plot_ST_spec
+```
+
+```{r, eval=map_for_P, warning=FALSE, echo=FALSE, fig.cap=paste("Occurrences of", taxa_name, "in the climate conditions of Príncipe.")}
+
+base_plot_P_spec
+```
+
+```{r, eval=eval_diameter_plot, echo=FALSE, fig.cap=paste("Histogram of diameters of all stems identified as", taxa_name)}
+
+combined_dataset %>% 
+  filter(!is.na(id_n), tax_infra_level == taxa_name) %>% 
+  dplyr::select(stem_diameter) %>% 
+  ggplot() + 
+  geom_histogram(mapping = aes(stem_diameter), binwidth = 1)
+
+
+```
+
+
+#### Use and trade {.unnumbered}
+
+#### Population {.unnumbered}
+
+
+
+

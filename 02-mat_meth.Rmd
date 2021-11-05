@@ -1,0 +1,245 @@
+# Materials and methods
+
+## Database
+
+## Assessments
+
+## Species ecology
+
+```{r loadPack, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(sf)
+library(mapview)
+library(raster)
+library(shiny)
+library(ggplot2)
+library(leaflet)
+```
+
+
+```{r EcolPlotsST, echo=FALSE}
+ST <- st_read("ST_cast.shp", quiet = TRUE)
+
+lowlands_df <- tibble(
+  xmim = c(0, 1, 2, 3),
+  xmax = c(1, 2, 3, 4),
+  ymin = c(0, 750, 1350, 1800),
+  ymax = c(800, 1400, 2020, 2020),
+  type = c("lowlands", "submontane", "montane", "montane_grasslands")
+)
+
+alt_veg <-
+  ggplot() +
+  geom_rect(lowlands_df,
+            mapping = aes(
+              xmin = xmim ,
+              xmax = xmax,
+              ymin = ymin,
+              ymax = ymax,
+              fill = type
+            )) + theme_void() + 
+  theme(legend.position = c(0.8, 0.25),
+        legend.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        plot.margin=unit(c(0,0,0.5,0.5), "cm")) +
+    scale_fill_manual(values = viridis::cividis(n = 4), 
+                      labels = c("Lowlands \ndry/wet", 
+                                 "Montane \nforests", 
+                                 "Grasslands \nShrublands", 
+                                 "Submontane \nforests")) +
+  guides(fill = "none")
+
+alt_veg <- ggplotGrob(alt_veg)
+
+alt_veglg <- ggpubr::get_legend(ggplot() +
+  geom_rect(lowlands_df,
+            mapping = aes(
+              xmin = xmim ,
+              xmax = xmax,
+              ymin = ymin,
+              ymax = ymax,
+              fill = type
+            )) + theme_void() +
+    scale_fill_manual(values = viridis::cividis(n = 4), 
+                      labels = c("Lowlands \ndry/wet", 
+                                 "Montane \nforests", 
+                                 "Grasslands \nShrublands", 
+                                 "Submontane \nforests")) +
+    theme(legend.title = element_blank()))
+
+layers_env <- 
+  stack("D:/MonDossierR/sao_tome_principe/all_layers_STP.tif")
+names(layers_env) <- 
+  c("elevation_STP", "rainfall_STP", "cloud_cover_STP", "cloud_intra_sd__STP")
+
+layers_env_ST <- crop(layers_env, ST)
+
+layers_env_val <- values(layers_env_ST) %>% 
+  as_tibble() %>% 
+  mutate(id = 1:nrow(.))
+
+to.keep <- apply(layers_env_val, 1, 
+                   function(x) all(!is.na(x)))
+
+layers_env_val <- layers_env_val[to.keep,]
+
+base_plot <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 0.5,
+             color = "grey",
+             alpha = 0.5)
+
+base_plot_ST <-
+  base_plot  +
+  labs(title = "") +
+  expand_limits(x = 0, y = 0) +
+  stat_density2d(aes(color = ..level..)) +
+  scale_colour_gradient(low = "black", high = "blue") +
+  scale_x_continuous(limits = c(700, 7000), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 2000), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic()
+
+base_plot_grob <- ggplotGrob(base_plot_ST)
+
+save(base_plot_ST, file = "base_plot_ST")
+
+
+# ecology_plots <-
+#   list(alt_veg = alt_veg,
+#        base_plot_grob = base_plot_grob,
+#        alt_veglg = alt_veglg,
+#        base_plot = base_plot)
+
+
+```
+
+
+```{r, echo=FALSE, fig.cap="Insight into the main climatic patterns of Sao Tomé by relating the two most contrasted environmental factors of the island: altitude and annual rainfall. The lines of the plot show the frequency of combined environmental conditions. The colored band on the left show the described vegetation belts along elevation."}
+
+gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob, alt_veglg),
+                        layout_matrix = rbind(c(3,3, 1, 2, 2, 2, 2),
+                                              c(3,3, 1, 2, 2, 2, 2),
+                                              c(NA,NA, 1, 2, 2, 2, 2)))
+
+```
+
+
+
+```{r EcolPlotsP, echo=FALSE}
+
+P <- st_read("P_cast.shp", quiet = TRUE)
+
+lowlands_df <- tibble(
+  xmim = c(0, 1),
+  xmax = c(1, 2),
+  ymin = c(0, 750),
+  ymax = c(800, 1000),
+  type = c("lowlands", "submontane")
+)
+
+alt_veg <-
+  ggplot() +
+  geom_rect(lowlands_df,
+            mapping = aes(
+              xmin = xmim ,
+              xmax = xmax,
+              ymin = ymin,
+              ymax = ymax,
+              fill = type
+            )) + theme_void() + 
+  theme(legend.position = c(0.8, 0.25),
+        legend.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        plot.margin=unit(c(0,0,0.5,0.5), "cm")) +
+    scale_fill_manual(values = viridis::cividis(n = 2), 
+                      labels = c("Lowlands \nmoist/wet", 
+                                 "Submontane \nforests")) +
+  guides(fill = "none")
+
+alt_veg <- ggplotGrob(alt_veg)
+
+alt_veglg <- ggpubr::get_legend(ggplot() +
+  geom_rect(lowlands_df,
+            mapping = aes(
+              xmin = xmim ,
+              xmax = xmax,
+              ymin = ymin,
+              ymax = ymax,
+              fill = type
+            )) + theme_void() +
+    scale_fill_manual(values = viridis::cividis(n = 2), 
+                      labels = c("Lowlands \nmoist/wet", 
+                                 "Submontane \nforests")) +
+    theme(legend.title = element_blank()))
+
+layers_env <- 
+  stack("D:/MonDossierR/sao_tome_principe/all_layers_STP.tif")
+names(layers_env) <- 
+  c("elevation_STP", "rainfall_STP", "cloud_cover_STP", "cloud_intra_sd__STP")
+
+layers_env_P <- crop(layers_env, P)
+
+layers_env_val <- values(layers_env_P) %>% 
+  as_tibble() %>% 
+  mutate(id = 1:nrow(.))
+
+to.keep <- apply(layers_env_val, 1, 
+                   function(x) all(!is.na(x)))
+
+layers_env_val <- layers_env_val[to.keep,]
+
+base_plot_P <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 0.5,
+             color = "grey",
+             alpha = 0.5)
+
+base_plot_P <-
+  base_plot_P  +
+  labs(title = "") +
+  expand_limits(x = 0, y = 0) +
+  stat_density2d(aes(color = ..level..)) +
+  scale_colour_gradient(low = "black", high = "blue") +
+  scale_x_continuous(limits = c(1500, 4133), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 904), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic()
+
+base_plot_grob_P <- ggplotGrob(base_plot_P)
+
+
+save(base_plot_P, file = "base_plot_P")
+
+
+# ecology_plots <-
+#   list(alt_veg = alt_veg,
+#        base_plot_grob = base_plot_grob,
+#        alt_veglg = alt_veglg,
+#        base_plot = base_plot)
+
+
+```
+
+
+```{r EcoPrincipe, echo=FALSE, fig.cap="Insight into the main climatic patterns of Principe by relating the two most contrasted environmental factors of the island: altitude and annual rainfall. The lines of the plot show the frequency of combined environmental conditions. The colored band on the left indicate approximate vegetation belts along elevation."}
+
+gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob_P, alt_veglg),
+                        layout_matrix = rbind(c(3,3, 1, 2, 2, 2, 2),
+                                              c(3,3, 1, 2, 2, 2, 2),
+                                              c(NA,NA, 1, 2, 2, 2, 2)))
+
+```
+
+
+
+
+

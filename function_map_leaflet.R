@@ -28,16 +28,27 @@ generate_sp_leaflet <- function(taxa, dataset) {
   map_lf <-
     leaflet() %>%
     addProviderTiles(providers$Esri.WorldImagery, group =  "Esri") %>%
-    addProviderTiles(providers$OpenStreetMap, group = "Open Street Map") %>%
-    addMarkers(data = selected_pts %>%
-                 filter(extirpated == 0 | is.na(extirpated)),
-               popup = leafpop::popupTable(selected_pts %>%
-                                             filter(extirpated == 0 | is.na(extirpated)) %>%
-                                             dplyr::select(idrb_n, idc,
-                                                           colnam, nbr, coly, loc_notes, habitat) %>%
-                                             sf::st_set_geometry(NULL),
-                                           feature.id = FALSE, row.numbers = FALSE),
-               group = "Still existing \noccurence")
+    addProviderTiles(providers$OpenStreetMap, group = "Open Street Map")
+  
+  
+  if (selected_pts %>%
+      filter(extirpated == 0 | is.na(extirpated)) %>% nrow() > 0)
+    map_lf <- map_lf %>%
+    addMarkers(
+      data = selected_pts %>%
+        filter(extirpated == 0 | is.na(extirpated)),
+      popup = leafpop::popupTable(
+        selected_pts %>%
+          filter(extirpated == 0 |
+                   is.na(extirpated)) %>%
+          dplyr::select(idrb_n, idc,
+                        colnam, nbr, coly, loc_notes, habitat) %>%
+          sf::st_set_geometry(NULL),
+        feature.id = FALSE,
+        row.numbers = FALSE
+      ),
+      group = "Still existing \noccurence"
+    )
   
   if (length(which(grepl("_polygons.shp", selected_built_poly))) > 0)
     map_lf <-
@@ -75,7 +86,7 @@ generate_sp_leaflet <- function(taxa, dataset) {
   #,
   # clusterOptions = markerClusterOptions()
   
-  if (length(unique(dataset$extirpated)) > 1) {
+  if (any(unique(dataset$extirpated) == 1)) {
     
     map_lf <-
       map_lf %>%

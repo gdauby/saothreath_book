@@ -1,5 +1,6 @@
 
-ggmap_species <- function(dataset, country, protected_areas, size.legend.txt = 12, size.pts = 10) {
+ggmap_species <- function(dataset, country, protected_areas, size.legend.txt = 12, size.pts = 10,
+                          lwd.pa = 1.5) {
   
   if (st_bbox(country)[2] > 1) {
     
@@ -56,7 +57,7 @@ ggmap_species <- function(dataset, country, protected_areas, size.legend.txt = 1
         data = protected_areas,
         fill = NA,
         color = "black",
-        lwd = 1.5,
+        lwd = lwd.pa,
         linetype = "dashed"
       )
     

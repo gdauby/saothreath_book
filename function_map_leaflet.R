@@ -2,28 +2,13 @@
 
 generate_sp_leaflet <- function(taxa, dataset) {
   
-  selected_built_poly <- list.files(path = "D:/MonDossierR/sao_tome_principe/taxa_built_poly/",
-                                    pattern = gsub(" ", "_", taxa), full.names = TRUE)
   
-  selected_pts <-
-    st_read(selected_built_poly[which(grepl("_points.shp", selected_built_poly))], quiet = TRUE)
-  selected_pts <-
-    selected_pts %>%
-    left_join(dataset %>%
-                st_set_geometry(NULL),
-              by = c("idrb_n" = "idrb_n"))
-  selected_pts <- st_transform(selected_pts, 4326)
+  selected_pts_poly <- 
+    get_pts_poly_sp(taxa = taxa, dataset = dataset)
   
-  if (length(which(grepl("_polygons.shp", selected_built_poly))) > 0) {
-    selected_poly <- 
-      st_read(selected_built_poly[which(grepl("_polygons.shp", selected_built_poly))], quiet = TRUE)
-    selected_poly <-
-      selected_poly %>%
-      left_join(dataset %>%
-                  st_set_geometry(NULL),
-                by = c("idrb_n" = "idrb_n"))
-    selected_poly <- st_transform(selected_poly, 4326)
-  }
+  selected_pts <- selected_pts_poly$selected_pts
+  
+  selected_built_poly <- selected_pts_poly$selected_poly
   
   map_lf <-
     leaflet() %>%
@@ -33,7 +18,8 @@ generate_sp_leaflet <- function(taxa, dataset) {
   
   if (selected_pts %>%
       filter(extirpated == 0 | is.na(extirpated)) %>% nrow() > 0)
-    map_lf <- map_lf %>%
+    map_lf <-
+    map_lf %>%
     addMarkers(
       data = selected_pts %>%
         filter(extirpated == 0 | is.na(extirpated)),
@@ -50,11 +36,11 @@ generate_sp_leaflet <- function(taxa, dataset) {
       group = "Still existing \noccurence"
     )
   
-  if (length(which(grepl("_polygons.shp", selected_built_poly))) > 0)
+  if (!is.null(selected_built_poly))
     map_lf <-
     map_lf %>%
     addPolygons(
-      data = selected_poly,
+      data = selected_built_poly,
       stroke = TRUE,
       weight = 0.5,
       opacity = 0.8,
@@ -75,7 +61,7 @@ generate_sp_leaflet <- function(taxa, dataset) {
         direction = "auto"
       ),
       popup = leafpop::popupTable(
-        selected_poly %>%
+        selected_built_poly %>%
           dplyr::select(idrb_n, idc,
                         colnam, nbr, coly, loc_notes, habitat) %>%
           sf::st_set_geometry(NULL),
@@ -113,7 +99,6 @@ generate_sp_leaflet <- function(taxa, dataset) {
                         "Innacurate occurrences"),
       options = layersControlOptions(collapsed = F)
     )
-  
   
   htmlwidgets::saveWidget(map_lf, "leaflet.html")
   # browseURL("leaflet.html")

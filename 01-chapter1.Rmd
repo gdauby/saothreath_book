@@ -1,14 +1,476 @@
 # Introduction
 
+```{r loadPack, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(dplyr)
+library(sf)
+library(mapview)
+library(raster)
+library(shiny)
+library(ggplot2)
+library(leaflet)
+library(knitr)
+library(grid)
+library(gridSVG)
+opts_knit$set(eval.after = "fig.cap")
+source("function_map_leaflet.R")
+source("function_map_ggplot.R")
+source("function_generate_fixex_maps.R")
+source("function_climate_occ_maps.R")
+source("function_map_pheno.R")
+
+source("function_generate_grid_map.R")
+load("base_plot_ST")
+load("base_plot_P")
+
+
+```
+
+```{r loadData, echo=FALSE, message=FALSE, warning=FALSE}
+
+ST <- st_read("ST_cast.shp", quiet = TRUE)
+P <- st_read("P_cast.shp", quiet = TRUE)
+protected_areas <- st_read("obo_np_stp.shp", quiet = TRUE)
+
+ST_proj <- st_transform(ST, 32632)
+
+combined_dataset <- 
+  readxl::read_excel("combined_dataset_2021-11-22.xlsx", guess_max = 40000)
+
+combined_dataset <- 
+  combined_dataset %>% 
+  filter(is.na(garden))
+
+endemic_list <-
+  combined_dataset %>%
+  filter(EndemicTS == "E") %>%
+  dplyr::select(
+    idtax_f,
+    tax_infra_level,
+    tax_infra_level_auth,
+    tax_fam,
+    tax_gen,
+    tax_famclass,
+    starts_with("traitvalue"),
+    taxo_unclear,
+    status_revision_needed,
+    Island,
+    iucn_status
+  ) %>%
+  distinct() %>%
+  arrange(tax_fam, tax_infra_level) %>% 
+  filter(Island != "A")
+
+# endemic_list_tree <- 
+#   endemic_list %>% 
+#   filter(grepl("tree", traitvalue_char_growth_form_level_1_1_3),
+#          is.na(taxo_unclear)) %>% 
+#   arrange(tax_fam, tax_infra_level)
+
+
+layers_env <-
+  stack("D:/MonDossierR/sao_tome_principe/all_layers_STP.tif")
+names(layers_env) <-
+  c("elevation_STP",
+    "rainfall_STP",
+    "cloud_cover_STP",
+    "cloud_intra_sd__STP")
+
+layers_env_ST <- crop(layers_env, ST)
+layers_env_P <- crop(layers_env, P)
+
+all_impacted_poly <-
+  st_read("D:/MonDossierR/sao_tome_principe/all_impacted_poly_ST.shp")
+roads_ST_main <-
+  st_read("D:/MonDossierR/sao_tome_principe/roads_ST_main.shp")
+
+
+```
+
+
+```{r prep-data, echo=FALSE, message=FALSE, warning=FALSE}
+
+combined_dataset_sf <-
+    combined_dataset %>%
+    filter(georef_final == 1) %>%
+    st_as_sf(coords = c("ddlon", "ddlat"))
+  
+  # combined_dataset_transect_sf <-
+  #   combined_dataset %>%
+  #   filter(!is.na(idtax_individual_f)) %>%
+  #   st_as_sf(coords = c("ddlon", "ddlat"))
+  
+  # combined_dataset_sf <- 
+  #   bind_rows(combined_dataset_sf,
+  #             combined_dataset_transect_sf)
+  
+  st_crs(combined_dataset_sf) <- 4326
+  
+  combined_dataset_sf <- 
+    combined_dataset_sf %>% 
+    mutate(accuracy_final =  ifelse(!is.na(accuracy), accuracy, calc_accuracy))
+  
+  combined_dataset_sf <- 
+    combined_dataset_sf %>% 
+    filter(accuracy_final >= 4 | is.na(accuracy_final))
+
+combined_dataset_sf_proj <- st_transform(combined_dataset_sf, 32632)
+  
+resolution <- 1000
+grid <- st_make_grid(x = ST_proj, cellsize = resolution, square = F)
+grid <- st_as_sf(grid) %>% 
+  mutate(id_grid = 1:nrow(.))
+
+intersect_grid <- st_intersection(combined_dataset_sf_proj, grid)
+
+sampling_cell <- 
+  intersect_grid %>% 
+  group_by(id_grid) %>% 
+  summarise(nbe_esp = length(unique(tax_infra_level)),
+            n = length(tax_infra_level)) %>% 
+  st_set_geometry(NULL)
+
+sampling_endemics_cell <- 
+  intersect_grid %>% 
+  filter(!is.na(EndemicTS)) %>% 
+  group_by(id_grid) %>% 
+  summarise(nbe_end_esp = length(unique(tax_infra_level)),
+            n_end = length(tax_infra_level)) %>% 
+  st_set_geometry(NULL)
+
+sampling_threatened_cell <- 
+  intersect_grid %>% 
+  filter(!is.na(iucn_status)) %>% 
+  group_by(id_grid) %>% 
+  summarise(nbe_threat_esp = length(unique(tax_infra_level)),
+            n_threat = length(tax_infra_level)) %>% 
+  st_set_geometry(NULL)
+
+grid_completed_ST <- 
+  grid %>% 
+  left_join(sampling_cell %>% 
+              dplyr::select(id_grid, n, nbe_esp)) %>% 
+  left_join(sampling_endemics_cell %>% 
+              dplyr::select(id_grid, n_end, nbe_end_esp)) %>% 
+  mutate(prop_end = nbe_end_esp/nbe_esp*100) %>% 
+  left_join(sampling_threatened_cell %>% 
+              dplyr::select(id_grid, n_threat, nbe_threat_esp)) %>% 
+  mutate(prop_threat = nbe_threat_esp/nbe_esp*100)
+
+grid_completed_ST_unproj <- st_transform(grid_completed_ST, 4326)
+
+```
+
+
+```{r generate-grid-map, echo=FALSE, message=FALSE, warning=F, eval=FALSE}
+
+map_ST <-
+  generate_grid_map(
+    shape = ST,
+    size.legend.txt = 50,
+    st.size.bar = 30,
+    margin.sz = 10,
+    field_name = n
+  )
+
+ggsave(
+  "grid_map_ST_sampling.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_ST,
+  width = 40,
+  height = 40
+)
+
+map_ST <-
+  generate_grid_map(
+    shape = ST,
+    size.legend.txt = 12,
+    st.size.bar = 6,
+    margin.sz = 1,
+    field_name = n
+  )
+
+ggsave(
+  "grid_map_ST_sampling.tiff",
+  device = "tiff",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_ST
+)
+
+
+map_ST <-
+  generate_grid_map(
+    shape = ST,
+    size.legend.txt = 60,
+    st.size.bar = 30,
+    margin.sz = 12,
+    field_name = nbe_threat_esp
+  )
+
+ggsave(
+  "grid_map_ST_nbe_threat_sp.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  plot = map_ST,
+  width = 40,
+  height = 40
+)
+
+map_ST <-
+  generate_grid_map(
+    shape = ST,
+    size.legend.txt = 12,
+    st.size.bar = 6,
+    margin.sz = 1,
+    field_name = nbe_threat_esp
+  )
+
+ggsave(
+  "grid_map_ST_nbe_threat_sp.tiff",
+  device = "tiff",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_ST
+)
+
+
+
+
+map_ST <-
+  generate_grid_map(
+    shape = ST,
+    size.legend.txt = 60,
+    st.size.bar = 30,
+    margin.sz = 12,
+    field_name = nbe_end_esp
+  )
+
+ggsave(
+  "grid_map_ST_nbe_end_sp.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  plot = map_ST,
+  width = 40,
+  height = 40
+)
+
+map_ST <-
+  generate_grid_map(
+    shape = ST,
+    size.legend.txt = 12,
+    st.size.bar = 6,
+    margin.sz = 1,
+    field_name = nbe_end_esp
+  )
+
+ggsave(
+  "grid_map_ST_nbe_end_sp.tiff",
+  device = "tiff",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_ST
+)
+
+```
+
+
 ## Flora
+
+```{r grid-map-samp-lf, message=FALSE, echo=FALSE, warning=FALSE}
+
+map_lf <-
+  leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery, group =  "Esri") %>%
+  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map")
+
+map_lf <-
+  map_lf %>%
+  addPolygons(
+    data = grid_completed_ST_unproj %>%
+      filter(!is.na(n)),
+    stroke = TRUE,
+    weight = 0.5,
+    opacity = 0.8,
+    dashArray = "1",
+    fillOpacity = 0.8,
+    color = ~ colorFactor("viridis", n)(n),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "blue",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "13px",
+      direction = "auto"
+    ),
+    popup = leafpop::popupTable(
+      grid_completed_ST_unproj %>%
+        filter(!is.na(n)) %>%
+        dplyr::select(n) %>% 
+        rename(Number = n) %>% 
+        sf::st_set_geometry(NULL),
+      feature.id = FALSE,
+      row.numbers = FALSE
+    ),
+   group = 'Number of specimen'
+  ) %>%
+  addLayersControl(baseGroups = c("Open Street Map", "ESRI"),
+                   options = layersControlOptions(collapsed = F),
+      overlayGroups = c("Number of specimen"))
+
+htmlwidgets::saveWidget(map_lf, "leaflet.html")
+# browseURL("leaflet.html")
+hh <-
+  file.rename(
+    "leaflet.html",
+    "D:/MonDossierR/stp_website_backup/static/img/leaflet_sampling.html"
+  )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="An interactive map showing sampling of the flora in Sao Tomé"}
+
+knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet_sampling.html"))
+
+```
+
 
 ## Endemism
 
-## Threatened  species
+```{r grid-map-nbe-end-lf, message=FALSE, echo=FALSE, warning=FALSE}
+
+map_lf <-
+  leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery, group =  "Esri") %>%
+  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map")
+
+map_lf <-
+  map_lf %>%
+  addPolygons(
+    data = grid_completed_ST_unproj %>%
+      filter(!is.na(nbe_end_esp)),
+    stroke = TRUE,
+    weight = 0.5,
+    opacity = 0.8,
+    dashArray = "1",
+    fillOpacity = 0.8,
+    color = ~ colorFactor("viridis", nbe_end_esp)(nbe_end_esp),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "blue",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "13px",
+      direction = "auto"
+    ),
+    popup = leafpop::popupTable(
+      grid_completed_ST_unproj %>%
+        filter(!is.na(nbe_end_esp)) %>%
+        dplyr::select(nbe_end_esp) %>% 
+        rename(Number = nbe_end_esp) %>% 
+        sf::st_set_geometry(NULL),
+      feature.id = FALSE,
+      row.numbers = FALSE
+    ),
+   group = 'Number of endemic taxa'
+  ) %>%
+  addLayersControl(baseGroups = c("Open Street Map", "ESRI"),
+                   options = layersControlOptions(collapsed = F),
+      overlayGroups = c("Number of endemic taxa"))
+
+htmlwidgets::saveWidget(map_lf, "leaflet.html")
+# browseURL("leaflet.html")
+hh <-
+  file.rename(
+    "leaflet.html",
+    "D:/MonDossierR/stp_website_backup/static/img/leaflet_end_rich.html"
+  )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="An interactive map of Sao Tomé showing the number of endemic taxa in 1 km size hexagonal grid cells"}
+
+knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet_end_rich.html"))
+
+```
 
 
 
+## Threatened species
 
+```{r grid-map-nbe-end-lf, message=FALSE, echo=FALSE, warning=FALSE}
+
+map_lf <-
+  leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery, group =  "Esri") %>%
+  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map")
+
+map_lf <-
+  map_lf %>%
+  addPolygons(
+    data = grid_completed_ST_unproj %>%
+      filter(!is.na(nbe_threat_esp)),
+    stroke = TRUE,
+    weight = 0.5,
+    opacity = 0.8,
+    dashArray = "1",
+    fillOpacity = 0.8,
+    color = ~ colorFactor("viridis", nbe_threat_esp)(nbe_threat_esp),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "blue",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "13px",
+      direction = "auto"
+    ),
+    popup = leafpop::popupTable(
+      grid_completed_ST_unproj %>%
+        filter(!is.na(nbe_threat_esp)) %>%
+        dplyr::select(nbe_threat_esp) %>% 
+        rename(Number = nbe_threat_esp) %>% 
+        sf::st_set_geometry(NULL),
+      feature.id = FALSE,
+      row.numbers = FALSE
+    ),
+   group = 'Number of threatened taxa'
+  ) %>%
+  addLayersControl(baseGroups = c("Open Street Map", "ESRI"),
+                   options = layersControlOptions(collapsed = F),
+      overlayGroups = c("Number of threatened taxa"))
+
+htmlwidgets::saveWidget(map_lf, "leaflet.html")
+# browseURL("leaflet.html")
+hh <-
+  file.rename(
+    "leaflet.html",
+    "D:/MonDossierR/stp_website_backup/static/img/leaflet_threat_rich.html"
+  )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="An interactive map of Sao Tomé showing the number of threatened taxa in 1 km size hexagonal grid cells"}
+
+knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet_threat_rich.html"))
+
+```
 
 
 

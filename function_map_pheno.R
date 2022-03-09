@@ -1,8 +1,8 @@
 
 get_figs_paths <- function(taxa) {
   
-  all_pterido <- list.files("C:/Users/dauby/Dropbox/Photos livre STP/1 Ptérydophytes/")
-  all_pterido_path <- list.files("C:/Users/dauby/Dropbox/Photos livre STP/1 Ptérydophytes/", full.names = TRUE)
+  all_pterido <- list.files("C:/Users/dauby/Dropbox/Photos livre STP/1 Pterydophytes/")
+  all_pterido_path <- list.files("C:/Users/dauby/Dropbox/Photos livre STP/1 Pterydophytes/", full.names = TRUE)
   
   all_pterido <- 
     all_pterido %>% 
@@ -11,6 +11,9 @@ get_figs_paths <- function(taxa) {
     mutate(species = stringr::str_replace_all(species, "[:digit:]", "")) %>% 
     mutate(species = stringr::str_squish(species)) %>% 
     mutate(path = all_pterido_path)
+  
+  
+  # print(all_pterido)
   
   all_gymno <- list.files("C:/Users/dauby/Dropbox/Photos livre STP/2 Gymnospermes/")
   all_gymno_path <- list.files("C:/Users/dauby/Dropbox/Photos livre STP/2 Gymnospermes/", full.names = TRUE)
@@ -34,13 +37,16 @@ get_figs_paths <- function(taxa) {
     mutate(species = stringr::str_squish(species)) %>% 
     mutate(path = all_angio_path)
   
+  
   all_species <- bind_rows(all_pterido, all_gymno, all_angio)
   
-  print(all_species)
+  # print(all_species)
+  
+  taxa_col <- rlang::parse_expr(rlang::quo_name(rlang::enquo(taxa)))
   
   path_good <- 
     all_species %>% 
-    filter(species == taxa)
+    filter(species == !!taxa_col)
   
   path_good_foto <- path_good
   
@@ -70,7 +76,7 @@ get_figs_paths <- function(taxa) {
     
   }
   
-  print(path_good)
+  # print(path_good)
   
   next_fig_letter <- letters[nrow(list_figs) + 1]
   
@@ -82,7 +88,8 @@ get_figs_paths <- function(taxa) {
       path_good = path_good,
       all_files = all_files,
       list_figs = list_figs,
-      path_good_foto = path_good_foto
+      path_good_foto = path_good_foto,
+      all_species = all_species
     )
   )
   

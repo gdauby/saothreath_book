@@ -73,10 +73,51 @@ layers_env <-
 names(layers_env) <- 
   c("elevation_STP", "rainfall_STP", "cloud_cover_STP", "cloud_intra_sd__STP")
 
-layers_env_ST <- crop(layers_env, ST)
 
-layers_env_val <- values(layers_env_ST) %>% 
+# pico_area <- st_read("D:/MonDossierR/sao_tome_principe/pico_area.shp")
+# layers_env_pico_area <- mask(layers_env, pico_area)
+# 
+# values(layers_env_pico_area)
+# 
+# extract_pts <-
+#   raster::extract(layers_env_pico_area, pico_area) %>%
+#   as_tibble()
+#    
+#    
+# layers_env_val_pico <- 
+#   values(layers_env_pico_area) %>% 
+#   as_tibble() %>% 
+#   mutate(id = 1:nrow(.))
+# 
+# to.keep <- apply(layers_env_val_pico, 1, 
+#                    function(x) all(!is.na(x)))
+# 
+# layers_env_val_pico <- layers_env_val_pico[to.keep,]
+# 
+# xy_pico <- raster::xyFromCell(layers_env_pico_area, cell = layers_env_val_pico$id)
+# 
+# xy_pico_sf <- xy_pico %>% 
+#   as_tibble() %>% 
+#   st_as_sf(coords = c("x", "y"))
+# 
+# st_crs(xy_pico_sf) <- 4326
+# alt_pico_rast <- 
+#   st_intersection(xy_pico_sf, pico_area) %>% 
+#   st_set_geometry(NULL) %>% 
+#   mutate(id = layers_env_val_pico$id)
+# 
+# layers_env_val_pico <- layers_env_val_pico %>% 
+#   left_join(alt_pico_rast) %>% 
+#   mutate(elevation_STP = alt) %>% 
+#   dplyr::select(-alt)
+
+# sf::sf_use_s2(FALSE)
+# layers_env_ST <- mask(layers_env, st_difference(ST, st_union(st_combine(pico_area))))
+layers_env_ST <- crop(layers_env, ST)
+layers_env_val <- 
+  values(layers_env_ST) %>% 
   as_tibble() %>% 
+  # bind_rows(layers_env_val_pico) %>% 
   mutate(id = 1:nrow(.))
 
 to.keep <- apply(layers_env_val, 1, 
@@ -87,26 +128,107 @@ layers_env_val <- layers_env_val[to.keep,]
 base_plot <-
   ggplot(layers_env_val,
          aes(x = rainfall_STP, y = elevation_STP)) +
-  geom_point(size = 0.5,
+  geom_point(size = 3,
              color = "grey",
-             alpha = 0.5)
+             alpha = 0)
 
 base_plot_ST <-
-  base_plot  +
+  base_plot +
   labs(title = "") +
   expand_limits(x = 0, y = 0) +
-  stat_density2d(aes(color = ..level..)) +
+  stat_density2d(aes(color = ..level..), lwd = 2) +
   scale_colour_gradient(low = "black", high = "blue") +
-  scale_x_continuous(limits = c(700, 7000), expand = c(0, 0)) +
-  scale_y_continuous(limits = c(0, 2000), expand = c(0, 0)) +
+  scale_x_continuous(limits = c(700, 7050), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 2020), expand = c(0, 0)) +
   guides(color = "none") +
   labs(x = "Annual rainfall (mm)",
        y = "Elevation (m)") +
-  theme_classic()
+  theme_classic() +
+  theme(axis.title = element_text(size = 40), axis.text = element_text(size = 35))
 
-base_plot_grob <- ggplotGrob(base_plot_ST)
+ggsave(
+  "climate_ST_no_points.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = base_plot_ST
+)
+
+base_plot <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 3,
+             color = "grey",
+             alpha = 1) +
+  scale_x_continuous(limits = c(700, 7050), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 2020), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 40), axis.text = element_text(size = 35))
+
+ggsave(
+  "climate_ST_points.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = base_plot
+)
+
+# base_plot_grob <- ggplotGrob(base_plot_ST)
 
 save(base_plot_ST, file = "base_plot_ST")
+
+base_plot_ST_full <-
+   ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 3,
+             color = "grey",
+             alpha = 0.7) +
+  labs(title = "") +
+  expand_limits(x = 0, y = 0) +
+  stat_density2d(aes(color = ..level..), lwd = 2) +
+  scale_colour_gradient(low = "black", high = "blue") +
+  scale_x_continuous(limits = c(700, 7050), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 2020), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 20), axis.text = element_text(size = 18))
+
+base_plot_grob <- ggplotGrob(base_plot_ST_full)
+
+save(base_plot_ST_full, file = "base_plot_ST_full")
+
+
+## cloud cover and elevation
+
+# base_plot <-
+#   ggplot(layers_env_val,
+#          aes(x = cloud_cover_STP, y = elevation_STP), log10="x") +
+#   geom_point(size = 3,
+#              color = "grey",
+#              alpha = 0.5) + scale_x_log10()
+#   
+# 
+# base_plot_ST_cloud_alt <-
+#   base_plot  +
+#   labs(title = "") +
+#   expand_limits(x = 0, y = 0) +
+#   stat_density2d(aes(color = ..level..)) +
+#   scale_colour_gradient(low = "black", high = "blue") +
+#   scale_x_continuous(limits = c(70, 100), expand = c(0, 0)) +
+#   scale_y_continuous(limits = c(0, 2020), expand = c(0, 0)) +
+#   guides(color = "none") +
+#   labs(x = "Cloud cover (%)",
+#        y = "Elevation (m)") +
+#   theme_classic()
 
 
 # ecology_plots <-
@@ -197,9 +319,9 @@ layers_env_val <- layers_env_val[to.keep,]
 base_plot_P <-
   ggplot(layers_env_val,
          aes(x = rainfall_STP, y = elevation_STP)) +
-  geom_point(size = 0.5,
+  geom_point(size = 3,
              color = "grey",
-             alpha = 0.5)
+             alpha = 0)
 
 base_plot_P <-
   base_plot_P  +
@@ -212,12 +334,70 @@ base_plot_P <-
   guides(color = "none") +
   labs(x = "Annual rainfall (mm)",
        y = "Elevation (m)") +
-  theme_classic()
+  theme_classic() +
+  theme(axis.title = element_text(size = 20), axis.text = element_text(size = 18))
+
+ggsave(
+  "climate_P_no_points.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = base_plot_P
+)
+
+base_plot <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 3,
+             color = "grey",
+             alpha = 1) +
+  scale_x_continuous(limits = c(1500, 4133), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 904), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 40), axis.text = element_text(size = 35))
+
+ggsave(
+  "climate_P_points.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = base_plot
+)
+
 
 base_plot_grob_P <- ggplotGrob(base_plot_P)
 
 
 save(base_plot_P, file = "base_plot_P")
+
+base_plot_P_full <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 3,
+             color = "grey",
+             alpha = 0.7) +
+  labs(title = "") +
+  expand_limits(x = 0, y = 0) +
+  stat_density2d(aes(color = ..level..)) +
+  scale_colour_gradient(low = "black", high = "blue") +
+  scale_x_continuous(limits = c(1500, 4133), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 904), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 20), axis.text = element_text(size = 18))
+
+base_plot_grob_P <- ggplotGrob(base_plot_P_full)
+
+save(base_plot_P_full, file = "base_plot_P_full")
 
 
 # ecology_plots <-

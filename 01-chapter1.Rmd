@@ -410,7 +410,7 @@ knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet
 
 ## Threatened species
 
-```{r grid-map-nbe-end-lf, message=FALSE, echo=FALSE, warning=FALSE}
+```{r grid-map-nbe-end-lf2, message=FALSE, echo=FALSE, warning=FALSE}
 
 map_lf <-
   leaflet() %>%

@@ -68,9 +68,9 @@ climate_occ_maps_ST <- function(layers_env_ST,
     
     # selected_pts <- selected_pts_poly$selected_pts
     
-  print(dataset$maj_area)
-  
-  print(any(dataset$maj_area == "sao tomé island"))
+  # print(dataset$maj_area)
+  # 
+  # print(any(dataset$maj_area == "sao tomé island"))
   
   extract_pts <-
     raster::extract(layers_env_ST, dataset) %>%

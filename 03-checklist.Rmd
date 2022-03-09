@@ -255,6 +255,7 @@ for (i in 47:nrow(endemic_list)) {
   figs_paths <- get_figs_paths(taxa = taxa_name)
 
   if (any(grepl(".jpg", figs_paths$list_figs$value))) {
+    
     list_fotos <-
       figs_paths$list_figs %>%
       filter(grepl(".jpg", value)) %>%
@@ -285,6 +286,8 @@ for (i in 47:nrow(endemic_list)) {
         copy.mode = TRUE,
         copy.date = FALSE
       )
+    
+    
     
     # list_fotos <-
     #   list.files("./images/", pattern = gsub(" ", "_", taxa_name))
@@ -514,7 +517,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -700,7 +703,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -897,7 +900,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -1084,7 +1087,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -1293,7 +1296,7 @@ if (any(grepl(".jpg", figs_paths$list_figs$value))) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap="", out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", list_fotos))
 ```
 
@@ -1482,7 +1485,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -1680,7 +1683,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -1870,7 +1873,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -2071,7 +2074,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -2264,7 +2267,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -2471,7 +2474,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -2677,7 +2680,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -2866,7 +2869,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 
@@ -3089,7 +3092,7 @@ if (length(all_files_fotos) > 0) {
 
 ```
 
-```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '100%'}
+```{r , eval=show_foto, echo=FALSE, fig.cap=caps, out.width = '20%'}
 knitr::include_graphics(paste0("./images/", "/", all_files_fotos))
 ```
 

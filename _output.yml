@@ -8,11 +8,4 @@ bookdown::bs4_book:
     base: https://github.com/gdauby/saothreath_book
     branch: main
   fig_caption: true
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  extra_dependencies: ["float"]
-  citation_package: natbib
-  keep_tex: yes
 bookdown::epub_book: default

@@ -8,4 +8,5 @@ bookdown::bs4_book:
     base: https://github.com/gdauby/saothreath_book
     branch: main
   fig_caption: true
+  footnotes_inline: false
 bookdown::epub_book: default

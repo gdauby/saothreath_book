@@ -6,23 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 1 Introduction | Red List data book of the plant species endemic to Sao Tomé and Principe</title>
 <meta name="author" content="Tariq Stévart">
-<meta name="author" content="Maria do Ceu Madureira">
-<meta name="author" content="Laura Benitez">
 <meta name="author" content="Davy U. Ikabanga">
-<meta name="author" content="Dilson Madre de Deus">
-<meta name="author" content="Angela Lima">
 <meta name="author" content="Anne-Hélène Paradis">
 <meta name="author" content="Gilles Dauby">
-<meta name="description" content="#&gt; Reading layer `all_impacted_poly_ST' from data source #&gt;  `D:\MonDossierR\sao_tome_principe\all_impacted_poly_ST.shp' #&gt;  using driver `ESRI Shapefile' #&gt; Simple feature collection with 1663...">
+<meta name="description" content="To improve the documentation of the floristic diversity of São Tomé &amp; Príncipe and to identify conservation priorities, several botanical expeditions were undertaken between 2019 and 2021 (Flora...">
 <meta name="generator" content="bookdown 0.23 with bs4_book()">
 <meta property="og:title" content="Chapter 1 Introduction | Red List data book of the plant species endemic to Sao Tomé and Principe">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/gdauby/saothreath_book/introduction.html">
 <meta property="og:image" content="https://github.com/gdauby/saothreath_book/forest.jpg">
-<meta property="og:description" content="#&gt; Reading layer `all_impacted_poly_ST' from data source #&gt;  `D:\MonDossierR\sao_tome_principe\all_impacted_poly_ST.shp' #&gt;  using driver `ESRI Shapefile' #&gt; Simple feature collection with 1663...">
+<meta property="og:description" content="To improve the documentation of the floristic diversity of São Tomé &amp; Príncipe and to identify conservation priorities, several botanical expeditions were undertaken between 2019 and 2021 (Flora...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 1 Introduction | Red List data book of the plant species endemic to Sao Tomé and Principe">
-<meta name="twitter:description" content="#&gt; Reading layer `all_impacted_poly_ST' from data source #&gt;  `D:\MonDossierR\sao_tome_principe\all_impacted_poly_ST.shp' #&gt;  using driver `ESRI Shapefile' #&gt; Simple feature collection with 1663...">
+<meta name="twitter:description" content="To improve the documentation of the floristic diversity of São Tomé &amp; Príncipe and to identify conservation priorities, several botanical expeditions were undertaken between 2019 and 2021 (Flora...">
 <meta name="twitter:image" content="https://github.com/gdauby/saothreath_book/forest.jpg">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +45,8 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Preface</a></li>
+<li><a class="" href="index.html">Editors and contributors</a></li>
+<li><a class="" href="background.html">Background</a></li>
 <li><a class="active" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
 <li><a class="" href="materials-and-methods.html"><span class="header-section-number">2</span> Materials and methods</a></li>
 <li><a class="" href="sp-list.html"><span class="header-section-number">3</span> Checklist</a></li>
@@ -67,26 +64,14 @@
 <h1>
 <span class="header-section-number">1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction"><i class="fas fa-link"></i></a>
 </h1>
-<pre><code>#&gt; Reading layer `all_impacted_poly_ST' from data source 
-#&gt;   `D:\MonDossierR\sao_tome_principe\all_impacted_poly_ST.shp' 
-#&gt;   using driver `ESRI Shapefile'
-#&gt; Simple feature collection with 1663 features and 1 field
-#&gt; Geometry type: MULTIPOLYGON
-#&gt; Dimension:     XY
-#&gt; Bounding box:  xmin: 218292.2 ymin: -540.2105 xmax: 250792.4 ymax: 45739.72
-#&gt; Projected CRS: WGS 84 / UTM zone 32N
-#&gt; Reading layer `roads_ST_main' from data source 
-#&gt;   `D:\MonDossierR\sao_tome_principe\roads_ST_main.shp' 
-#&gt;   using driver `ESRI Shapefile'
-#&gt; Simple feature collection with 177 features and 26 fields
-#&gt; Geometry type: LINESTRING
-#&gt; Dimension:     XY
-#&gt; Bounding box:  xmin: 6.465618 ymin: 0.035495 xmax: 6.749642 ymax: 0.4119817
-#&gt; Geodetic CRS:  WGS 84</code></pre>
-<div id="flora" class="section level2" number="1.1">
+<p>To improve the documentation of the floristic diversity of São Tomé &amp; Príncipe and to identify conservation priorities, several botanical expeditions were undertaken between 2019 and 2021 (<a href="https://cepf-stp-threat-flora.netlify.app/">Flora Ameaçada 2021</a>). Various localities across the island were visited, from the dry North to the wet South, and from the coast to the summit of the Pico de São Tomé at 2 024 m, covering most vegetation types. A book chapter dedicated to the vascular plants is currently being published (Stévart et al 2022). It summarizes most of the current statistics on the flora.</p>
+<div id="floristic-diversity" class="section level2" number="1.1">
 <h2>
-<span class="header-section-number">1.1</span> Flora<a class="anchor" aria-label="anchor" href="#flora"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.1</span> Floristic diversity<a class="anchor" aria-label="anchor" href="#floristic-diversity"><i class="fas fa-link"></i></a>
 </h2>
+<p>The numbers of vascular plant taxa recorded from São Tomé and Príncipe is indicated in this most recent account (Stévart et al 2022): 135 families (of which 29 are introduced), 624 genera (172 introduced), and 1 104 species (301 introduced), along with 12 infraspecific taxa, which including 119 endemic taxa (107 species and 12 infraspecific taxa). However, these figures only concern São Tomé and Príncipe, and extensive inventories have since been conducted on Príncipe (Benitez et al 2018) and on São Tomé (<a href="https://cepf-stp-threat-flora.netlify.app/">Flora Ameaçada 2021</a>). Príncipe has the highest proportion of native flora (88.5 %), followed by São Tomé (80.7 %).
+Main findings of the Botanical Expeditions on São Tomé and Príncipe in 2019-2020 were that more than 90% of the endemic woody species were seen during this field work. Some very rare species were rediscovered, including Balthasaria mannii (Oliv.) Verdc. (Pentaphylacaceae), and <em>Psychotria exellii</em> R. Alves, Figueiredo and A.P. Davis (Rubiaceae), both restricted to the summit of the Pico de São Tomé and not seen for more than 50 years. Even more interesting is the finding of at least 17 species new to science – a number likely to increase as the ongoing identification of specimens continues. The most remarkable of these is a new species of Cleistanthus Hook. f. ex Planch., 1848 (Phyllanthaceae), which is the dominant tree of dry forest remnants in the North of the island. Several earlier collections are deposited in herbaria, but they have not yet been identified. Although locally abundant, the new species of Cleistanthus is highly threatened by wood exploitation and charcoal production, and its habitat is in need of protection. In addition, 42 species represent new country records for São Tomé and Príncipe, most of which are widespread on the mainland.
+Complementing the efforts undertaken since 2016 to understand tree diversity in the southern forests of Príncipe (Benitez et al 2018), since 2019 several botanical expeditions have focused on the drier northern (Flora Ameaçada 2021). This work included areas of secondary or presumably degraded forest, extending from coastal and lowland forests to the northern plateau of the island, but also involved collecting in areas in the south that had not been assessed during previous years, such as the summit of Pico do Príncipe (947 m). These inventories resulted in the discovery of 12 species putatively new to science, seven of which are only known from Príncipe.</p>
 <div class="figure">
 <span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_sampling.html" width="672" height="400px">
@@ -125,13 +110,13 @@ Figure 1.3: An interactive map of Sao Tomé showing the number of threatened tax
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html">Preface</a></div>
+<div class="prev"><a href="background.html">Background</a></div>
 <div class="next"><a href="materials-and-methods.html"><span class="header-section-number">2</span> Materials and methods</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-<li><a class="nav-link" href="#flora"><span class="header-section-number">1.1</span> Flora</a></li>
+<li><a class="nav-link" href="#floristic-diversity"><span class="header-section-number">1.1</span> Floristic diversity</a></li>
 <li><a class="nav-link" href="#endemism"><span class="header-section-number">1.2</span> Endemism</a></li>
 <li><a class="nav-link" href="#threatened-species"><span class="header-section-number">1.3</span> Threatened species</a></li>
 </ul>
@@ -151,7 +136,7 @@ Figure 1.3: An interactive map of Sao Tomé showing the number of threatened tax
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Red List data book of the plant species endemic to Sao Tomé and Principe</strong>" was written by Tariq Stévart, Maria do Ceu Madureira, Laura Benitez, Davy U. Ikabanga, Dilson Madre de Deus, Angela Lima, Anne-Hélène Paradis, Gilles Dauby. It was last built on 2022-03-09.</p>
+    <p>"<strong>Red List data book of the plant species endemic to Sao Tomé and Principe</strong>" was written by Tariq Stévart, Davy U. Ikabanga, Anne-Hélène Paradis, Gilles Dauby. It was last built on 2022-03-11.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

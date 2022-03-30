@@ -98,7 +98,7 @@ climate_occ_maps_ST <- function(layers_env_ST,
     )
   
   if (export_tiff) {
-    figs_paths <- get_figs_paths(taxa_name = taxa)
+    figs_paths <- get_figs_paths(taxa = taxa)
     
     # suppressWarnings(dir.create(
     #   paste0(
@@ -188,7 +188,12 @@ climate_occ_maps_ST <- function(layers_env_ST,
 
 
 
-climate_occ_maps_P <- function(layers_env_P, taxa, dataset, export_tiff = FALSE, device = "eps", shape.pts = 17) {
+climate_occ_maps_P <- function(layers_env_P, 
+                               taxa, 
+                               dataset, 
+                               export_tiff = FALSE, 
+                               device = "eps", 
+                               shape.pts = 17) {
   
   # selected_pts_poly <- 
   #   get_pts_poly_sp(taxa = taxa, dataset = dataset)
@@ -227,7 +232,7 @@ climate_occ_maps_P <- function(layers_env_P, taxa, dataset, export_tiff = FALSE,
   
   if (export_tiff) {
     
-    figs_paths <- get_figs_paths(taxa_name = taxa)
+    figs_paths <- get_figs_paths(taxa = taxa)
     
     if (length(figs_paths$all_files) > 0) {
       

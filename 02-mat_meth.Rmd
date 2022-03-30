@@ -182,6 +182,28 @@ ggsave(
 
 # base_plot_grob <- ggplotGrob(base_plot_ST)
 
+base_plot <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 3,
+             color = "grey",
+             alpha = 0)
+
+base_plot_ST <-
+  base_plot +
+  labs(title = "") +
+  expand_limits(x = 0, y = 0) +
+  # stat_density2d(aes(color = ..level..), lwd = 2) +
+  # scale_colour_gradient(low = NA, high = NA) +
+  scale_x_continuous(limits = c(700, 7050), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 2020), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 40), axis.text = element_text(size = 35))
+
+
 save(base_plot_ST, file = "base_plot_ST")
 
 base_plot_ST_full <-
@@ -373,6 +395,28 @@ ggsave(
 
 
 base_plot_grob_P <- ggplotGrob(base_plot_P)
+
+
+base_plot_P <-
+  ggplot(layers_env_val,
+         aes(x = rainfall_STP, y = elevation_STP)) +
+  geom_point(size = 3,
+             color = "grey",
+             alpha = 0)
+
+base_plot_P <-
+  base_plot_P  +
+  labs(title = "") +
+  expand_limits(x = 0, y = 0) +
+  # stat_density2d(aes(color = ..level..)) +
+  # scale_colour_gradient(low = "black", high = "blue") +
+  scale_x_continuous(limits = c(1500, 4133), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 904), expand = c(0, 0)) +
+  guides(color = "none") +
+  labs(x = "Annual rainfall (mm)",
+       y = "Elevation (m)") +
+  theme_classic()  +
+  theme(axis.title = element_text(size = 40), axis.text = element_text(size = 35))
 
 
 save(base_plot_P, file = "base_plot_P")

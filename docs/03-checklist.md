@@ -191,7 +191,7 @@ Population information is not precisely known for this species.
 
 #### Rationale {.unnumbered}
 
-*Alsophila camerooniana* var. *currorii* was preliminary assessed as VU D2 (Figueiredo 2002), but not published on the IUCN Red List. This variety is a tree fern up to 3 m in height, endemic to Príncipe Island and found in lowland forest from 60 to 350 altitude. It is known from seven collections made between 1919 (Navel 136) and 1957 (Rose 400). Three of these collections do not have precise coordinates and were excluded from this assessment (Strickland s.n., Curror s.n. and Stévart s.n.). Four specimens of *Alsophila camerooniana* were collected in Príncipe from 1998 and 2016 and need further investigation to check if they can be *Alsophila camerooniana* var. *currorii* (Oliveira 98/177, 515, 1796 and Equipa Botanica do Príncipe 56) and were not used for this assessment. The four collections used for this assessment represent three occurrences, none considered as extirpated and all within Príncipe’s Natural Park (PNP). Based on a 2 x 2 km cell size, the AOO of this species is estimated as 12 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 5.1 km2, below the upper threshold for CR status under subcriterion B1. Since the EOO cannot be less than the AOO, we consider the EOO as 12 km2 (the same value as AOO), which is below the upper threshold of the CR category under subcriterion B1. The three occurrences (Rio Bambu-Porco, Ôquê Pipi-Morro do Leste and Infante D. Henrique) were threatened by past plantations but are not currently threatened and represent one location and 1-3 subpopulations. *Alsophila camerooniana* var. *currorii* was probably much more widespread in the lowland forests of the South and thus we infer a reduction of the EOO, area of occupancy, and past decline in the extent and quality of its habitat, and a decline in the number of mature individuals. It is thus assessed as CR B1ab(i,ii,iii,iv,v). 
+*Alsophila camerooniana* var. *currorii* was preliminary assessed as VU D2 (Figueiredo 2002), but not published on the IUCN Red List. This variety is a tree fern up to 3 m in height, endemic to Príncipe Island and found in lowland forest from 60 to 350 altitude. It is known from seven collections made between 1919 (Navel 136) and 1957 (Rose 400). Three of these collections do not have precise coordinates and were excluded from this assessment (Strickland s.n., Curror s.n. and Stévart s.n.). Four specimens of *Alsophila camerooniana* were collected in Príncipe from 1998 and 2016 and need further investigation to check if they can be *Alsophila camerooniana* var. *currorii* (Oliveira 98/177, 515, 1796 and Equipa Botanica do Príncipe 56) and were not used for this assessment. The four collections used for this assessment represent three occurrences, none considered as extirpated and all within Príncipe’s Natural Park (PNP). Based on a 2 x 2 km cell size, the AOO of this species is estimated as 12 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 5.1 km², below the upper threshold for CR status under subcriterion B1. Since the EOO cannot be less than the AOO, we consider the EOO as 12 km² (the same value as AOO), which is below the upper threshold of the CR category under subcriterion B1. The three occurrences (Rio Bambu-Porco, Ôquê Pipi-Morro do Leste and Infante D. Henrique) were threatened by past plantations but are not currently threatened and represent one location and 1-3 subpopulations. *Alsophila camerooniana* var. *currorii* was probably much more widespread in the lowland forests of the South and thus we infer a reduction of the EOO, area of occupancy, and past decline in the extent and quality of its habitat, and a decline in the number of mature individuals. It is thus assessed as CR B1ab(i,ii,iii,iv,v). 
 
 
 #### Habitat and ecology {.unnumbered}
@@ -323,7 +323,7 @@ Very widespread in São Tomé, the species seems to be very present in the cente
 
 #### Rationale {.unnumbered}
 
-*Dryopteris caperata* is a terrestrial plant, with a rhizome up to 90 mm long, and 10 mm in diameter, known from low and montane rain forest. It is known from 16 collections collected between 1885 (Moller 39) and 1998 (Lejoly 244; Oliveira 485, 624, 644). We consider that two occurrences, corresponding to collections made by Moller (39) and Rozeira (4974) are extirpated given that the habitat has been deeply changed in Nova Moca and Monte Café. Two other collections (Oliveira 136; Quintas 10) were not taken into account in this assessment since they are not precisely georeferenced. So, the 12 remaining collections represent twelve occurrences, two of them occurring in PNOST. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 36 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 98 km2, below the upper threshold for CR status under subcriterion B1. Two occurrences inside the PNOST, are not threatened and represent one location. The occurrence around Bom Sucesso is threatened by vegetable plantations and represents one location. We infer that this occurrence will disappear in nearly future. Two occurrences at Macambrara and Tras-os-Montes are threatened by agriculture activities and illegal logging and represent one location. Two occurrences made from Bombain and at the base of Pico Formoso were threatened by past coffee plantations and represent one location. The occurrence at Rio Lemba (Santa Catarina) is threatened by human disturbance, and represents one location. The occurrence made at Milagrosa is threatened by human disturbance, and represents one location. The occurrence around Poiso Alto is threatened by agriculture activities and represents one location. The occurrence at Cascata de São Nicolau is not threatened and represents one location. Therefore, these twelve occurrences represent nine locations (sensu IUCN, 2019) with regard to the most serious plausible threats (small-scale agriculture). Based on these threats and the disappearance of two occurrences, we infer past, current and future continuing decline in its AOO, the extent and the quality of its habitat, in number of locations, and number of individuals due to agriculture. *Dryopteris caperata* is thus assessed as VU B1ab(ii,iii,iv,v)+2ab(ii,iii,iv,v).
+*Dryopteris caperata* is a terrestrial plant, with a rhizome up to 90 mm long, and 10 mm in diameter, known from low and montane rain forest. It is known from 16 collections collected between 1885 (Moller 39) and 1998 (Lejoly 244; Oliveira 485, 624, 644). We consider that two occurrences, corresponding to collections made by Moller (39) and Rozeira (4974) are extirpated given that the habitat has been deeply changed in Nova Moca and Monte Café. Two other collections (Oliveira 136; Quintas 10) were not taken into account in this assessment since they are not precisely georeferenced. So, the 12 remaining collections represent twelve occurrences, two of them occurring in PNOST. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 36 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 98 km², below the upper threshold for CR status under subcriterion B1. Two occurrences inside the PNOST, are not threatened and represent one location. The occurrence around Bom Sucesso is threatened by vegetable plantations and represents one location. We infer that this occurrence will disappear in nearly future. Two occurrences at Macambrara and Tras-os-Montes are threatened by agriculture activities and illegal logging and represent one location. Two occurrences made from Bombain and at the base of Pico Formoso were threatened by past coffee plantations and represent one location. The occurrence at Rio Lemba (Santa Catarina) is threatened by human disturbance, and represents one location. The occurrence made at Milagrosa is threatened by human disturbance, and represents one location. The occurrence around Poiso Alto is threatened by agriculture activities and represents one location. The occurrence at Cascata de São Nicolau is not threatened and represents one location. Therefore, these twelve occurrences represent nine locations (sensu IUCN, 2019) with regard to the most serious plausible threats (small-scale agriculture). Based on these threats and the disappearance of two occurrences, we infer past, current and future continuing decline in its AOO, the extent and the quality of its habitat, in number of locations, and number of individuals due to agriculture. *Dryopteris caperata* is thus assessed as VU B1ab(ii,iii,iv,v)+2ab(ii,iii,iv,v).
 
 
 #### Habitat and ecology {.unnumbered}
@@ -365,7 +365,7 @@ Population information is not sufficiently known for this species, but we sugges
 
 
 
-### ``Dryopteris cicatrica J.P.Roux``
+#### ``Dryopteris cicatrica J.P.Roux``
 
 
 
@@ -450,7 +450,7 @@ The species has only been collected in São Tomé. Its current distribution repr
 
 #### Rationale {.unnumbered}
 
-*Grammitis nigrocincta* is a fern preliminary assessed as VU D2 but not published on the IUCN Red List (Figueiredo 2002). The species is known from 18 collections made between 1956 (Monod 12162 and Thorold 2017) and 2019 (Barberá 2592), in submontane forests, between 450 and 1,852 m altitude. Two collections do not have precise coordinates and were excluded from this assessment (Rozeira s.n. and Wilde 532). The 16 remaining collections represent 15 occurrences (4 in Príncipe, 1 in São Tomé, 1 in Cameroon, 2 in Equatorial Guinea, 6 in Gabon, and 1 in Congo), none are considered as extirpated and representing seven subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 56 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 229,315 km2, above the upper threshold for VU status under subcriterion B1. In Príncipe three occurrences Pico do Príncipe are not threatened and represent one location, and the occurrence at Pico Papagaio is threatened by tourism causing the decrease of the quality of the habitat and promoting invasive species spread and represents one location. In São Tomé, the only occurrence is at the top of Pico São Tomé and is threatened by tourism causing the decrease of the quality of the habitat and promoting invasive species spread representing one location. In Cameroon, the occurrence is not threatened and represents one location. In Equatorial Guinea, the two occurrences at the Parc National de Monte Alén are not threatened and represent one location. In Gabon, three occurrences around Monts de Cristal are threatened, two by logging and one by small-scale agriculture, each one representing one location. The occurrence in Tchimbélé is threatened by hydroelectric facilities and represents one location. The occurrence on the Komo is threatened by illegal logging and represents one location. In Naguila, the occurrence is not threatened and represents one location. In Congo, the occurrence on Bamba Mountain is not threatened and represents one location. Thus, the 15 occurrences of *Grammitis nigrocincta* represent 11 locations (sensu IUCN, 2019), with regard to the most serious plausible threat (logging). Due to these threats, we infer a continuing decline in the extent and quality of its habitat, almost reaching the threshold of VU status, but which cannot currently lead to consider the species under a threatened category according to criterion B. *Grammitis nigrocincta* is therefore assessed as NT.
+*Grammitis nigrocincta* is a fern preliminary assessed as VU D2 but not published on the IUCN Red List (Figueiredo 2002). The species is known from 18 collections made between 1956 (Monod 12162 and Thorold 2017) and 2019 (Barberá 2592), in submontane forests, between 450 and 1,852 m altitude. Two collections do not have precise coordinates and were excluded from this assessment (Rozeira s.n. and Wilde 532). The 16 remaining collections represent 15 occurrences (4 in Príncipe, 1 in São Tomé, 1 in Cameroon, 2 in Equatorial Guinea, 6 in Gabon, and 1 in Congo), none are considered as extirpated and representing seven subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 56 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 229,315 km², above the upper threshold for VU status under subcriterion B1. In Príncipe three occurrences Pico do Príncipe are not threatened and represent one location, and the occurrence at Pico Papagaio is threatened by tourism causing the decrease of the quality of the habitat and promoting invasive species spread and represents one location. In São Tomé, the only occurrence is at the top of Pico São Tomé and is threatened by tourism causing the decrease of the quality of the habitat and promoting invasive species spread representing one location. In Cameroon, the occurrence is not threatened and represents one location. In Equatorial Guinea, the two occurrences at the Parc National de Monte Alén are not threatened and represent one location. In Gabon, three occurrences around Monts de Cristal are threatened, two by logging and one by small-scale agriculture, each one representing one location. The occurrence in Tchimbélé is threatened by hydroelectric facilities and represents one location. The occurrence on the Komo is threatened by illegal logging and represents one location. In Naguila, the occurrence is not threatened and represents one location. In Congo, the occurrence on Bamba Mountain is not threatened and represents one location. Thus, the 15 occurrences of *Grammitis nigrocincta* represent 11 locations (sensu IUCN, 2019), with regard to the most serious plausible threat (logging). Due to these threats, we infer a continuing decline in the extent and quality of its habitat, almost reaching the threshold of VU status, but which cannot currently lead to consider the species under a threatened category according to criterion B. *Grammitis nigrocincta* is therefore assessed as NT.
 
 
 #### Habitat and ecology {.unnumbered}
@@ -525,7 +525,7 @@ Population information is not sufficiently known for this species, but we sugges
 
 #### Rationale {.unnumbered}
 
-*Stenogrammitis tomensis* is an epiphytic fern with rhizome short creeping, scaly, the scales reddish-brown to castaneous (Labiak, 2011). Although two collections (Newton 11; Quintas 11) are often cited, we consider that the attribution of the collection to Newton is a mistake. So, the species is known from only one collection made in 1888 (Quintas 11) around Pico São Tomé. This collection represents one occurrence and one subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 4 km2, below the upper threshold for CR status under Criterion B2. The EOO is not calculated. The habitat of the species is threatened by ecotourism activities. Ecotourism is the most important threat and this occurrence represents one location (sensu IUCN, 2019). Based on this threat, we infer past, current and future continuing decline in the extent and the quality of its habitat. *Stenogrammitis tomensis* is thus assessed as CR B2ab(iii).
+*Stenogrammitis tomensis* is an epiphytic fern with rhizome short creeping, scaly, the scales reddish-brown to castaneous (Labiak, 2011). Although two collections (Newton 11; Quintas 11) are often cited, we consider that the attribution of the collection to Newton is a mistake. So, the species is known from only one collection made in 1888 (Quintas 11) around Pico São Tomé. This collection represents one occurrence and one subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 4 km², below the upper threshold for CR status under Criterion B2. The EOO is not calculated. The habitat of the species is threatened by ecotourism activities. Ecotourism is the most important threat and this occurrence represents one location (sensu IUCN, 2019). Based on this threat, we infer past, current and future continuing decline in the extent and the quality of its habitat. *Stenogrammitis tomensis* is thus assessed as CR B2ab(iii).
 
 
 #### Habitat and ecology {.unnumbered}
@@ -591,7 +591,7 @@ Population information is not precisely known for this species.
 
 #### Rationale {.unnumbered}
 
-*Selaginella mannii* is known from lowland and submontane forests, between 600 and 1,900 m in elevation. It is endemic to São Tomé and Príncipe and is known from 19 collections made between 1885 and 1996. We discarded five collections (Moller 80, s.n., Henriques 4, Chevallier 14552, and Mann 1108) prior to the assessment because their locality of collections is unknown or very imprecise. The 14 remaining collections represent nine occurrences and two subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated to be 24 km2, which falls within the limits of the EN category under Criterion B2. The EOO is calculated as 643 km2, below the upper threshold of the EN category under Criterion B1.
+*Selaginella mannii* is known from lowland and submontane forests, between 600 and 1,900 m in elevation. It is endemic to São Tomé and Príncipe and is known from 19 collections made between 1885 and 1996. We discarded five collections (Moller 80, s.n., Henriques 4, Chevallier 14552, and Mann 1108) prior to the assessment because their locality of collections is unknown or very imprecise. The 14 remaining collections represent nine occurrences and two subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated to be 24 km², which falls within the limits of the EN category under Criterion B2. The EOO is calculated as 643 km², below the upper threshold of the EN category under Criterion B1.
 Five occurrences of *Selaginella mannii* are located within the PNOST and PNOP on both islands. The habitat of only one of them does not appear under threat, whereas the four other occurrences are threatened by invasive plants. Outside the park, the species is threatened by small-scale shifting agriculture and small-holder farming. Indeed, the occurrence Exell 683 is threatened by invasive plants and trampling and represents one location. The collection Moller s.n., Exell 95, 106, 168, all representing the same occurrence, are threatened by the encroachment of carrot crops and represent one location. The occurrence Monod 11784 is threatened by invasive plants and represents one location. The occurrences Rose 151, Paiva 1101, and 1104 (the last two in the same occurrence) are threatened by shifting agriculture and represent two locations. The collections Monod 11904, Paiva 190, and Moller s.n. located within the park in São Tomé are threatened by invasive plants and trampling. We have not found any threat for the occurrence Moller s.n. located within the park. Based on the smallest size of locations in the currently affected areas by small-holder farming, that occurrence represents one location. 
 Based on the main threat which is small-holder farming, the nine occurrences represent seven locations (sensu IUCN 2019), which falls within the limits of the Vulnerable category under the criteria B1 and B2. Shifting agriculture and small-holder farming are leading to a continuing decline in the quality of the species' habitat. The disappearance of the occurrence from São Nicolau leads us to infer a decline in AOO, number of locations, and mature individuals of the species. For these reasons, *Selaginella mannii* is assessed as VU B1ab(ii,iii,iv,v)+2ab(ii,iii,iv,v).
 
@@ -797,7 +797,7 @@ There is no population information for this species.
 
 #### Rationale {.unnumbered}
 
-*Pseudophegopteris henriquesii* (Holttum, 1969) is an herb up to 1 m, known from dense humid forest, between 600 and 1,250 m in elevation. The species is endemic to São Tomé. It is known from 10 collections made between 1885 (Moller s.n.; 45; 49) and 1998 (Paiva 1317). However, we excluded two collections because no locality information is provided. The eight remaining collections represent five occurrences and one subpopulation. Considering forest cover, which is still significant in areas of collection, we do not regard any of these five remaining occurrences as extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 16 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 2.5 km2, above the upper threshold for CR status under subcriteria B1. Since the EOO is less than the AOO, we consider the EOO equal to the AOO (16 km2), below the upper threshold for CR status. Two occurrences located at Nova Moca are threatened by coffee plantations and represent one location. The occurrence at Zampalma is threatened by horticulture and represents one location. We consider that this occurrence will disappear in the near future. Two occurrences at Rosa Calvario are threatened by plantations and represent one location. Therefore, these five occurrences represent three locations (sensu IUCN, 2019), with regard to the most serious plausible threats (small-scale agriculture). Based on the future disappearance of the occurrence in Zampalma, we infer a continuing decline in its AOO, EOO, the number of locations, the extent and the quality of its habitat, and the number of mature individuals. *Pseudophegopteris henriquesii* is thus assessed as EN B1ab(i,ii,iii iv,v)+2ab(i,ii,iii,iv,v).
+*Pseudophegopteris henriquesii* (Holttum, 1969) is an herb up to 1 m, known from dense humid forest, between 600 and 1,250 m in elevation. The species is endemic to São Tomé. It is known from 10 collections made between 1885 (Moller s.n.; 45; 49) and 1998 (Paiva 1317). However, we excluded two collections because no locality information is provided. The eight remaining collections represent five occurrences and one subpopulation. Considering forest cover, which is still significant in areas of collection, we do not regard any of these five remaining occurrences as extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 16 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 2.5 km², above the upper threshold for CR status under subcriteria B1. Since the EOO is less than the AOO, we consider the EOO equal to the AOO (16 km²), below the upper threshold for CR status. Two occurrences located at Nova Moca are threatened by coffee plantations and represent one location. The occurrence at Zampalma is threatened by horticulture and represents one location. We consider that this occurrence will disappear in the near future. Two occurrences at Rosa Calvario are threatened by plantations and represent one location. Therefore, these five occurrences represent three locations (sensu IUCN, 2019), with regard to the most serious plausible threats (small-scale agriculture). Based on the future disappearance of the occurrence in Zampalma, we infer a continuing decline in its AOO, EOO, the number of locations, the extent and the quality of its habitat, and the number of mature individuals. *Pseudophegopteris henriquesii* is thus assessed as EN B1ab(i,ii,iii iv,v)+2ab(i,ii,iii,iv,v).
 
 #### Habitat and ecology {.unnumbered}
 
@@ -1096,7 +1096,7 @@ Even if widespread in São Tomé, the species appears locally rare.
 #### Rationale {.unnumbered}
 
 *Heteradelphia paulowilhelmia* is a small shrub, glabrescent, more rarely up to 1 m high. It is found in open places on secondary submontane rainforest around the Lago Amélia crater, open montane forest, along roads and tracks, plantations, between 600 and 1,700 m in elevation. The species is endemic to São Tomé Island and is known from 47 collections made between 1861 (Mann 1094) and 2020 (Lachenaud 3008) in the North-center and south of the island. Six occurrences (Mann 1094, Moller 198, Campos 6, Paiva 45, Chevalier 13681 and Chevalier 14577) were excluded because they are not precisely located. These 47 specimens represent 19 occurrences. Despite the old age of some collections, we consider that only one of the 19 occurrences represent individuals that are extirpated (Moller 162 at Bom Sucesso).
-The habitat of the species does not appear as fragmented, so the 18 occurrences represent 1 subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 44 km2, and the EOO is calculated as 66 km2, both below the upper threshold for EN status under Criterion B.
+The habitat of the species does not appear as fragmented, so the 18 occurrences represent 1 subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 44 km², and the EOO is calculated as 66 km², both below the upper threshold for EN status under Criterion B.
 Of the 10 occurrences located within the PNOST, 8 are located along the tourist path from Bom Sucesso to Pico São Tomé, and Lago Amélia and 2 were collected in the south part of the park. The occurrences around Lago Amélia and along the path to the Pico are threatened by invasive species, and represent one location, while the two other occurrences are not threatened, representing another location. The seven occurrences located around Bom Sucesso are threatened by field establishment. However, such open space is also profitable for this sunny lover species. The occurrence collected between S. Luís and Chamiço was threatened by former plantations; it represents one location. The occurrence at Macambara is threatened by logging but the ridge is still covered by forest, it represents one location. Overall, we can infer that the habitat of this species in this area is threatened by the invasive species that are planted to delineate the fields, and they represent one location. Finally, one occurrence collected near Bombaim (Formoso Pequeno) was threatened by past large plantations and current logging, representing one location.
 Therefore, these 18 occurrences represent 6 locations (sensu IUCN 2019), with regards to the most important threat (agriculture). Moreover, we infer a past, current, and future continuing decline in the extent and habitat quality and population based on the extirpation of one occurrence at Bom Sucesso. This species is thus assessed as VU B1ab(iii,v)+2ab(iii,v).
 
@@ -1178,7 +1178,7 @@ The population of this species is unknown, but it is confined to a single mounta
 #### Rationale {.unnumbered}
 
 *Heteradelphia paulowilhelmia* is a small shrub, glabrescent, more rarely up to 1 m high. It is found in open places on secondary submontane rainforest around the Lago Amélia crater, open montane forest, along roads and tracks, plantations, between 600 and 1,700 m in elevation. The species is endemic to São Tomé Island and is known from 47 collections made between 1861 (Mann 1094) and 2020 (Lachenaud 3008) in the North-center and south of the island. Six occurrences (Mann 1094, Moller 198, Campos 6, Paiva 45, Chevalier 13681 and Chevalier 14577) were excluded because they are not precisely located. These 47 specimens represent 19 occurrences. Despite the old age of some collections, we consider that only one of the 19 occurrences represent individuals that are extirpated (Moller 162 at Bom Sucesso).
-The habitat of the species does not appear as fragmented, so the 18 occurrences represent 1 subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 44 km2, and the EOO is calculated as 66 km2, both below the upper threshold for EN status under Criterion B.
+The habitat of the species does not appear as fragmented, so the 18 occurrences represent 1 subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 44 km², and the EOO is calculated as 66 km², both below the upper threshold for EN status under Criterion B.
 Of the 10 occurrences located within the PNOST, 8 are located along the tourist path from Bom Sucesso to Pico São Tomé, and Lago Amélia and 2 were collected in the south part of the park. The occurrences around Lago Amélia and along the path to the Pico are threatened by invasive species, and represent one location, while the two other occurrences are not threatened, representing another location. The seven occurrences located around Bom Sucesso are threatened by field establishment. However, such open space is also profitable for this sunny lover species. The occurrence collected between S. Luís and Chamiço was threatened by former plantations; it represents one location. The occurrence at Macambara is threatened by logging but the ridge is still covered by forest, it represents one location. Overall, we can infer that the habitat of this species in this area is threatened by the invasive species that are planted to delineate the fields, and they represent one location. Finally, one occurrence collected near Bombaim (Formoso Pequeno) was threatened by past large plantations and current logging, representing one location.
 Therefore, these 18 occurrences represent 6 locations (sensu IUCN 2019), with regards to the most important threat (agriculture). Moreover, we infer a past, current, and future continuing decline in the extent and habitat quality and population based on the extirpation of one occurrence at Bom Sucesso. This species is thus assessed as VU B1ab(iii,v)+2ab(iii,v).
 
@@ -1384,19 +1384,6 @@ Widespread and abundant on submontane and montane forest, mentioned as one of th
 <p class="caption">(\#fig:unnamed-chunk-262-2)Copyright Lachenaud</p>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### ``Balsaminaceae``
 
 
@@ -1419,7 +1406,7 @@ Widespread and abundant on submontane and montane forest, mentioned as one of th
 
 #### Rationale {.unnumbered}
 
-*Impatiens buccinalis* is a herb up to 1 m, sometimes forming dense subpopulations, known from dense sub-montane rainforest, close to stream; runway edge, disturbed forest, among wet rocks; between 700 and 1,700 m in elevation. The species is endemic to São Tomé island and is known from 39 collections made between 1861 (Mann 1089) and 2020 (Ikabanga 1155, Nguema 3343) in the centre and south-centre of the island. Eight collections were made in the PNOST, and two of them were recently collected (Ikabanga 1155, Nguema 3343 made in 2020). Six collections made around Monte Café (342, 367 made in 1885; Chevalier 13656, 14305; 14287 made in 1905; Espirito Santo 168 made in 1949) and three other collections made in Bom Sucesso (Moller 291 made in 1885; Oliveira 98 made in 1998; Joffroy 110 made in 1999) are excluded from estimated parameters. These 30 specimens represent 20 occurrences. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 48 km2, below the upper threshold for EN status under criterion B2. The EOO is calculated as 74 km2, below the upper threshold for CR status under criteria B1. These 20 occurrences represent one subpopulation. Given the older date of eight collections around Monte Café and Bom Sucesso, and the recent reconversion of part of the Bom Sucesso forest into plantations which affected three collections, we consider these three occurrences (represented by all of the 11 excluded collections) as extirpated. Eight occurrences are located within the PNOST and represent three locations because the northern part of the park is actually used for agriculture. Twelve occurrences are located outside of the protected area and are threatened by agricultural activities that cause the degradation of the quality of the habitat of this species. These 12 occurrences represent two locations. Therefore, these 20 occurrences represent five locations (*sensu* IUCN 2019), with regards to the most important threat (agriculture: plantations). Based on the disappearance of the occurrences around Monte Café and Bom Successo, we inferred a decline in its AOO, its EOO, the quality of its habitat, the number of locations, and the number of mature individuals. We infer a past, current and future continuing decline in the extent and the habitat quality. This species is thus assessed as EN B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+*Impatiens buccinalis* is a herb up to 1 m, sometimes forming dense subpopulations, known from dense sub-montane rainforest, close to stream; runway edge, disturbed forest, among wet rocks; between 700 and 1,700 m in elevation. The species is endemic to São Tomé island and is known from 39 collections made between 1861 (Mann 1089) and 2020 (Ikabanga 1155, Nguema 3343) in the centre and south-centre of the island. Eight collections were made in the PNOST, and two of them were recently collected (Ikabanga 1155, Nguema 3343 made in 2020). Six collections made around Monte Café (342, 367 made in 1885; Chevalier 13656, 14305; 14287 made in 1905; Espirito Santo 168 made in 1949) and three other collections made in Bom Sucesso (Moller 291 made in 1885; Oliveira 98 made in 1998; Joffroy 110 made in 1999) are excluded from estimated parameters. These 30 specimens represent 20 occurrences. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 48 km², below the upper threshold for EN status under criterion B2. The EOO is calculated as 74 km², below the upper threshold for CR status under criteria B1. These 20 occurrences represent one subpopulation. Given the older date of eight collections around Monte Café and Bom Sucesso, and the recent reconversion of part of the Bom Sucesso forest into plantations which affected three collections, we consider these three occurrences (represented by all of the 11 excluded collections) as extirpated. Eight occurrences are located within the PNOST and represent three locations because the northern part of the park is actually used for agriculture. Twelve occurrences are located outside of the protected area and are threatened by agricultural activities that cause the degradation of the quality of the habitat of this species. These 12 occurrences represent two locations. Therefore, these 20 occurrences represent five locations (*sensu* IUCN 2019), with regards to the most important threat (agriculture: plantations). Based on the disappearance of the occurrences around Monte Café and Bom Successo, we inferred a decline in its AOO, its EOO, the quality of its habitat, the number of locations, and the number of mature individuals. We infer a past, current and future continuing decline in the extent and the habitat quality. This species is thus assessed as EN B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
 
 
 #### Habitat and ecology {.unnumbered}
@@ -1499,7 +1486,7 @@ Population information is not known for this species.
 
 #### Rationale {.unnumbered}
 
-*Impatiens manteroana* is a herb up to 0.5 m high, sometimes forming dense mats of individuals. It is known from dense rainforest, among wet rocks in shaded humid places; between 100 and 1,200 m in elevation. The species is endemic to Príncipe island and is known by 26 collections made between 1932 (Exell 682) and 2019 (Equipa Botanica do Príncipe 390) in the south-center of the island. Two collections (Oliveira 871, 977) were made in 2004 in the Botanical Garden of Bom Sucesso, so they were not considered for this evaluation. In Príncipe, 23 collections were made inside the protected area (PNOP) and one (Oliveira 98) outside, at Rio Banzù. Overall, these 24 specimens represent 15 occurrences, and one or two subpopulations. Considering the forest coverage, which is still important in these areas, we consider that none of the 15 occurrences has been extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 28 km2, below the upper threshold of the EN category under subcriterion B2. The EOO is calculated as 21.5 km2, below the upper threshold of the CR category under subcriterion B1. Based on criterion B, the EOO value is less than the AOO, so we consider the AOO equal to the EOO (28 km2). Concerning the 14 occurrences located within the PNP, three of them located at Pico Papagaio are threatened by ecotourism and represent one location. The occurrence located in the Southern part (around Maria Correia) was threatened by past coffee plantations and represents one location. The occurrence at Pico Mesa was threatened by small-scale agriculture and represents one location. The nine other occurrences are not clearly threatened and represent one location. These 14 occurrences, therefore, represent four locations. The occurrence of Rio Banzù is threatened by palm oil and cacao plantations (large-scale agriculture) that will induce degradation of the quality of the habitat of this species. This occurrence represents one location. As a consequence, these 15 occurrences represent five locations (sensu IUCN, 2019), with regards to the most important threat (large-scale agriculture). Based on the past, current and future threats on the occurrences around Rio Banzù, Pico A Mesa and Pico Papagaio, we inferred a decline in the quality of its habitat. We could infer a future continuing decline in the extent and the quality of its habitat. *Impatiens manteroana* is thus assessed as EN B1ab(iii)+2ab(iii).
+*Impatiens manteroana* is a herb up to 0.5 m high, sometimes forming dense mats of individuals. It is known from dense rainforest, among wet rocks in shaded humid places; between 100 and 1,200 m in elevation. The species is endemic to Príncipe island and is known by 26 collections made between 1932 (Exell 682) and 2019 (Equipa Botanica do Príncipe 390) in the south-center of the island. Two collections (Oliveira 871, 977) were made in 2004 in the Botanical Garden of Bom Sucesso, so they were not considered for this evaluation. In Príncipe, 23 collections were made inside the protected area (PNOP) and one (Oliveira 98) outside, at Rio Banzù. Overall, these 24 specimens represent 15 occurrences, and one or two subpopulations. Considering the forest coverage, which is still important in these areas, we consider that none of the 15 occurrences has been extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 28 km², below the upper threshold of the EN category under subcriterion B2. The EOO is calculated as 21.5 km², below the upper threshold of the CR category under subcriterion B1. Based on criterion B, the EOO value is less than the AOO, so we consider the AOO equal to the EOO (28 km²). Concerning the 14 occurrences located within the PNP, three of them located at Pico Papagaio are threatened by ecotourism and represent one location. The occurrence located in the Southern part (around Maria Correia) was threatened by past coffee plantations and represents one location. The occurrence at Pico Mesa was threatened by small-scale agriculture and represents one location. The nine other occurrences are not clearly threatened and represent one location. These 14 occurrences, therefore, represent four locations. The occurrence of Rio Banzù is threatened by palm oil and cacao plantations (large-scale agriculture) that will induce degradation of the quality of the habitat of this species. This occurrence represents one location. As a consequence, these 15 occurrences represent five locations (sensu IUCN, 2019), with regards to the most important threat (large-scale agriculture). Based on the past, current and future threats on the occurrences around Rio Banzù, Pico A Mesa and Pico Papagaio, we inferred a decline in the quality of its habitat. We could infer a future continuing decline in the extent and the quality of its habitat. *Impatiens manteroana* is thus assessed as EN B1ab(iii)+2ab(iii).
 
 
 #### Habitat and ecology {.unnumbered}
@@ -1654,7 +1641,7 @@ Population information is not precisely known for this species, but we consider 
 
 #### Rationale {.unnumbered}
 
-*Begonia annobonensis* is a herb, 50 cm high, known from volcanic rock near the coast, old fallow, cocoa plantation, and old buildings; below 1,000 m in elevation. The species is known from 26 collections made between 1841 (Curror 9) and 2014 (Berthold & Gardner 49) in São Tomé and Príncipe, Annobón (Equatorial Guinea) and Cameroon. The preferential habitat is rocky cliffs, which is little or not impacted in the area where the species occurs. We consider that none of the occurrences is extirpated. One collection (Quintas 143) is not precisely located, so it is not considered for this evaluation. These 25 collections represent 24 occurrences and 4 or 5 subpopulations. Based on a 2 x 2 km cell size, the AOO  of this species is estimated as 76 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 35,214 km2, above the upper threshold for VU status under subcriteria B1. In Annobón, the two occurrences located around San Antonio are threatened by urbanization, and represent one location; the three other occurrences located outside the protected area are threatened by sand extraction, and represent another location; and the two occurrences within Annobón Natural Reserve represent a third location. The occurrence located in the north of Príncipe island is threatened by coconut plantation and represents one location. In Cameroon, the occurrence located at Limbé is threatened by urbanization and agriculture activities, and the one of Batoké is threatened by oil palm plantations. No threat is known for the occurrence in Rio del Rey. So, these three occurrences represent three locations. In São Tomé, the five occurrences located between Santa Catarina and Ponta Figo (outside PNOST) are threatened by small-scale agriculture and represent one location. The two occurrences located around São Miguel are threatened by past large-scale agriculture and represent one location. The occurrence located around Binda is threatened by large-scale agriculture. The occurrence located at Vila Clothilde is threatened by oil palm plantations. These two occurrences represent two locations. The two occurrences located at Monte Cabumbé and Rio Fugo (within PNOST) are not threatened and represent together one location. The two other occurrences located within the PNOST are also threatened by small-scale agriculture, and represent one location. Therefore, these 24 occurrences represent 12 locations (sensu IUCN, 2019), with regard to the most serious plausible threats (large-scale agriculture and urbanization). Based on urbanization at Limbé and San Antonio de Palé, we expect that two occurrences will disappear in a near future, and the species would become threatened. We thus infer a future decline in its AOO, its EOO, the number of locations, and the number of mature individuals. Moreover, we infer a current and a future continuing decline in the extent and habitat quality. *B. annobonensis* is thus assessed as NT as it nearly qualifies for listing as VU B2ab(i,ii,iii,iv,v).
+*Begonia annobonensis* is a herb, 50 cm high, known from volcanic rock near the coast, old fallow, cocoa plantation, and old buildings; below 1,000 m in elevation. The species is known from 26 collections made between 1841 (Curror 9) and 2014 (Berthold & Gardner 49) in São Tomé and Príncipe, Annobón (Equatorial Guinea) and Cameroon. The preferential habitat is rocky cliffs, which is little or not impacted in the area where the species occurs. We consider that none of the occurrences is extirpated. One collection (Quintas 143) is not precisely located, so it is not considered for this evaluation. These 25 collections represent 24 occurrences and 4 or 5 subpopulations. Based on a 2 x 2 km cell size, the AOO  of this species is estimated as 76 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 35,214 km², above the upper threshold for VU status under subcriteria B1. In Annobón, the two occurrences located around San Antonio are threatened by urbanization, and represent one location; the three other occurrences located outside the protected area are threatened by sand extraction, and represent another location; and the two occurrences within Annobón Natural Reserve represent a third location. The occurrence located in the north of Príncipe island is threatened by coconut plantation and represents one location. In Cameroon, the occurrence located at Limbé is threatened by urbanization and agriculture activities, and the one of Batoké is threatened by oil palm plantations. No threat is known for the occurrence in Rio del Rey. So, these three occurrences represent three locations. In São Tomé, the five occurrences located between Santa Catarina and Ponta Figo (outside PNOST) are threatened by small-scale agriculture and represent one location. The two occurrences located around São Miguel are threatened by past large-scale agriculture and represent one location. The occurrence located around Binda is threatened by large-scale agriculture. The occurrence located at Vila Clothilde is threatened by oil palm plantations. These two occurrences represent two locations. The two occurrences located at Monte Cabumbé and Rio Fugo (within PNOST) are not threatened and represent together one location. The two other occurrences located within the PNOST are also threatened by small-scale agriculture, and represent one location. Therefore, these 24 occurrences represent 12 locations (sensu IUCN, 2019), with regard to the most serious plausible threats (large-scale agriculture and urbanization). Based on urbanization at Limbé and San Antonio de Palé, we expect that two occurrences will disappear in a near future, and the species would become threatened. We thus infer a future decline in its AOO, its EOO, the number of locations, and the number of mature individuals. Moreover, we infer a current and a future continuing decline in the extent and habitat quality. *B. annobonensis* is thus assessed as NT as it nearly qualifies for listing as VU B2ab(i,ii,iii,iv,v).
 
 
 #### Habitat and ecology {.unnumbered}
@@ -1746,7 +1733,7 @@ Population information is not known for this species.
 
 #### Rationale {.unnumbered}
 
-*Begonia baccata* grows in open areas in rainforest (often secondary), usually on steep wet slopes, and it is found mostly below 1,500 m in elevation, rarely down to sea level. The species is endemic to São Tomé and is known from 78 collections made between 1861 (Mann 1087) and 2020 (Ikabanga 1031, Lima 23, Nguema 3318) in the north-center and south of the island. Two collections (Moller 146, Mann 1087) were not taken into account in this assessment since they are not precisely georeferenced. Seven occurrences  located around Bom Sucesso are considered as extirpated given the intensity of agricultural activities (vegetable plantations) present in this locality. The occurrence (Chevalier 14208) at Porto Alegre is extirpated. These ten collections were not considered for this evaluation. The 66 remaining collections represent 44 occurrences. The dispersal is assumed to be by birds (Plana 2002). We, therefore, consider these 49 occurrences as one subpopulation. Twenty-seven occurrences of them are located outside of PNOST. Based on a 2 x 2 km cell size, the AOO  of this species is estimated as 152 km2, and the EOO is calculated as 399 km2, both below the upper threshold for EN status under criterion B. Among the 17 occurrences within PNOST, seven occurrences of them (along the tourist path) and one (at the camp near Morro Vilela) are threatened by ecotourism activity and represent one location. The occurrence located at Bom Sucesso (within PNOST) is threatened by agricultural activities (vegetable plantations) and represents one location. The three occurrences at Monte Cabumbé are not threatened and represent one location. The occurrence located at Lembà and the four last occurrences in the south of part PNOST could be threatened by agriculture and represent one location. Therefore these 17 occurrences represent three locations. Among the 32 occurrences outside PNOST, four are located in the south of the island, two threatened by small-scale agricultural activities and two are not threatened; these four occurrences represent two locations, among which two will probably disappear. The ten occurrences located in the west of the island are threatened by urbanization at Santa Catarina, by small-scale agriculture (near limit west of PNOST) and by past and current large-scale agriculture (Binda region), so they represent three locations. The five occurrences located in the north (outside protected areas) were threatened by past large-scale agriculture (Chamiço region) and represent one location. The occurrence located around Bom Sucesso is threatened by agricultural activities (vegetable plantations) and represents one location. We infer that they will disappear in near future. The three last occurrences located at the southwestern of Macambrarà near PNOST are threatened by illegal logging. So, these three occurrences represent one location. Therefore, these 44 occurrences represent 17 locations (sensu IUCN, 2019), with regards to the most serious plausible threats (small-scale agriculture and urbanization). Despite the disappearance of seven occurrences in the south part of island, this species occurs mostly on wet slopes that are usually too steep for agriculture and is, therefore, able to survive even within quite degraded areas. The species is not severely fragmented and does not meet the threshold of any threatened categories under criterion B. We cannot apply criterion A because less than 10% and 8% of respectively EOO and AOO are expected to disappear (calculated by GeoCAT). *Begonia baccata*  is therefore assessed as LC.
+*Begonia baccata* grows in open areas in rainforest (often secondary), usually on steep wet slopes, and it is found mostly below 1,500 m in elevation, rarely down to sea level. The species is endemic to São Tomé and is known from 78 collections made between 1861 (Mann 1087) and 2020 (Ikabanga 1031, Lima 23, Nguema 3318) in the north-center and south of the island. Two collections (Moller 146, Mann 1087) were not taken into account in this assessment since they are not precisely georeferenced. Seven occurrences  located around Bom Sucesso are considered as extirpated given the intensity of agricultural activities (vegetable plantations) present in this locality. The occurrence (Chevalier 14208) at Porto Alegre is extirpated. These ten collections were not considered for this evaluation. The 66 remaining collections represent 44 occurrences. The dispersal is assumed to be by birds (Plana 2002). We, therefore, consider these 49 occurrences as one subpopulation. Twenty-seven occurrences of them are located outside of PNOST. Based on a 2 x 2 km cell size, the AOO  of this species is estimated as 152 km², and the EOO is calculated as 399 km², both below the upper threshold for EN status under criterion B. Among the 17 occurrences within PNOST, seven occurrences of them (along the tourist path) and one (at the camp near Morro Vilela) are threatened by ecotourism activity and represent one location. The occurrence located at Bom Sucesso (within PNOST) is threatened by agricultural activities (vegetable plantations) and represents one location. The three occurrences at Monte Cabumbé are not threatened and represent one location. The occurrence located at Lembà and the four last occurrences in the south of part PNOST could be threatened by agriculture and represent one location. Therefore these 17 occurrences represent three locations. Among the 32 occurrences outside PNOST, four are located in the south of the island, two threatened by small-scale agricultural activities and two are not threatened; these four occurrences represent two locations, among which two will probably disappear. The ten occurrences located in the west of the island are threatened by urbanization at Santa Catarina, by small-scale agriculture (near limit west of PNOST) and by past and current large-scale agriculture (Binda region), so they represent three locations. The five occurrences located in the north (outside protected areas) were threatened by past large-scale agriculture (Chamiço region) and represent one location. The occurrence located around Bom Sucesso is threatened by agricultural activities (vegetable plantations) and represents one location. We infer that they will disappear in near future. The three last occurrences located at the southwestern of Macambrarà near PNOST are threatened by illegal logging. So, these three occurrences represent one location. Therefore, these 44 occurrences represent 17 locations (sensu IUCN, 2019), with regards to the most serious plausible threats (small-scale agriculture and urbanization). Despite the disappearance of seven occurrences in the south part of island, this species occurs mostly on wet slopes that are usually too steep for agriculture and is, therefore, able to survive even within quite degraded areas. The species is not severely fragmented and does not meet the threshold of any threatened categories under criterion B. We cannot apply criterion A because less than 10% and 8% of respectively EOO and AOO are expected to disappear (calculated by GeoCAT). *Begonia baccata*  is therefore assessed as LC.
 
 
 #### Habitat and ecology {.unnumbered}
@@ -1819,7 +1806,7 @@ Population information is not known for this species.
 
 #### Rationale {.unnumbered}
 
-*Begonia crateris* is a shrub up to 4 m high. It has been suggested that it might be synonymous with *B. baccata* (Ferreira, 1965) but Reitsma (1985) and Plana (2002) considered it as a distinct species, a view supported by recent fieldwork. One collection (Chevalier 13748) was made around Boa Entrada (300 m in elevation). Based on lower elevation and degradation of habitat at Boa Entrada, we consider that this collection probably represents a cultivated subpopulation, and whether the occurrence still exists is not clear. So, this collection was excluded from this assessment. The 20 remaining collections represent 11 occurrences, none of which are considered as extirpated. Three occurrences are located in the area of Roça Calvàrio, outside of the PNOST. The seeds are dispersed by birds (Plana, 2002), so these 11 occurrences represent 1 or 2 subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated to be 24 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 34.5 km2, below the upper threshold for CR status under subcriterion B1. The five occurrences along the tourist path are threatened by ecotourism, and represent one location. Two occurrences around Lagoa Amelia (within PNOST), and three others around Macambrará (outside of the protected area), are both threatened for traditional medicinal use, especially at Lagoa Amelia. Indeed, leaves of this species are used to make a tea to prevent abortion and local people often cut leafy stems from adult individuals. The three occurrences located around Macambará are also threatened by illegal forest logging that affects the species’ habitat. Despite occurring within and outside PNOST, the five occurrences (Macambará and Lagoa Amelia) are affected simultaneously by a given and represent one location. The occurrence of Monte Cabumbé is not threatened and represents one location. Consequently, these 11 occurrences represent three locations (sensu IUCN, 2019), with regard to the most important threat (traditional medicinal use) which induces a continuing decline in the number of mature individuals by cutting adult individuals. We also infer a past, current and future continuing decline in the extent and habitat quality. This species is thus assessed as EN B1ab(iii,v)+2ab(iii,v).
+*Begonia crateris* is a shrub up to 4 m high. It has been suggested that it might be synonymous with *B. baccata* (Ferreira, 1965) but Reitsma (1985) and Plana (2002) considered it as a distinct species, a view supported by recent fieldwork. One collection (Chevalier 13748) was made around Boa Entrada (300 m in elevation). Based on lower elevation and degradation of habitat at Boa Entrada, we consider that this collection probably represents a cultivated subpopulation, and whether the occurrence still exists is not clear. So, this collection was excluded from this assessment. The 20 remaining collections represent 11 occurrences, none of which are considered as extirpated. Three occurrences are located in the area of Roça Calvàrio, outside of the PNOST. The seeds are dispersed by birds (Plana, 2002), so these 11 occurrences represent 1 or 2 subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated to be 24 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 34.5 km², below the upper threshold for CR status under subcriterion B1. The five occurrences along the tourist path are threatened by ecotourism, and represent one location. Two occurrences around Lagoa Amelia (within PNOST), and three others around Macambrará (outside of the protected area), are both threatened for traditional medicinal use, especially at Lagoa Amelia. Indeed, leaves of this species are used to make a tea to prevent abortion and local people often cut leafy stems from adult individuals. The three occurrences located around Macambará are also threatened by illegal forest logging that affects the species’ habitat. Despite occurring within and outside PNOST, the five occurrences (Macambará and Lagoa Amelia) are affected simultaneously by a given and represent one location. The occurrence of Monte Cabumbé is not threatened and represents one location. Consequently, these 11 occurrences represent three locations (sensu IUCN, 2019), with regard to the most important threat (traditional medicinal use) which induces a continuing decline in the number of mature individuals by cutting adult individuals. We also infer a past, current and future continuing decline in the extent and habitat quality. This species is thus assessed as EN B1ab(iii,v)+2ab(iii,v).
 
 
 #### Habitat and ecology {.unnumbered}
@@ -1895,7 +1882,7 @@ Population information is not precisely known for this species.
 
 #### Rationale {.unnumbered}
 
-*Begonia fusialata* var. *príncipensis* is an herb up to 3 m long and is found on wet rocks in half shade; below 200 m in elevation. The taxon is endemic to Príncipe island, and is known from 9 collections made probably between 1857 (Barter 2037) and 1986 (de Wilde 8819). The first collection (Barter 2037) is not precisely located. One collection (Van Veldhuizen 1035) was made from Wageningen greenhouse (Netherlands) without clear locality of collection. Both collections (Barter 2037; Van Veldhuizen 1035) have been excluded from estimated parameters. Four collections (Rose 443; 464; 474; 475) were made in 1956 from Porto Real in the northern center part of Príncipe. Three collections were made from the south part of the island, two of them (de Wilde 399; 8819) from Pico Mesa and the last collection (Rozeira 2566) was made from Caminho de Macoia. Considering the rock coverage, which is still important in places of other collections, we consider that none of all occurrences are extirpated. These seven specimens represent three occurrences. The dispersal ability is conferred by bird vectors (Plana, 2002), so these three occurrences represent one subpopulation. Based on a 2 x 2 km grid cell size, the AOO and the EOO of this species are respectively estimated as 8 km2 and 5.3 km², both below the upper threshold for CR status under Criterion B. The estimated EOO is lower than the AOO, we thus consider EOO equal to AOO (8 km2), which is below the upper threshold for CR status under Criterion B1. The occurrence from Porto Real is threatened by stone quarries, house constructions and cacao agriculture. This occurrence represents one location. Two occurrences are located within the protected area, the PNOP, but the occurrence located at Pico Mesa was threatened by old plantation for subsistence and represents one location. The occurrence of Caminho de Macoia is not clearly threatened and represents one location. We infer that the presence of stone quarries induces a decline in the number of mature individuals. All of the three occurrences represent three locations (sensu IUCN, 2019) with the most important threat (stone quarries). Based on the past, current and future threats to these occurrences, we inferred a decline in the quality of its habitat. We could infer a future continuing decline in the extent and habitat quality, and the number of mature individuals. This sub-species is thus assessed as EN B1ab(iii,v)+2ab(iii,v).
+*Begonia fusialata* var. *príncipensis* is an herb up to 3 m long and is found on wet rocks in half shade; below 200 m in elevation. The taxon is endemic to Príncipe island, and is known from 9 collections made probably between 1857 (Barter 2037) and 1986 (de Wilde 8819). The first collection (Barter 2037) is not precisely located. One collection (Van Veldhuizen 1035) was made from Wageningen greenhouse (Netherlands) without clear locality of collection. Both collections (Barter 2037; Van Veldhuizen 1035) have been excluded from estimated parameters. Four collections (Rose 443; 464; 474; 475) were made in 1956 from Porto Real in the northern center part of Príncipe. Three collections were made from the south part of the island, two of them (de Wilde 399; 8819) from Pico Mesa and the last collection (Rozeira 2566) was made from Caminho de Macoia. Considering the rock coverage, which is still important in places of other collections, we consider that none of all occurrences are extirpated. These seven specimens represent three occurrences. The dispersal ability is conferred by bird vectors (Plana, 2002), so these three occurrences represent one subpopulation. Based on a 2 x 2 km grid cell size, the AOO and the EOO of this species are respectively estimated as 8 km² and 5.3 km², both below the upper threshold for CR status under Criterion B. The estimated EOO is lower than the AOO, we thus consider EOO equal to AOO (8 km²), which is below the upper threshold for CR status under Criterion B1. The occurrence from Porto Real is threatened by stone quarries, house constructions and cacao agriculture. This occurrence represents one location. Two occurrences are located within the protected area, the PNOP, but the occurrence located at Pico Mesa was threatened by old plantation for subsistence and represents one location. The occurrence of Caminho de Macoia is not clearly threatened and represents one location. We infer that the presence of stone quarries induces a decline in the number of mature individuals. All of the three occurrences represent three locations (sensu IUCN, 2019) with the most important threat (stone quarries). Based on the past, current and future threats to these occurrences, we inferred a decline in the quality of its habitat. We could infer a future continuing decline in the extent and habitat quality, and the number of mature individuals. This sub-species is thus assessed as EN B1ab(iii,v)+2ab(iii,v).
 
 
 
@@ -1945,8 +1932,1255 @@ Population information is not precisely known for this species.
 
 
 
+#### ``Begonia loranthoides Hook.f. subsp. loranthoides``
 
 
 
 
 
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/EN.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Begonia loranthoides* subsp. *loranthoides* is known from 23 collections made between 1858 (Barter) and 1980 (de Wilde 437). The first collections were made in Príncipe island (Barter 1940, 1946, 2010) but they are not precisely located. Two other collections (Moller 7 in 1885 and Mason 3109) are without localities. There are five collections (Van Veldhuizen 443, 625, 1000; de Wilde 8762 8776) made from Wageningen greenhouse (Netherlands), from a specimen brought from São Tomé. All of these 10 collections have been excluded from estimated parameters because of lack of precision. The 13 remaining specimens represent ten occurrences, seven in Príncipe island and three in São Tomé. The dispersal is assumed to be by birds (Plana, 2002). We, therefore, consider these eleven occurrences as 2-4 subpopulations. Based on a 2 x 2 km grid cell size, the AOO and the EOO of this subspecies are respectively estimated as 36 km² and 1720 km², both below the upper threshold for EN status under Criterion B. Considering the rocky habitat, which is still important in places of these collections, we consider that none of the occurrences are extirpated. The occurrence at Príncipe island near Porto Real is threatened by stone quarries, house constructions and cacao agriculture. This occurrence represents one location, and we infer that presence of stone quarries induces a strong decline in habitat quality and the number of mature individuals. We also consider that this occurrence will disappear in a near future. Five occurrences are located within the protected area of Príncipe Natural Park, one of them with no threats (Pico Mesa) representing one location. The occurrence located at Praia Rei (Cachocho) -Maria Fernandes was threatened by old plantation and animal breeding, and thus represents one location. The three occurrences located between Infante D. Henrique - Picos Mencorne - Neves Ferreira were threatened by old plantations and represent one location. The occurrence of Sta Trindade - Pico Papagaio is threatened by touristic activities and represents one location. On SãoTomé island, the occurrence from Trás-os-Montes is threatened by illegal logging and small-scale agriculture, and represents one location. The occurrence from Novo Brasil is threatened for subsistence agriculture and represents one location, and the only occurrence that is located within the protected area of Obô Natural Park, with no threats (Pico de SãoTomé) represents one location. All of the 10 occurrences represent 8-9 locations (sensu IUCN, 2019) with the most important threats (stone quarries and small-scale agriculture). Based on the past, current and future threats to these occurrences, we could infer a past, present and future continuing decline in the extent and the quality of its habitat, and the number of mature individuals. The future disappearance of occurrence from Porto Real will also induce a decline in its AOO, EOO, and the number of locations. This variety is thus assessed as VU B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species usually grows as an epiphyte in the crown of tall forest trees, sometimes rupestral among rocks, in places exposed to the light; between 0 and 1,800 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+There are no known uses of this species.
+
+#### Population {.unnumbered}
+Population information is not known for this subspecies, but the dispersal is assumed to be by birds (Plana, 2002).
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_loranthoides_subsp._loranthoides.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-362)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-364-1.png" alt="Occurrences of Begonia loranthoides subsp. loranthoides in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-364)Occurrences of Begonia loranthoides subsp. loranthoides in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-365-1.png" alt="Occurrences of Begonia loranthoides subsp. loranthoides in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-365)Occurrences of Begonia loranthoides subsp. loranthoides in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### ``Begonia molleri (C.DC.) Warb.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Begonia molleri* is an epiphytic herb up to 1.3 m high. The species is endemic to São Tomé island and it is known from four collections made between 1885 (Moller 3; 177) and 1980 (de Wilde 256). One collection (Moller 3) is not considered for this evaluation because it is not precisely located. The three remaining collections represent three occurrences. Although the habitat was very degraded in places of collection, we consider that none of all occurrences has been extirpated because not all trees are cut in coffee plantations. The dispersal ability is conferred by bird vectors (Plana, 2002), so these three occurrences (all located outside the PNOST) represent one or two subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 12 km², below the upper threshold of the EN category under subcriterion B2. The EOO is calculated as 40 km², below the upper threshold of the CR category under subcriterion B1. The two occurrences at Nova Moca and Milaglosa are threatened by coffee plantation activities and represent two locations. The occurrence located around Praia Grande is threatened by cacao plantation activities, and probably by palm oil plantations. This occurrence represents one location. Therefore, these three occurrences represent three locations (sensu IUCN 2019), with regards to the most important threat (large-scale agriculture). We infer a past and a future decline in the number of mature individuals. Moreover, we infer a past, current, and future continuing decline in the extent and the quality of its habitat. *Begonia molleri* is thus assessed as EN B1ab(iii,v)+2ab(iii,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species is an epiphytic plant that occurs in lowland and submontane forests, between 100 and 1,100 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+There are no known uses of this species.
+
+#### Population {.unnumbered}
+*Begonia molleri* appears to be rare, so population information is little known for this species.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_molleri.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-375)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-377-1.png" alt="Occurrences of Begonia molleri in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-377)Occurrences of Begonia molleri in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### ``Begonia subalpestris A.Chev.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/EN.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Begonia subalpestris* is an epiphyte herb up to 2 m high. The species is endemic to São Tomé island and is known from 28 collections made between 1905 (Chevalier 13752) and 2019 (Lachenaud 2873). Two collections (Chevalier 13752, Groenendijk 137) are not considered for this evaluation because they are not precisely located. The remaining 26 specimens represent 16 occurrences. Considering the habitat, which is still relatively intact where the species has been collected, we consider that none of these occurrences has been extirpated. The dispersal ability is conferred by bird vectors (Plana 2002), so these 16 occurrences represent one or two subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 40 km², below the upper threshold of the EN category under subcriterion B2. The EOO is calculated as 58.8 km², below the upper threshold of the CR status under subcriterion B1. The nine occurrences located along the tourist path within the PNOST are threatened by ecotourism activity and represent one location. The occurrence located at Monte Cabumbé is not threatened and represents one location. The two occurrences located at Macambrarà and Campo Grande (outside of protected area) are threatened by agricultural activities (plantations of vegetables) that induce degradation of the quality of the habitat of this species. These two occurrences will probably disappear in a near future and represent one location. The occurrence located at Monte Café is threatened by agricultural activities (coffee plantations) and represents one location. The three last occurrences located at the southwestern of Macambrarà near PNOST are not currently under any threat, but they could be threatened in the near future by ecotourism. So, these three occurrences represent one location. Therefore, these 16 occurrences represent five locations (sensu IUCN 2019), with regards to the most important threat (shifting agriculture). Based on the disappearance of the occurrences in the surroundings of Macambrarà and Campo Grande, we infer a past, and a future decline in its AOO, EOO, the number of locations, and the number of mature individuals. Moreover, we infer a past, current and future continuing decline in the extent and the quality of its habitat. This species is thus assessed as EN B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species occurs in submontane and montane rainforest, between 800 and 2,000 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+This species is in cultivation as an ornamental.
+
+#### Population {.unnumbered}
+Population information is not known for this species.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_subalpestris.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-388)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-390-1.png" alt="Occurrences of Begonia subalpestris in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-390)Occurrences of Begonia subalpestris in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Begonia_subalpestris_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-394-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Begonia_subalpestris_1_Poncet.jpg" alt="Copyright Poncet" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-394-2)Copyright Poncet</p>
+</div><div class="figure">
+<img src="./images//Begonia_subalpestris_2_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-394-3)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Begonia_subalpestris_3_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-394-4)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Begonia_subalpestris_4_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-394-5)Copyright Lachenaud</p>
+</div>
+
+
+
+
+
+#### ``Begonia thomeana C.DC.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Begonia thomeana* is an epiphyte climber herb. The species occurs in São Tomé and Gabon (Plana 2002). It is known from 17 collections and 7 observations made between 1888 (Quintas 5; 147;1273; 1339) and 2019 (Eduardo 2). Three collections (Quintas 5; 147; 1339) are not considered for this evaluation because they are not precisely located. The 14 remaining specimens and all observations represent 17 occurrences, four of them located in Gabon. Although the habitat was very degraded in places of collection, we consider that none of all occurrences has been extirpated. The dispersal ability is conferred by bird vectors (Plana, 2002), so these 17 occurrences (four of them located within PNOST) represent two subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 44 km², below the upper threshold of the EN category under subcriterion B2. The EOO is calculated as 3541 km², below the upper threshold of the EN category under subcriterion B1. In Gabon, the three occurrences located on Mont Songo are not threatened, but the collection around (in lower elevation) is threatened by logging. So, these four occurrences represent two locations. In São Tomé, the four occurrences within the PNOST are not threatened and represent one location. Two occurrences around Bom Sucesso are threatened by horticulture activities and represent one location. We consider that these two occurrences will disappear in near future. Three occurrences at Trás-os-Montes and Calvário are threatened by plantation activities and logging, and represent one location. The occurrence around Bombaim is threatened by plantation activities and represents one location. Therefore, these 17 occurrences represent six locations (sensu IUCN 2019), with regards to the most important threat (small-scale agriculture). We infer a past, and a future decline in its EOO, AOO, the number of locations, and the number of mature individuals. Moreover, we infer a past, current, and future continuing decline in the extent and the quality of its habitat. *Begonia thomeana* is thus assessed as VU B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species occurs in submontane forests, between 690 and 1,700 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+There are no known uses of this species.
+
+#### Population {.unnumbered}
+The species appears to be common but very localized, so we considered the existence of two subpopulations.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_thomeana.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-401)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-403-1.png" alt="Occurrences of Begonia thomeana in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-403)Occurrences of Begonia thomeana in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Begonia_thomeana_1_Leal.jpg" alt="Copyright Leal" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-407-1)Copyright Leal</p>
+</div><div class="figure">
+<img src="./images//Begonia_thomeana_1_Poncet.jpg" alt="Copyright Poncet" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-407-2)Copyright Poncet</p>
+</div><div class="figure">
+<img src="./images//Begonia_thomeana_2_Leal.jpg" alt="Copyright Leal" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-407-3)Copyright Leal</p>
+</div><div class="figure">
+<img src="./images//Begonia_thomeana_2_Poncet.jpg" alt="Copyright Poncet" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-407-4)Copyright Poncet</p>
+</div><div class="figure">
+<img src="./images//Begonia_thomeana_3_Leal.jpg" alt="Copyright Leal" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-407-5)Copyright Leal</p>
+</div><div class="figure">
+<img src="./images//Begonia_thomeana_4_Leal.jpg" alt="Copyright Leal" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-407-6)Copyright Leal</p>
+</div>
+
+
+
+### ``Boraginaceae``
+
+
+
+
+#### ``Ehretia scrobiculata Hiern``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Ehretia scrobiculata* is a small tree with whitish flowers, which is endemic to the islands of São Tomé and Príncipe. The species is known from three collections made between 1853 (Welwitsch 5465) and 1980 (de Wilde 275). The collection of Welwitsch 5465 was made in a forest of low altitude near the sea in Príncipe but without a precise locality description. The collection of Mann 1124 was made in an unrecorded locality with no coordinates. Thus, these two collections were not considered for this evaluation. The remaining specimen (Wilde 275) was made in 1980 and represents one occurrence located within the PNOST and one subpopulation. No collection or observation of this species was done after 1980 despite intensive fieldwork carried out on both islands in the last five years. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 4 km², below the upper threshold of the CR category under subcriterion B2. With only one occurrence, it was not possible to calculate the EOO. This single occurrence was threatened by plantations but does not present current threats, and represents one location (*sensu* IUCN, 2019). Based on the probable extinction of the species in Príncipe Island, since no records of the species were found since 1853, we infer a reduction of the extent of occurrence, area of occupancy, mature individuals and locations, and a future decline in the extent and quality of its habitat. This species is therefore assessed as CR B2ab(i,ii,iii,iv,v).
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species occurs in lowland forests.
+
+
+#### Use and trade {.unnumbered}
+It is not known if the species is used.
+
+#### Population {.unnumbered}
+Information on population is lacking, but data suggest the existence of only one subpopulation.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Ehretia_scrobiculata.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-415)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-417-1.png" alt="Occurrences of Ehretia scrobiculata in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-417)Occurrences of Ehretia scrobiculata in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ``Campanulaceae``
+
+
+
+
+#### ``Lobelia barnsii Exell``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/CR.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Lobelia barnsii* is a monocaule shrub reaching 1 to 2 m in height (Exell, 1944), grouped in small stand. It is endemic to São Tomé and found mostly on low shrubby vegetation with *Erica* or *Afrocarpus*; between 1,400 et 1,900 m in elevation. The species is known from twelve collections made between 1956 (Monod 12241) and 2021 (Ikabanga 1593), around and in Pico São Tomé, Pico Pequeno, and Calvario. Considering vegetation, which is still important in places of collections, we consider that none of all occurrences is extirpated. These twelve collections represent seven occurrences and one subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 16 km², below the upper threshold for EN status under Criterion B2. The EOO is calculated as 1.4 km², below the AOO, so we consider the EOO as 16 km² below the upper threshold for CR status under Criterion B1. The habitat of the species was threatened by *Cinchona* spp. agriculture activities (as indicated by the presence of invasive species *Cinchona pubescens*). This activity is now finished but Cinchona spp.has invaded its habitat, especially at the top of the Pico. This invasive species is the most important threat and these seven occurrences represent one location (*sensu* IUCN, 2019). Based on this threat, we infer past, current and future continuing decline in the extent and the quality of its habitat. *Lobelia barnsii* is thus assessed as CR B1ab(iii,v).
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species is known from low and open montane forest with Erica or Afrocarpus, between 1,400 and 2,024 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+It is not known if the species is used.
+
+#### Population {.unnumbered}
+*Lobelia barnsii* occurs grouped in small stands, 5-20 twigs.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Lobelia_barnsii.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-429)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-431-1.png" alt="Occurrences of Lobelia barnsii in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-431)Occurrences of Lobelia barnsii in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Lobelia_barnsii_1_Camuenha.jpg" alt="Copyright Camuenha" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-435-1)Copyright Camuenha</p>
+</div><div class="figure">
+<img src="./images//Lobelia_barnsii_2_Dauby.jpg" alt="Copyright Dauby" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-435-2)Copyright Dauby</p>
+</div><div class="figure">
+<img src="./images//Lobelia_barnsii_3_Ikabanga.jpg" alt="Copyright Ikabanga" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-435-3)Copyright Ikabanga</p>
+</div><div class="figure">
+<img src="./images//Lobelia_barnsii_4_Ikabanga.jpg" alt="Copyright Ikabanga" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-435-4)Copyright Ikabanga</p>
+</div>
+
+
+
+### ``Celastraceae``
+
+
+
+
+#### ``Maytenus monodii Exell``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/EN.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Maytenus monodii* is a liana with divaricated branches with white flowers. The species is rare and endemic to São Tomé island. It is known from five collections made in 1956 (Monod 11914; 11982; 12234 in Western of Pico São Tomé), 1999 (Joffroy 177 between Mesa de Pico São Tomé and Ponta Figo) and 2019 (Lachenaud 2832 along path from Bom Sucesso to Morro Santana) in the North of PNOST. Despite the old age of collections made by Monod, we consider that none of these occurrences are extirpated. These five collections represent four occurrences, all of them located in the protected area. The dispersal vector is assumed to be birds (Groppo et al, 2014). We therefore consider these four occurrences as one subpopulation. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 16 km², below the upper threshold for EN status under Criterion B2. The EOO is calculated as 3.5 km², below the upper threshold for CR status under Criteria B1. Based on Criterion B, the EOO is less than the AOO, so we changed the EOO to reflect the AOO (16 km²), which corresponds to status CR. Three occurrences around Pico São Tomé (within the PNOST) are threatened by ecotourism which induces a degradation of the quality of the habitat. The occurrence along the path from Bom Sucesso to Morro Santana is threatened by small scale agriculture which induces reduction of the number of mature individuals of this species. Therefore, these four occurrences represent two locations (*sensu* IUCN, 2019), with regards to the most important threat (small-scale agriculture). We infer a past, current and future continuing decline in the extent and the quality of its habitat and number of mature individuals. This species is thus assessed as EN B1ab(iii,v)+2ab(iii,v).
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species is known from submontane and montane rainforest, between 1,300 and 1,700 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+It is not known if the species is used.
+
+#### Population {.unnumbered}
+Population information is not known for this species.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Maytenus_monodii.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-443)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-445-1.png" alt="Occurrences of Maytenus monodii in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-445)Occurrences of Maytenus monodii in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Maytenus_monodii_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-449-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Maytenus_monodii_2_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-449-2)Copyright Lachenaud</p>
+</div>
+
+
+### ``Combretaceae``
+
+
+
+
+#### ``Strephonema sp.nov. Principe``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered} {#strephonema}
+
+*Strephonema sp. nov.* occurs in lowland forest in Príncipe. Since 2020 a project lead by Fauna & Flora International and Fundação Príncipe (Taking action for Príncipe’s threatened trees) is conducting awareness, surveys, and monitoring of this species, and more information is expected in the near future, thus this assessment should be considered as preliminary. The IUCN status will also depend on the publication of the species, but it is currently considered as an endemic species to Príncipe. The distribution of *Strephonema sp. nov.* appears very restricted, limited to coastal forest near Rio Porco, on the track to Pico Mesa from Maria Correia, and near Barriga Branca, on mature lowland forest inside PNOP. A recent account of the population gives a number of 400 mature individuals. In fact, this species should have had a larger distribution in the lowland forest where it was probably cut for timber during the colonial period from the 15^th century. This species appears to be locally abundant but its density is difficult to assess because it is misidentified with *Carapa gogo*. The species is known from 12 collections and 75 observations representing 16 occurrences and three subpopulations. Its extent of occurrence is calculated to be 5.432 km², within the limit for CR status under subcriterion B1, while its area of occupancy is estimated to be 12 km², also within the limit for EN status under subcriterion B2. However, since the AOO cannot be larger than the EOO, the AOO should be considered as equal to the EOO, meaning 5,432 km², within the limit for CR status under subcriterion B2. All of its subpopulations occur in a protected area but one is close to the border of it (Maria Correia) and its habitat is threatened by farming activities. Former subpopulation was threatened by habitat destruction for plantations in areas near Praia Seca, and between Rio Porco and Rio São Tomé, and in the South of Pico Mesa. A decline in habitat extent and quality is therefore observed, and a past decline of about 80% in AOO and EOO is inferred which could lead to CR status. However, this number still needs to be confirmed by GIS analysis and could not be used in this assessment. The three groups of occurrences represent three locations in the sense of IUCN which qualifies for EN status. The population of each subpopulation is less than 250 mature individuals. Therefore, the species is assessed as EN under the conditions B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v); C2(i). This species could be considered as a flagship species for biodiversity conservation since it is a good indicator of highly diverse mature forest and important for bird nesting. The sites of occurrence should be protected in priority.
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species appears very restricted, limited to coastal forest near Rio Porco, and near Barriga Branca, on mature lowland forest.
+
+
+#### Use and trade {.unnumbered}
+The species was probably cut for timber during the colonial period from the 15th century.
+
+#### Population {.unnumbered}
+A recent account of the population gives a number of 400 mature individuals. In fact, this species should have had a larger distribution in the lowland forest where it was probably cut for timber during the colonial period from the 15th century. This species appears to be locally abundant but its density is difficult to assess because it is misidentified with another endemic tree species *Carapa gogo*.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Strephonema_sp.nov._Principe.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-457)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-460-1.png" alt="Occurrences of Strephonema sp.nov. Principe in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-460)Occurrences of Strephonema sp.nov. Principe in the climate conditions of Príncipe.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-461-1.png" alt="Histogram of diameters of all stems identified as Strephonema sp.nov. Principe" width="672" />
+<p class="caption">(\#fig:unnamed-chunk-461)Histogram of diameters of all stems identified as Strephonema sp.nov. Principe</p>
+</div>
+
+
+
+
+<div class="figure">
+<img src="./images//Strephonema_sp.nov._Principe_1_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-463)Copyright Stévart</p>
+</div>
+
+
+
+
+
+
+### ``Commelinaceae``
+
+
+
+
+#### ``Palisota pedicellata K.Schum.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Palisota pedicellata* is an herb, up to 2 (3) m high. It occurs in shade in rainforest or in open areas, and it is found mostly from the sea until 1,600 m in elevation. The species is endemic to São Tomé, Príncipe and Annobón and is known from 76 collections made between 1860 (Welwitsch 6602) and 2020 (Ikabanga 1037, Lewis 187, Lima, 36). Nine collections (Wrigley 271, Campos 61, Chevalier 13723, Moller 111, Moller 11, Henriques 9, Lucas 3, Paiva 1918, Welwitsch 1043, Welwitsch 602) were not taken into account in this assessment since they are not precisely georeferenced (lack localities). The 67 remaining collections represent 42 occurrences in São Tomé, 7 in Príncipe and 1 in Annobón. We, therefore, consider these 50 occurrences as three subpopulations. Twenty-seven occurrences are located outside of PNOST. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 144 km² below the upper threshold for EN status under Criterion B, and the EOO is calculated as 3,958 km², below the upper threshold for VU status under Criterion B. Among the 19 occurrences within PNOST in São Tomé, 14 occurrences (along the tourist path) are threatened by ecotourism activity and represent one location, the other being not threatened and representing another location. The three occurrences in the north part of PNOST are threatened by agriculture and logging and represent three locations. The two occurrences west of Monte Café (Maia) were threatened by past plantations and current agriculture and logging and represent one location. The occurrence at Monte Café is threatened by agriculture and logging and represents one location. The occurrence located around Bom Sucesso (Esperança and Macambara) is threatened by small-scale agricultural (vegetable plantations) and represents two locations. The three occurrences from Santa Maria to Zampalma are threatened by logging and past plantations and represent one location. The occurrences near Bombaim are threatened by plantations and logging and represent one location. Those near Formoso Grande and Pequeno are not threatened and represent one location. The three occurrences at Monte Cabumbé are not threatened and represent one location. The occurrence located near Rio Io Grande East of the PNOST was threatened by agriculture and represents one location. The occurrences situated near Santa Clotilde and the one situated near Cascata Apaga-Foguinho are threatened by logging and represent two locations. Therefore these 41 occurrences situated in São Tomé represent 16 locations. Among the 7 occurrences situated in Príncipe 2 are outside PNOST and threatened by small-scale agricultural activities, and representing two locations. Five are located in the south of the island within the PNOST, one was threatened by former plantations, one is threatened by current small-scale agriculture activities and 3 are not threatened; these five occurrences represent three locations. The occurrence situated in Annobón doesn’t appear as threatened and represents one location. Therefore, these 44 occurrences represent 22 locations (sensu IUCN, 2019), with regards to the most serious plausible threats (small-scale agriculture and logging). Despite these threats, this species occurs in many different habitats, is widespread in São Tomé and Príncipe, and is able to survive even within quite degraded areas. The species is not severely fragmented and does not meet the threshold of any threatened categories under criterion B. We cannot apply criterion A because none of the occurrences are expected to disappear or have disappeared. *Palisota pedicellata* species is thus assessed as LC.
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species is an endemic that tolerates human presence. In São Tomé it can frequently be found in secondary, lowland, submontane and montane forest. In Príncipe it has only been collected at low altitude and it is less frequent.
+
+
+#### Use and trade {.unnumbered}
+Ucutê-macaco; Ucutê-d’obô. Used to treat Injuries and bruises. Child baths (stunted child).
+
+#### Population {.unnumbered}
+Population information is not known for this species, but the species is widespread and frequent in São Tomé, and in the South part of Príncipe.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Palisota_pedicellata.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-471)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-473-1.png" alt="Occurrences of Palisota pedicellata in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-473)Occurrences of Palisota pedicellata in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-474-1.png" alt="Occurrences of Palisota pedicellata in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-474)Occurrences of Palisota pedicellata in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Palisota_pedicellata_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-477-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Palisota_pedicellata_2_Ikabanga.jpg" alt="Copyright Ikabanga" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-477-2)Copyright Ikabanga</p>
+</div><div class="figure">
+<img src="./images//Palisota_pedicellata_3_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-477-3)Copyright Stévart</p>
+</div>
+
+
+
+
+
+### ``Costaceae``
+
+
+
+
+#### ``Costus giganteus Welw. ex Ridl.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/NT.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Costus giganteus* was assessed by Contu (2013) as LC, and this assessment has been published by the Red List Unit in 2013. It is an herbaceous up to 8 m high, known from rainforest between 0 to 1,450 m in elevation. This species occurs in São Tomé, Príncipe and Annobón. It is known from 22 collections made between 1860 (Welwitsh 6465) and 2017 (Equipa botanica do Príncipe 97). These 22 collections represent 18 occurrences and three subpopulations. *Costus giganteus* occurs within three protected areas: PNOP, PNOST and Annobón Natural Reserve. Considering forest cover, which is still significant in the areas of collection, we do not regard any of these 18 occurrences as extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 52 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 4,876 km2, above the upper threshold for EN status under subcriteria B1. Two occurrences located within Annobón Natural reserve are threatened by cassava plantations and represent one location. Two occurrences located outside of the Annobón Natural Reserve (in the north part) are threatened by land carry and represent one location. We consider that these two occurrences will disappear in near future. In São Tomé, one occurrence located between Santa Maria and Jamar is not threatened and represents one location. The occurrence located around Batepa is threatened by coffee plantations and represents one location. Three occurrences located around rosa Calvario are threatened by agriculture, illegal logging and stem cutting. They represent one location. Three occurrences at Macambrara are threatened by horticulture activities and represent one location. Two occurrences at Formiga and Ribeira Palma are threatened by cocoa plantations and represent two locations. The occurrence made within PNOST is threatened by tourism and represents one location. In Príncipe, two occurrences located within PNP are not threatened and represent one location. The occurrence outside of the PNP is not threatened and represents one location. Therefore, these 18 occurrences represent eleven locations (sensu IUCN, 2019), with regard to the most serious plausible threats (small-scale agriculture). Based on the future disappearance of two occurrences in Annobón, we infer a continuing decline in its AOO, EOO, the number of locations, the extent and the quality of its habitat and the number of mature individuals. *Costus giganteus* is thus assessed as NT because it nearly meets criterion VU B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species grows in shade, wet places, in old-growth or secondary forests, on montane slopes and along streams, between 100 and 1,500 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+The caul has been used for renal infection and rheumatism.
+
+#### Population {.unnumbered}
+*Costus giganteus* is very common in São Tomé, so we consider that these 18 occurrences represent three subpopulations.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Costus_giganteus.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-485)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-487-1.png" alt="Occurrences of Costus giganteus in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-487)Occurrences of Costus giganteus in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-488-1.png" alt="Occurrences of Costus giganteus in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-488)Occurrences of Costus giganteus in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Costus_giganteus_1_Fertard.jpg" alt="Copyright Fertard" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-491-1)Copyright Fertard</p>
+</div><div class="figure">
+<img src="./images//Costus_giganteus_2_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-491-2)Copyright Stévart</p>
+</div>
+
+
+
+
+
+
+
+### ``Cyperaceae``
+
+
+
+
+#### ``Principina grandis Uittien``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Principina grandis* is a grass-like herb, known from old-growth vegetation on trachyte inselbergs, between 670 and 760 m in elevation. This species was supposed to be endemic to São Tomé and Príncipe until it was recently collected in Gabon. The species is known from two collections, one in Príncipe Island, in 1932 (Excell 703 at the summit of Pico Papagaio) and one in São Tomé Island in 2007 (Mesterhàzy 173 at the South West part of Pico Maria Fernandes, Angolares), and one observation in Gabon (at Milobo inselberg). None of these three occurrences is considered extirpated and they represent three subpopulations. *Principina grandis* seems to be locally abundant on these sites. Several similar inselbergs can be found around Milobo´s region in Gabon, in Equatorial Guinea, and on São Tomé and Príncipe. The species is probably more abundant but currently underrepresented due to the difficult access to its habitat. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 12 km2, below the upper threshold for EN status under Criterion B2. The EOO is calculated as 31,040 km2, above the upper threshold for VU status under Criteria B1. The occurrence at Pico Papagaio in Príncipe is within PNOP but is threatened by ecotourism which induces degradation of the quality of the habitat and represents one location. The occurrence located on Pico Maria Fernandes is threatened by intensive use of the area for palm wine extraction, which induces degradation of the quality of the habitat and potentially reduction of the number of mature individuals and represents one location. The occurrence in Milobo is not threatened and represents one location. Thus, these three occurrences represent three locations (*sensu* IUCN 2019) with regards to the most important threats (tourism and palm wine harvest). We infer a past, current and future continuing decline in the extent and the quality of its habitat and number of mature individuals. This species is thus assessed as EN B2ab(iii,v).
+
+
+#### Habitat and ecology {.unnumbered}
+The species is known from old-growth vegetation on inselbergs, between 670 and 760 m in elevation. Mesterhazy & Browning (2014) correlate the distribution of this species with trachyte mounts.
+
+
+#### Use and trade {.unnumbered}
+There is no known use for this species.
+
+#### Population {.unnumbered}
+Population information is not sufficiently known for this species, but we suggest the existence of three subpopulations.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Principina_grandis.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-499)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-501-1.png" alt="Occurrences of Principina grandis in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-501)Occurrences of Principina grandis in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-502-1.png" alt="Occurrences of Principina grandis in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-502)Occurrences of Principina grandis in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ``Dichapetalaceae``
+
+
+
+
+#### ``Dichapetalum bocageanum (Henrard) Engl.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/VU.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Dichapetalum bocageanum* was assessed in 1998 as VU D2 by Word Conservation Monitoring Centre. This assessment was based on two collections, which lead the authors to consider the species as poorly known. Since then, many collections have been made, allowing a reassessment. 
+
+*Dichapetalum bocageanum* is liana or lianescent shrub up to 5 m tall, known from riverine and terra firme forests, between 50 and 1,264 m in elevation. The species is endemic to São Tomé and Príncipe. It is now known from 10 collections, of which eight were made in São Tomé and two in Príncipe. It has been collected for the first time by Mann (s.n.) in São Tomé in 1861. The last collection was made by Lachenaud (3010), in 2020. We excluded the two collections made by Mann because no locality information is provided. Therefore, the eight remaining collections represent eight occurrences and 2 to 4 subpopulations. Considering the forest coverage, which is still important in these areas, we consider that none of the eight occurrences are extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 32 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 1,806 km2, below the upper threshold for EN status under subcriterion B1. Five occurrences are located within two protected areas: four in PNOST and one in PNOP. In São Tomé, two of the four occurrences within PNOST are threatened by vicinity to plantations in the north part, and by possible future extension of palm oil plantations around Dona Eugenia; they represent two locations. The two other occurrences within PNOST are not threatened and represent one location. The two occurrences outside the PNOST are threatened by agriculture activities (small-scale agriculture) and represent two locations. In Príncipe, the occurrence within PNOP is not threatened. However, the occurrence outside the PNOP is threatened by plantations (small-scale agriculture). These two occurrences represent two locations. As a consequence, these eight occurrences represent seven locations (sensu IUCN 2019), with regards to the most important threat (small-scale agriculture). We infer a current and future continuing decline in the extent and the quality of its habitat. This species is thus assessed as VU B1ab(iii)+2ab(iii).
+
+
+#### Habitat and ecology {.unnumbered}
+The species has a wide ecological range but is mainly known from mature and secondary forests, between 50 and 1,264 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+There is no known use for this species.
+
+#### Population {.unnumbered}
+Population information is not known for this species.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dichapetalum_bocageanum.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-513)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-515-1.png" alt="Occurrences of Dichapetalum bocageanum in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-515)Occurrences of Dichapetalum bocageanum in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-516-1.png" alt="Occurrences of Dichapetalum bocageanum in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-516)Occurrences of Dichapetalum bocageanum in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Dichapetalum_bocageanum_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-519-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Dichapetalum_bocageanum_2_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-519-2)Copyright Lachenaud</p>
+</div>
+
+
+
+### ``Ericaceae``
+
+
+
+
+#### ``Erica thomensis (Henriq.) Dorr & E.G.H.Oliv.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/CR.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Erica thomensis* is a shrub 3 to 4 m high. It is known from the Erica vegetation belt; between 1,900 and 2,020 m in elevation. The species is known from 17 collections made between 1885 (Moller 610, 724) and 2019 (Ikabanga 923, Lachenaud 2868) in São Tomé, on the Pico de São Tomé and Pico Pequeno. Two collections (Emilio s.n., Henriques 5) have no precise locality and were not considered for this evaluation. These 15 remaining collections represent four occurrences, all of which are situated within the PNOST and form one subpopulation. Based on field observation where the species has been collected, we consider none of the occurrences as extirpated. One occurrence is located at the top of Pico Pequeno. The three other occurrences are located around the Pico de São Tomé. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 8 km², below the upper threshold for CR status under subcriterion B2. The EOO is calculated as 0.183 km², below the AOO, so we consider the EOO as 8 km², below the upper threshold for CR status under subcriterion B1. All four occurrences are threatened by an invasive tree species (*Cinchona* spp.) which has been cultivated in the past and is now regenerating abundantly at the expense of the natural vegetation. The species is dependent on open areas in the forest, which *Cinchona* is invading. We also consider ecotourism as a future threat that will induce a decline of the extent and the quality of its habitat at Pico de São Tomé. Therefore, these four occurrences represent one location (sensu IUCN, 2019) with regard to the most serious plausible threat (invasive species). Based on the impact caused by the invasive species, we infer a past, present and future continuing decline in its EOO, AOO, the extent and the quality of its habitat, the number of locations and the number of mature individuals. *E. thomensis* is thus assessed as CR B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+#### Habitat and ecology {.unnumbered}
+The species is gregarious and dominant in the low *Erica* vegetation belt, which covers only very small areas at the tops of Pico Pequeno and Pico de São Tomé, between 1,900 and 2,020 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+There is no known use for this species.
+
+#### Population {.unnumbered}
+No quantitative population data are available for *Erica thomensis*, but the habitat covered by the species is probably less than few hectares.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Erica_thomensis.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-527)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-529-1.png" alt="Occurrences of Erica thomensis in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-529)Occurrences of Erica thomensis in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Erica_thomensis_1_Ikabanga.jpg" alt="Copyright Ikabanga" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-533-1)Copyright Ikabanga</p>
+</div><div class="figure">
+<img src="./images//Erica_thomensis_2_Ikabanga.jpg" alt="Copyright Ikabanga" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-533-2)Copyright Ikabanga</p>
+</div><div class="figure">
+<img src="./images//Erica_thomensis_3_Ikabanga.jpg" alt="Copyright Ikabanga" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-533-3)Copyright Ikabanga</p>
+</div>
+
+
+
+### ``Euphorbiaceae``
+
+
+
+
+#### ``Croton stelluliferus Hutch.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+The species has been assessed as VU but without any information on threats. The collection of new information justify its reassessment. *Croton stellulifer* is a tree endemic to São Tomé and Príncipe islands. It is found in mature and, mostly, in secondary lowland and montane forests, from 77 to 1,694 m in elevation. It is known from 33 collections and 92 observations, made between 1932 (Exell 547, type) and 2020. The collection of Madureira & Martins 483 was made in an unrecorded locality in São Tomé, thus was not considered for this evaluation. In Príncipe, *Croton stellulifer* is found in low to middle elevated forests of the South, and known from 11 occurrences and 1-4 populations, none considered extirpated and all within PNOP. This species probably has a larger distribution in Príncipe, especially in the North, since it occurs in secondary or degraded forests, and a population probably occurs in Sundy, but additional fieldwork needs to be conducted to confirm this information. In São Tomé, *Croton stellulifer* is quite widespread, occurring in the lowland to montane forest and known from 24 occurrences and 4-5 subpopulations, none considered extirpated. Thus, this species is known from 35 occurrences and 5-8 subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 84 km², below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 2,424 km², below the upper threshold for EN status under subcriterion B1. In Príncipe, the occurrences around Rio Porco, and Pico Mencorne are not threatened and represent one location. Nine occurrences were threatened by past plantations and are currently threatened by the unsustainable bark collection for traditional medicine due to its proximity to accessible places through touristic tracks (two occurrences on the Track to Pico do Príncipe and seven around Oquê Pipi), representing one location. In São Tomé, seven occurrences located near Bom Sucesso and Macambrará are threatened by agricultural activities (vegetable plantations) and represent one location. Five occurrences situated along touristic tracks within the PNOST, near Morro Vilela and Lagoa Amélia, are threatened by tourism activities, and invasive species, they represent one location.
+Four occurrences (Pico ana Chaves, Monte Carmo, Rio Lemba, Rio Ave) situated in the PNOST are not threatened and represent one location. The occurrence near Sta. Clotilde - S. José is threatened by illegal logging and represents one location. The occurrences situated near Cao Pequeño and Cão Grande are threatened by palm plantations and represent one location. The ones near the top of Pico Macuru and near Monta Maru/ bombaim were previously threatened by plantations and represent two locations. Finally, the occurrences collected near Pico Maria Fernandez are threatened by current plantations, and the one near Morro Claudina is threatened by illegal logging. The species is thus known from 8 locations in São Tomé.
+Therefore, these occurrences represent 10 locations (*sensu* IUCN, 2019), with regards to the most serious plausible threats (small-scale agriculture). 
+In São Tomé, its distribution probably strongly declined when large shade plantations covered most of the island. The subpopulation situation in the north-center of the island is currently exposed to high human pressure for logging and we can suspect a decline in the quality of its habitat.
+A decline in habitat extent and quality is therefore observed, and a past decline in the number of individuals, number of subpopulations, AOO, and EOO could have occurred but since the species occur in secondary vegetation, it is impossible to assess it properly. The 8 subpopulations represent 10 locations, therefore, the species is assessed as VU under the conditions B1ab(iii)+2ab(iii). 
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species is principally occurring in secondary forest (World Conservation Monitoring Centre, 1998), but exists also in old-growth forest (Carvalho et al., 2004). This species has a wide altitudinal range (World Conservation Monitoring Centre, 1998) : *C. stellulifer* is present at low altitude in the valley of the rivers, but it is also recorded in montane rainforest between 800 and 1,400 m of elevation and in cloudy-forest above 1400 m (Christy, 2001). The studies of Toelen (1995) on the montane forests of São Tomé show that this tree is frequent in old secondary forests and rare in old-growth forests. In Príncipe, the species is quite abundant in old secondary forest, but also occurs in disturbed forest on the Pico of Príncipe.
+
+
+#### Use and trade {.unnumbered}
+The dry and pulverized bark is burned as incense, on charcoal, to flavor and disinfect the house environment and to ward off "bad looks".
+
+#### Population {.unnumbered}
+This species probably has a larger distribution in Príncipe, especially in the North.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Croton_stelluliferus.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-541)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-543-1.png" alt="Occurrences of Croton stelluliferus in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-543)Occurrences of Croton stelluliferus in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-544-1.png" alt="Occurrences of Croton stelluliferus in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-544)Occurrences of Croton stelluliferus in the climate conditions of Príncipe.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-545-1.png" alt="Histogram of diameters of all stems identified as Croton stelluliferus" width="672" />
+<p class="caption">(\#fig:unnamed-chunk-545)Histogram of diameters of all stems identified as Croton stelluliferus</p>
+</div>
+
+
+
+
+
+
+
+
+### ``Melastomataceae``
+
+
+
+
+#### ``Tristemma mauritianum J.F.Gmel. var. rozeiranum Jacq.-Fél.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Tristemma mauritianum* var. *rozeiranum* is an erect succulent perennial herb or a small shrub, found between 600 m and 1,430 m in elevation, mainly in the submontane and montane forests. The species is endemic to São Tomé and is known from 8 collections made between 1905 (Chevalier, 14524) and 1999 (Joffroy, 75), of which five are located within PNOST. The 8 collections represent 6 occurrences and 1 or 2 subpopulations, and none of the occurrences is considered extirpated. Based on a 2 x 2 km cell size, its AOO is estimated to be 20 km², and its EOO is calculated to be 21 km², within the limits for EN (AOO) and CR (EOO) status under subcriteria B2 and B1. The occurrences at Monte Café and Nova Moca were threatened by plantations (past) and currently threatened by small-scale agriculture and represent one location. The occurrence at Água Parada-Santa Elvira (road Bombain- São Nicolau) is threatened by wine palm extraction and illegal logging and represents one location. The two occurrences at Lagoa Amélia are threatened by tourism activities and represent one location. The occurrence at the west of Pico, within the PNOST, is not threatened and represents one location. As a consequence, these six occurrences represent 4 locations (sensu IUCN, 2021), with regards to the most important threat (small-scale agriculture). Moreover, we infer a past, current and future continuing decline in the extent and habitat quality and the number of mature individuals. *Tristemma mauritianum* var. *rozeiranum* is therefore assessed EN B1ab(iii,v)+2ab(iii,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species is found between 600 m and 1,430 m in elevation, mainly in the submontane and montane forests. 
+
+
+#### Use and trade {.unnumbered}
+Species utilized in traditional medicine (leaves) and the fruits are used as food (Madureira et al., 2002).
+
+#### Population {.unnumbered}
+Population information is not known for this species.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tristemma_mauritianum_var._rozeiranum.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-555)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-557-1.png" alt="Occurrences of Tristemma mauritianum var. rozeiranum in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-557)Occurrences of Tristemma mauritianum var. rozeiranum in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+#### ``Tristemma mauritianum J.F.Gmel. var. thomense (J.H.P.B.Ferreira) Jacq.-Fél.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Tristemma mauritianum* var. *thomense* is an erect perennial herb or a small shrub, found from sea level (39 m) to highlands (557 m), concentrated in the litoral south forests. The species is endemic to São Tomé, and is known from 9 collections made between 1957 (Rozeira, A.D.F., 3413) and 2020 (Ikabanga, 1043). These 9 collections represent 9 occurrences and 2 or 3 subpopulations. None of the occurrences are located within the PNOST and none are considered to be extirpated. Based on a 2 x 2 km cell size, its EOO is calculated to be 220 km², and its AOO is estimated to be 32 km², both within the limits for EN status under subcriteria B1 and B2.
+The two occurrences located near the Pico Formoso are threatened by old plantations and the extraction of palm wine and represent 1 location. The occurrence between Santa Clotilde and São José is threatened by illegal logging and represents 1 location. The occurrences of Caridade, São João and Fraternidade are threatened by small-scale agriculture and represent 3 locations. The occurrences of Monte Carmo and Monte Mário are threatened by large-scale agriculture (palm oil plantation) and represent two locations. We infer the future disappearance of the Monte Mario occurrence as oil palm plantations expand towards the littoral. As a consequence, these nine occurrences represent 7 locations (sensu IUCN, 2021), with regards to the most serious plausible threat (palm oil plantation). Based on the probable future disappearance of the Monte Mario occurrence, we infer a future decline in its AOO, its EOO, the number of locations, and the number of mature individuals. Moreover, we infer a current and a future continuing decline in the extent and habitat quality. *Tristemma mauritianum* var. *thomense* is therefore assessed as VU B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species is found from sea level (39 m) to mi-altitude (557 m), concentrated in the litoral south forests.
+
+
+#### Use and trade {.unnumbered}
+Species utilized in traditional medicine (leaves) and the fruits are used as food (Madureira et al., 2002).
+
+#### Population {.unnumbered}
+Population information is not known for this species. We assume that the number of subpopulations can be 2 or 3.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tristemma_mauritianum_var._thomense.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-568)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-570-1.png" alt="Occurrences of Tristemma mauritianum var. thomense in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-570)Occurrences of Tristemma mauritianum var. thomense in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+### ``Meliaceae``
+
+
+
+
+#### ``Carapa gogo A.Chev. ex Kenfack``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Carapa gogo* occurs mostly in mid elevation forest in São Tomé and Príncipe (300-500 m). The distribution of *C. gogo* appears quite restricted in São Tomé and more widespread in Príncipe. In Príncipe it is limited to PNOP, occurring on the coastal forest near Rio Porco and Maria Correia, but also on the track to Pico Mesa, the area near Barriga Branca and near Pico do Príncipe. Indeed this species has probably a larger distribution on Príncipe and many individuals should have been cut for timber. This rare species appears to be locally abundant but its density is difficult to assess because it is misidentified with Strephonema sp. nov. in this island. Moreover, there is no sign of natural regeneration. Since 2020 a project lead by Fauna & Flora International and Fundação Príncipe (Taking action for Príncipe’s threatened trees) is conducting awareness, surveys and monitoring of *Carapa gogo*, and more information regarding the species is expected in the near future, this assessment should be considered as preliminary. *C. gogo* is currently known from 11 collections and 21 observations that represent 9 subpopulations. Its extent of occurrence is calculated to be 1718 km², within the limit for EN status under subcriterion B1, while its area of occupancy is estimated to be 36 km², also within the limit for EN status under subcriterion B2. Seven of its subpopulations occur in a protected area but some are close to the border of it (Maria Correia, Oquê Pipi, Lago Amélia). Former subpopulations were threatened by habitat destruction for plantations in areas near Praia Seca, and between Rio Porco and Rio do São Tomé, and in the South of Pico Mesa, but also everywhere in São Tomé. A decline in habitat extent and quality is therefore observed, and a past decline in number of individuals, number of subpopulations, AOO and EOO is suspected. The 9 occurrences represent 9 locations in the sense of IUCN, therefore, the species is assessed as VU under the conditions B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v). This species could be considered as a flagship species for biodiversity conservation since it is a good indicator of highly diverse mature forest and probably important for bird nesting. Therefore, the places where it occurs need thus to be protected in priority.
+
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species occurs mostly in mid elevation forest (300-500 m) but can be found up to 1,300 m in São Tomé.
+
+
+#### Use and trade {.unnumbered}
+The species is used for massages of displaced or broken bones, for the treatment of venereal diseases (heating), to treat anaemia, and it is used as an aphrodisiac. 
+
+Moreover, the wood is used for the manufacture of furniture, being very appreciated and valued by the beautiful veins of the wood and its red color.
+
+
+#### Population {.unnumbered}
+This species probably has a larger distribution on Príncipe but many individuals should have been cut for timber. This rare species appears to be locally abundant but the density is difficult to assess since it is misidentified with [*Strephonema sp. nov.*](#strephonema) in these areas. Moreover, there is no sign of natural regeneration.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Carapa_gogo.html" width="672" height="400px"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-582)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-584-1.png" alt="Occurrences of Carapa gogo in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-584)Occurrences of Carapa gogo in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-585-1.png" alt="Occurrences of Carapa gogo in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-585)Occurrences of Carapa gogo in the climate conditions of Príncipe.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-586-1.png" alt="Histogram of diameters of all stems identified as Carapa gogo" width="672" />
+<p class="caption">(\#fig:unnamed-chunk-586)Histogram of diameters of all stems identified as Carapa gogo</p>
+</div>
+
+
+
+
+<div class="figure">
+<img src="./images//Carapa_gogo_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-588-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Carapa_gogo_2_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-588-2)Copyright Stévart</p>
+</div><div class="figure">
+<img src="./images//Carapa_gogo_3_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-588-3)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Carapa_gogo_4_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-588-4)Copyright Stévart</p>
+</div>

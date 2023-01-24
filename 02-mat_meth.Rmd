@@ -14,6 +14,7 @@ library(raster)
 library(shiny)
 library(ggplot2)
 library(leaflet)
+library(grid)
 ```
 
 
@@ -43,7 +44,7 @@ alt_veg <-
         axis.text = element_blank(),
         axis.ticks = element_blank(),
         plot.margin=unit(c(0,0,0.5,0.5), "cm")) +
-    scale_fill_manual(values = viridis::cividis(n = 4), 
+    scale_fill_manual(values = viridis::rocket(n = 4), 
                       labels = c("Lowlands \ndry/wet", 
                                  "Montane \nforests", 
                                  "Grasslands \nShrublands", 
@@ -61,12 +62,13 @@ alt_veglg <- ggpubr::get_legend(ggplot() +
               ymax = ymax,
               fill = type
             )) + theme_void() +
-    scale_fill_manual(values = viridis::cividis(n = 4), 
+    scale_fill_manual(values = viridis::rocket(n = 4), 
                       labels = c("Lowlands \ndry/wet", 
                                  "Montane \nforests", 
                                  "Grasslands \nShrublands", 
                                  "Submontane \nforests")) +
-    theme(legend.title = element_blank()))
+    theme(legend.title = element_blank(),
+          legend.text = element_text(size = 30)))
 
 layers_env <- 
   stack("D:/MonDossierR/sao_tome_principe/all_layers_STP.tif")
@@ -203,6 +205,7 @@ base_plot_ST <-
   theme_classic() +
   theme(axis.title = element_text(size = 40), axis.text = element_text(size = 35))
 
+base_plot_grob_no_pts <- ggplotGrob(base_plot_ST)
 
 save(base_plot_ST, file = "base_plot_ST")
 
@@ -265,10 +268,29 @@ save(base_plot_ST_full, file = "base_plot_ST_full")
 
 ```{r, echo=FALSE, fig.cap="Insight into the main climatic patterns of Sao Tomé by relating the two most contrasted environmental factors of the island: altitude and annual rainfall. The lines of the plot show the frequency of combined environmental conditions. The colored band on the left show the described vegetation belts along elevation."}
 
-gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob, alt_veglg),
+plot_ST_full <- gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob, alt_veglg),
                         layout_matrix = rbind(c(3,3, 1, 2, 2, 2, 2),
                                               c(3,3, 1, 2, 2, 2, 2),
                                               c(NA,NA, 1, 2, 2, 2, 2)))
+
+plot_ST_not_pts <- gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob_no_pts, alt_veglg),
+                        layout_matrix = rbind(c(3,3, 1, 2, 2, 2, 2),
+                                              c(3,3, 1, 2, 2, 2, 2),
+                                              c(NA,NA, 1, 2, 2, 2, 2)))
+
+
+grid.draw(plot_ST_not_pts)
+
+
+ggsave(
+  "Fig12_plotS_ST_not_pts.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  width = 25,
+  height = 10,
+  plot = plot_ST_not_pts
+)
 
 ```
 
@@ -301,7 +323,7 @@ alt_veg <-
         axis.text = element_blank(),
         axis.ticks = element_blank(),
         plot.margin=unit(c(0,0,0.5,0.5), "cm")) +
-    scale_fill_manual(values = viridis::cividis(n = 2), 
+    scale_fill_manual(values = viridis::rocket(n = 2, direction = - 1), 
                       labels = c("Lowlands \nmoist/wet", 
                                  "Submontane \nforests")) +
   guides(fill = "none")
@@ -317,10 +339,11 @@ alt_veglg <- ggpubr::get_legend(ggplot() +
               ymax = ymax,
               fill = type
             )) + theme_void() +
-    scale_fill_manual(values = viridis::cividis(n = 2), 
-                      labels = c("Lowlands \nmoist/wet", 
+    scale_fill_manual(values = viridis::rocket(n = 2, direction = - 1), 
+                      labels = c("Lowlands \nforests", 
                                  "Submontane \nforests")) +
-    theme(legend.title = element_blank()))
+    theme(legend.title = element_blank(),
+          legend.text = element_text(size = 30)))
 
 layers_env <- 
   stack("D:/MonDossierR/sao_tome_principe/all_layers_STP.tif")
@@ -440,6 +463,7 @@ base_plot_P_full <-
   theme(axis.title = element_text(size = 20), axis.text = element_text(size = 18))
 
 base_plot_grob_P <- ggplotGrob(base_plot_P_full)
+base_plot_grob_P_no_pts <- ggplotGrob(base_plot_P)
 
 save(base_plot_P_full, file = "base_plot_P_full")
 
@@ -456,10 +480,28 @@ save(base_plot_P_full, file = "base_plot_P_full")
 
 ```{r EcoPrincipe, echo=FALSE, fig.cap="Insight into the main climatic patterns of Principe by relating the two most contrasted environmental factors of the island: altitude and annual rainfall. The lines of the plot show the frequency of combined environmental conditions. The colored band on the left indicate approximate vegetation belts along elevation."}
 
-gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob_P, alt_veglg),
+plot_P_full <- gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob_P, alt_veglg),
                         layout_matrix = rbind(c(3,3, 1, 2, 2, 2, 2),
                                               c(3,3, 1, 2, 2, 2, 2),
                                               c(NA,NA, 1, 2, 2, 2, 2)))
+
+plot_P_not_pts <- gridExtra::grid.arrange(grobs = list(alt_veg, base_plot_grob_P_no_pts, alt_veglg),
+                        layout_matrix = rbind(c(3,3, 1, 2, 2, 2, 2),
+                                              c(3,3, 1, 2, 2, 2, 2),
+                                              c(NA,NA, 1, 2, 2, 2, 2)))
+
+
+grid.draw(plot_P_not_pts)
+
+ggsave(
+  "Fig13_plot_P_not_pts.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  width = 25,
+  height = 10,
+  plot = plot_P_not_pts
+)
 
 ```
 

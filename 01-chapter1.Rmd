@@ -14,7 +14,8 @@ library(ggplot2)
 library(leaflet)
 library(knitr)
 library(grid)
-library(gridSVG)
+# library(gridSVG)
+library(tmap)
 opts_knit$set(eval.after = "fig.cap")
 source("function_map_leaflet.R")
 source("function_map_ggplot.R")
@@ -36,9 +37,10 @@ P <- st_read("P_cast.shp", quiet = TRUE)
 protected_areas <- st_read("obo_np_stp.shp", quiet = TRUE)
 
 ST_proj <- st_transform(ST, 32632)
+P_proj <- st_transform(P, 32632)
 
 combined_dataset <- 
-  readxl::read_excel("combined_dataset_2021-11-22.xlsx", guess_max = 40000)
+  readxl::read_excel("combined_dataset_2022-04-11.xlsx", guess_max = 40000)
 
 combined_dataset <- 
   combined_dataset %>% 
@@ -118,13 +120,16 @@ combined_dataset_sf <-
     filter(accuracy_final >= 4 | is.na(accuracy_final))
 
 combined_dataset_sf_proj <- st_transform(combined_dataset_sf, 32632)
-  
+
+
+## ST grid
 resolution <- 1000
 grid <- st_make_grid(x = ST_proj, cellsize = resolution, square = F)
 grid <- st_as_sf(grid) %>% 
   mutate(id_grid = 1:nrow(.))
 
-intersect_grid <- st_intersection(combined_dataset_sf_proj, grid)
+intersect_grid <- 
+  st_intersection(combined_dataset_sf_proj, grid)
 
 sampling_cell <- 
   intersect_grid %>% 
@@ -162,10 +167,920 @@ grid_completed_ST <-
 
 grid_completed_ST_unproj <- st_transform(grid_completed_ST, 4326)
 
+
+
+
+
+
+
+## P grid
+resolution <- 1000
+grid <- st_make_grid(x = P_proj, cellsize = resolution, square = F)
+grid <- st_as_sf(grid) %>% 
+  mutate(id_grid = 1:nrow(.))
+
+intersect_grid <- st_intersection(combined_dataset_sf_proj, grid)
+
+sampling_cell <- 
+  intersect_grid %>% 
+  group_by(id_grid) %>% 
+  summarise(nbe_esp = length(unique(tax_infra_level)),
+            n = length(tax_infra_level)) %>% 
+  st_set_geometry(NULL)
+
+sampling_endemics_cell <- 
+  intersect_grid %>% 
+  filter(!is.na(EndemicTS)) %>% 
+  group_by(id_grid) %>% 
+  summarise(nbe_end_esp = length(unique(tax_infra_level)),
+            n_end = length(tax_infra_level)) %>% 
+  st_set_geometry(NULL)
+
+sampling_threatened_cell <- 
+  intersect_grid %>% 
+  filter(!is.na(iucn_status)) %>% 
+  group_by(id_grid) %>% 
+  summarise(nbe_threat_esp = length(unique(tax_infra_level)),
+            n_threat = length(tax_infra_level)) %>% 
+  st_set_geometry(NULL)
+
+grid_completed_P <- 
+  grid %>% 
+  left_join(sampling_cell %>% 
+              dplyr::select(id_grid, n, nbe_esp)) %>% 
+  left_join(sampling_endemics_cell %>% 
+              dplyr::select(id_grid, n_end, nbe_end_esp)) %>% 
+  mutate(prop_end = nbe_end_esp/nbe_esp*100) %>% 
+  left_join(sampling_threatened_cell %>% 
+              dplyr::select(id_grid, n_threat, nbe_threat_esp)) %>% 
+  mutate(prop_threat = nbe_threat_esp/nbe_esp*100)
+
+grid_completed_P_unproj <- st_transform(grid_completed_P, 4326)
+
 ```
 
 
-```{r generate-grid-map, echo=FALSE, message=FALSE, warning=F, eval=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=F}
+
+elev_rast_STP <- raster("D:/MonDossierR/sao_tome_principe/elev_rast_STP.tif")
+
+bare_rocks <- st_read("D:/MonDossierR/sao_tome_principe/inselbergs_ST.shp")
+
+bare_rocks_pts <- st_centroid(bare_rocks)
+
+bare_rocks_pts_trans <- st_geometry(bare_rocks_pts) + 0.01
+bare_rocks_pts_trans <- st_as_sf(bare_rocks_pts_trans) %>% 
+  mutate(name = bare_rocks_pts$name)
+
+bbox_new <- st_bbox(ST) # current bounding box
+xrange <- bbox_new$xmax - bbox_new$xmin # range of x values
+yrange <- bbox_new$ymax - bbox_new$ymin # range of y values
+bbox_new[3] <- bbox_new[3] + (0.2 * xrange) # xmax - right
+bbox_new <- bbox_new %>%  # take the bounding box ...
+  st_as_sfc() # ... and make it a sf polygon
+
+elev_rast_ST <- raster::mask(elev_rast_STP, as(ST, "Spatial"))
+
+size_leg_title <- 1.6
+size_leg <- 1
+size_title <- 3
+
+elev_tmap <- 
+  tm_shape(elev_rast_ST, bbox = bbox_new, raster.downsample = F) +
+  tm_raster(
+    breaks=c(-Inf, 250, 500, 750, 1000, 1250, 1500, Inf),  
+    palette = terrain.colors(8), title = "Elevation (m)") +
+  tm_legend(legend.title.fontface = 2,  # legend bold
+            legend.title.size = size_leg_title,
+            legend.text.size = size_leg,
+            legend.bg.alpha = 0,
+            legend.position = c("right", "bottom"),
+            legend.width = 3, 
+            fontface = 2)  +
+  tm_shape(bare_rocks_pts) +
+  tm_dots(col = "black", size = 0.3) +
+  tm_shape(bare_rocks_pts_trans) +
+  tm_text(text = "name") +
+  tm_layout(frame = T)
+
+tmap_save(tm = elev_tmap, filename = "elev_tmap.tiff")
+
+
+bbox_new <- st_bbox(P) # current bounding box
+xrange <- bbox_new$xmax - bbox_new$xmin # range of x values
+yrange <- bbox_new$ymax - bbox_new$ymin # range of y values
+bbox_new[3] <- bbox_new[3] + (0.2 * xrange) # xmax - right
+bbox_new <- bbox_new %>%  # take the bounding box ...
+  st_as_sfc() # ... and make it a sf polygon
+
+elev_rast_P <- raster::mask(elev_rast_STP, as(P, "Spatial"))
+
+size_leg_title <- 1.6
+size_leg <- 1
+size_title <- 3
+
+elev_tmap <- 
+  tm_shape(elev_rast_P, bbox = bbox_new, raster.downsample = F) +
+  tm_raster(
+    breaks=c(-Inf, 250, 500, 750, 1000, Inf),  
+    palette = terrain.colors(7), title = "Elevation (m)") +
+  tm_legend(legend.title.fontface = 2,  # legend bold
+            legend.title.size = size_leg_title,
+            legend.text.size = size_leg,
+            legend.bg.alpha = 0,
+            legend.position = c("right", "bottom"),
+            legend.width = 3, 
+            fontface = 2)  +
+  tm_layout(frame = T)
+
+tmap_save(tm = elev_tmap, filename = "elev_tmap_P.tiff")
+
+
+# lim_y = c(-0.025, 0.42)
+# lim_x = c(6.44, 6.8)
+# 
+# # Use elevatr package to get elevation data for each point.
+# elev <- elevatr::get_elev_raster(ST, z = 8, clip = "bbox")
+# 
+# val <- raster::extract(elev, y = 1:ncell(elev))
+# xy <- raster::xyFromCell(object = elev, cell = 1:ncell(elev))
+# 
+# val_xv <- tibble(val = val, x = xy[,1], y = xy[,2])
+# val_xv <- val_xv %>% filter(val > 0)
+# 
+# map_ST <- 
+#   ggplot() +
+#   geom_sf(
+#     data = ST,
+#     fill = "lightgrey",
+#     color = "black",
+#     lwd = NA
+#   ) +
+#   # ggspatial::annotation_map_tile(
+#   #   type = "hotstyle",
+#   #   zoom = 13,
+#   #   cachedir = system.file("rosm.cache", package = "ggspatial"),
+#   #   progress = "none"
+#   # ) +
+#   # metR::geom_contour_fill(data = val_xv, mapping = aes(x, y, z = val), fill = NA) +
+#   metR::geom_contour2(data = val_xv, mapping = aes(x, y, z = val), color = "black", binwidth = 500) +
+#   metR::geom_text_contour(data = val_xv, mapping = aes(x, y, z = val),
+#                     stroke = 0.1, min.size = 250) +
+#   labs(y = " ", x = " ") +
+#   scale_x_continuous(limits = lim_x, expand = c(0, 0)) +
+#   scale_y_continuous(limits = lim_y, expand = c(0, 0))
+
+# ggsave(
+#   "general_map_ST.eps",
+#   device = "eps",
+#   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+#   dpi = 300,
+#   plot = map_ST,
+#   width = 40,
+#   height = 40
+# )
+# 
+# ggsave(
+#   "general_map_ST.tiff",
+#   device = "tiff",
+#   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+#   dpi = 400,
+#   plot = map_ST,
+#   width = 10,
+#   height = 15,
+#   units = "cm"
+# )
+
+
+# elev <- elevatr::get_elev_raster(ST, z = 8, clip = "bbox")
+# elev <- raster::mask(elev, ST)
+
+roads <- st_read("D:/MonDossierR/sao_tome_principe/roads_ST_main.shp")
+cities <- st_read("D:/MonDossierR/sao_tome_principe/towns_ST_main.shp")
+cities <- 
+  cities %>% 
+  mutate(name = replace(name, name == "Trindade", "Trinidade"))
+rivers <- st_read("D:/MonDossierR/sao_tome_principe/rivers_ST_main.shp")
+rivers <- rivers %>% 
+  filter(!osm_id %in% 734249815)
+
+
+# bbox_new <- st_bbox(ST) # current bounding box
+# xrange <- bbox_new$xmax - bbox_new$xmin # range of x values
+# yrange <- bbox_new$ymax - bbox_new$ymin # range of y values
+# bbox_new[3] <- bbox_new[3] + (0.2 * xrange) # xmax - right
+# bbox_new <- bbox_new %>%  # take the bounding box ...
+#   st_as_sfc() # ... and make it a sf polygon
+
+
+col1 <- rgb(0.98, 0.51, 0.14) ## orange
+col2 <- rgb(0, 0.59, 0.9) ## bleu
+col3 <- rgb(0.07, 0.42, 0.99) ## bleu
+
+lwd_size <- 1
+pts_size <- 18
+
+map_ST <- 
+      ggplot() +
+      geom_sf(
+        data = ST,
+        fill = "white",
+        color = col2,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = roads,
+        color = 'black',
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = rivers,
+        color = col3,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = cities,
+        color = col1,
+        size = pts_size
+      ) +
+  geom_sf_label(data = cities, aes(label = name)) +
+  geom_sf_label(data = rivers %>%
+             dplyr::filter(osm_id %in% c(
+               118110130, 167464090, 1015654105, 734249817, 1076529521, 672049457
+             )), aes(label = name)
+             ) +
+      labs(y = " ", x = " ") +
+      scale_x_continuous(limits = c(6.44, 6.8), expand = c(0, 0)) +
+      scale_y_continuous(limits = c(-0.025, 0.42), expand = c(0, 0)) +
+      ggsn::scalebar(
+        dist = 5,
+        dist_unit = "km",
+        transform = TRUE,
+        model = "WGS84",
+        x.min = 6.45,
+        x.max = 6.64,
+        y.min = 0.0,
+        y.max = 0.2,
+        st.dist = 0.07,
+        st.size = 10
+      ) +
+  theme(
+      panel.background = element_rect(fill = NA, colour = NA),
+      legend.background = element_rect(fill = "white", colour = "black"),
+      legend.title = element_text(size = 10),
+      legend.key.size = unit(10, "line"),
+      legend.position = c(0.78, 0.2),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      legend.text = element_text(size = 10,
+                                 margin = margin(l = 10, unit = "pt")),
+      legend.key.height = unit(10, "line")
+    )
+
+ggsave(
+  "Fig2a_ST_general_map_labels.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/figures_livre/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = map_ST
+)
+
+map_ST <- 
+      ggplot() +
+      geom_sf(
+        data = ST,
+        fill = "white",
+        color = col2,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = roads,
+        color = 'black',
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = rivers,
+        color = col3,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = cities,
+        color = col1,
+        size = pts_size
+      ) +
+      labs(y = " ", x = " ") +
+      scale_x_continuous(limits = c(6.44, 6.8), expand = c(0, 0)) +
+      scale_y_continuous(limits = c(-0.025, 0.42), expand = c(0, 0)) +
+      ggsn::scalebar(
+        dist = 5,
+        dist_unit = "km",
+        transform = TRUE,
+        model = "WGS84",
+        x.min = 6.45,
+        x.max = 6.64,
+        y.min = 0.0,
+        y.max = 0.2,
+        st.dist = 0.07,
+        st.size = 10
+      ) +
+  theme(
+      panel.background = element_rect(fill = NA, colour = NA),
+      legend.background = element_rect(fill = "white", colour = "black"),
+      legend.title = element_text(size = 10),
+      legend.key.size = unit(10, "line"),
+      legend.position = c(0.78, 0.2),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      legend.text = element_text(size = 10,
+                                 margin = margin(l = 10, unit = "pt")),
+      legend.key.height = unit(10, "line")
+    )
+
+ggsave(
+  "Fig2a_ST_general_map_not_labels.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/figures_livre/",
+  dpi = 300,
+  width = 30,
+  height = 30,
+  plot = map_ST
+)
+
+
+
+roads <- st_read("D:/MonDossierR/sao_tome_principe/roads_P_main.shp")
+cities <- st_read("D:/MonDossierR/sao_tome_principe/towns_P_main.shp")
+rivers <- st_read("D:/MonDossierR/sao_tome_principe/rivers_P_main.shp")
+rivers <- 
+  rivers %>% 
+  mutate(name = replace(name, name == "Rio BIibi", "Rio O-Quê-Pipi"))
+
+
+lwd_size <- 1
+pts_size <- 12
+
+map_P <- 
+      ggplot() +
+      geom_sf(
+        data = P,
+        fill = "white",
+        color = col2,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = roads,
+        color = 'black',
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = rivers,
+        color = col3,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = cities,
+        color = col1,
+        size = pts_size
+      ) +
+  geom_sf_label(data = cities, aes(label = name)) +
+  geom_sf_label(data = rivers %>%
+             dplyr::filter(osm_id %in% c(1076290346, 
+                              1076290343, 
+                              1076290342, 
+                              1076290344, 
+                              1076290348,
+                              243183219)), aes(label = name)
+             ) +
+      labs(y = " ", x = " ") +
+      scale_x_continuous(limits = c(7.32, 7.47), expand = c(0, 0)) +
+      scale_y_continuous(limits = c(1.49, 1.71), expand = c(0, 0)) +
+      ggsn::scalebar(
+        dist = 2,
+        dist_unit = "km",
+        transform = TRUE,
+        model = "WGS84",
+        x.min = 7.331,
+        x.max = 7.39,
+        y.min = 1.51,
+        y.max = 1.63,
+        st.dist = 0.07,
+        st.size = 10
+      )  +
+  theme(
+      panel.background = element_rect(fill = NA, colour = NA),
+      legend.background = element_rect(fill = "white", colour = "black"),
+      legend.title = element_text(size = 10),
+      legend.key.size = unit(10, "line"),
+      legend.position = c(0.78, 0.2),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      legend.text = element_text(size = 10,
+                                 margin = margin(l = 10, unit = "pt")),
+      legend.key.height = unit(10, "line")
+    )
+
+ggsave(
+  "Fig3a_P_general_map_labels.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/figures_livre/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = map_P
+)
+
+
+
+map_P <- 
+      ggplot() +
+      geom_sf(
+        data = P,
+        fill = "white",
+        color = col2,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = roads,
+        color = 'black',
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = rivers,
+        color = col3,
+        lwd = lwd_size
+      ) +
+      geom_sf(
+        data = cities,
+        color = col1,
+        size = pts_size
+      ) +
+  # geom_sf_label(data = cities, aes(label = name)) +
+  # geom_sf_label(data = rivers %>%
+  #            dplyr::filter(osm_id %in% c(
+  #              1076290346, 1076290343, 1076290342, 1076290344, 1076290348
+  #            )), aes(label = name)
+  #            ) +
+      labs(y = " ", x = " ") +
+      scale_x_continuous(limits = c(7.32, 7.47), expand = c(0, 0)) +
+      scale_y_continuous(limits = c(1.49, 1.71), expand = c(0, 0)) +
+      ggsn::scalebar(
+        dist = 2,
+        dist_unit = "km",
+        transform = TRUE,
+        model = "WGS84",
+        x.min = 7.331,
+        x.max = 7.39,
+        y.min = 1.51,
+        y.max = 1.63,
+        st.dist = 0.07,
+        st.size = 10
+      )  +
+  theme(
+      panel.background = element_rect(fill = NA, colour = NA),
+      legend.background = element_rect(fill = "white", colour = "black"),
+      legend.title = element_text(size = 10),
+      legend.key.size = unit(10, "line"),
+      legend.position = c(0.78, 0.2),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      legend.text = element_text(size = 10,
+                                 margin = margin(l = 10, unit = "pt")),
+      legend.key.height = unit(10, "line")
+    )
+
+ggsave(
+  "Fig3a_P_general_map_no_labels.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/figures_livre/",
+  dpi = 300,
+  width = 10,
+  height = 10,
+  plot = map_P
+)
+
+#And convert it to a matrix:
+library(raster)
+library(rayshader)
+
+
+roads <- st_read("D:/MonDossierR/sao_tome_principe/roads_ST_main.shp")
+cities <- st_read("D:/MonDossierR/sao_tome_principe/towns_ST_main.shp")
+cities <- 
+  cities %>% 
+  mutate(name = replace(name, name == "Trindade", "Trinidade"))
+rivers <- st_read("D:/MonDossierR/sao_tome_principe/rivers_ST_main.shp")
+rivers <- rivers %>% 
+  filter(!osm_id %in% 734249815)
+protected_areas <- st_read("obo_np_stp.shp", quiet = TRUE)
+
+elev_rast_STP <- raster("D:/MonDossierR/sao_tome_principe/elev_rast_STP.tif")
+elev_rast_ST <- crop(elev_rast_STP, ST)
+elev_rast_ST <- raster::crop(elev_rast_STP, as(ST, "Spatial"))
+roads <- st_crop(roads, st_bbox(ST))
+protected_areas <- st_crop(protected_areas, st_bbox(ST))
+
+cities_coord <- st_coordinates(cities) %>% as_tibble() %>% 
+  mutate(name = cities$name)
+
+elmat = raster_to_matrix(elev_rast_ST)
+
+tt <- st_read("cao_grande.shp")
+
+raster::extract(elev_rast_ST, data.frame(ddlon = 6.56593, ddlat = 0.1177704))
+cells_cao <- raster::cellFromPolygon(elev_rast_ST, as(tt, "Spatial"))
+elmat[cells_cao[[1]]] <- 620
+
+# breaks = seq(range(elmat, na.rm = T)[1], range(elmat, na.rm = T)[2],length.out=10)
+# water_breaks = breaks[breaks < 0]
+# land_breaks = breaks[breaks > 0]
+
+#We use another one of rayshader's built-in textures:
+plot_shade <- elmat %>%
+  sphere_shade(sunangle = 45, texture = "imhof1", colorintensity = 0.3) %>%
+  add_water(detect_water(elmat), color = "desert") %>% 
+  add_overlay(height_shade(elmat),alphalayer = 0.6) %>%
+ add_overlay(generate_polygon_overlay(protected_areas, palette = NA, linewidth=5,
+                                      linecolor = col1, 
+                        extent = attr(elev_rast_ST,"extent"), heightmap = elmat),
+                        alphalayer = 1) %>%
+  add_overlay(generate_line_overlay(rivers,extent = attr(elev_rast_ST, "extent"),
+                                    linewidth = 5, color="darkblue", 
+                                    heightmap = elmat))
+
+plot_shade %>% 
+  plot_map()
+
+save_png(plot_shade, filename = "plot_shade_ST.png")
+
+
+zscale <- 16
+textcolor <- "black"
+linecolor <- "black"
+
+plot_shade %>%
+  plot_3d(elmat, windowsize = c(1083, 1489), zscale = zscale)
+render_label(
+  elmat,
+  lat = 0.195479,
+  long = 6.55386,
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  text = "Pico Cabumbe (1403 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 2,
+  linewidth = 6
+)
+render_label(
+  elmat,
+  lat = 0.268862,
+  long = 6.541184,
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  text = "Pico de São Tomé (2024 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 2,
+  linewidth = 6
+)
+render_label(
+  elmat,
+  lat = 0.1177704,
+  long = 6.56593,
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  text = "Cao grande (623 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 2,
+  linewidth = 6,
+  altitude = 1200
+)
+render_label(
+  elmat,
+  lat = 0.1706848,
+  long = 6.641504,
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  text = "Pico Maria Fernandes (861 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 2,
+  linewidth = 6,
+  altitude = 1200
+)
+render_label(
+  elmat,
+  lat = 0.2455045,
+  long = 6.57156,
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  altitude = 2000,
+  text = "Pico Ana Chaves (1630 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 2,
+  linewidth = 6
+)
+render_label(
+  elmat,
+  lat = cities_coord$Y[2],
+  long = cities_coord$X[2],
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  text = "São João dos Angolares",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 2,
+  linewidth = 6
+)
+render_label(
+  elmat,
+  lat = cities_coord$Y[1],
+  long = cities_coord$X[1],
+  extent = attr(elev_rast_ST, "extent"),
+  zscale = zscale,
+  text = "São Tomé",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 4,
+  linewidth = 6
+)
+
+render_camera(theta = 40, phi = 40, zoom = 0.6, fov = 10)
+# render_scalebar(limits=c(0, 2, 4),label_unit = "km", position = "W",
+#                 scale_length = c(0.33,1))
+render_compass(position = "E", compass_radius = 120)
+# render_snapshot(filename = "plot3d_ST.png")
+rayshader::render_highquality(
+  filename = "plot3d_ST_PA_alt_no_labels.png",
+  parallel = TRUE,
+  samples = 1000,
+  line_radius = 6,
+  text_size = 40,
+  text_offset = c(0, 12, 0),
+  clamp_value = 10,
+  clear = TRUE,
+  width = 3500,
+  height = 1500,
+  lightdirection = 70,
+  lightaltitude = 40,
+  ground_material = rayrender::diffuse(checkerperiod = 30, checkercolor =
+                                         "white")
+)
+
+
+
+# render_label(
+#   elmat,
+#   lat = cities_coord$Y[2],
+#   long = cities_coord$X[2],
+#   extent = attr(elev_rast_ST, "extent"),
+#   zscale = zscale,
+#   text = "São João dos Angolares",
+#   textcolor = textcolor,
+#   linecolor = linecolor,
+#   textsize = 2,
+#   linewidth = 6
+# )
+# render_label(
+#   elmat,
+#   lat = cities_coord$Y[3],
+#   long = cities_coord$X[3],
+#   extent = attr(elev_rast_ST, "extent"),
+#   zscale = zscale,
+#   text = "Trinidade",
+#   textcolor = textcolor,
+#   linecolor = linecolor,
+#   textsize = 4,
+#   linewidth = 6
+# )
+# render_label(
+#   elmat,
+#   lat = cities_coord$Y[5],
+#   long = cities_coord$X[5],
+#   extent = attr(elev_rast_ST, "extent"),
+#   zscale = zscale,
+#   text = "Guadalupe",
+#   textcolor = textcolor,
+#   linecolor = linecolor,
+#   textsize = 4,
+#   linewidth = 6
+# )
+# render_label(
+#   elmat,
+#   lat = cities_coord$Y[1],
+#   long = cities_coord$X[1],
+#   extent = attr(elev_rast_ST, "extent"),
+#   zscale = zscale,
+#   text = "São Tomé",
+#   textcolor = textcolor,
+#   linecolor = linecolor,
+#   textsize = 4,
+#   linewidth = 6
+# )
+
+
+### Principe rayshader
+
+
+# elev_rast_STP <- elevatr::get_elev_raster(P, z = 13, clip = "bbox")
+roads <- st_read("D:/MonDossierR/sao_tome_principe/roads_P_main.shp")
+cities <- st_read("D:/MonDossierR/sao_tome_principe/towns_P_main.shp")
+rivers <- st_read("D:/MonDossierR/sao_tome_principe/rivers_P_main.shp")
+rivers <- 
+  rivers %>% 
+  mutate(name = replace(name, name == "Rio BIibi", "Rio O-Quê-Pipi"))
+rivers <-
+  rivers %>%
+  dplyr::filter(osm_id %in% c(1076290346, 
+                              1076290343, 
+                              1076290342, 
+                              1076290344, 
+                              1076290348,
+                              243183219))
+protected_areas <- st_read("obo_np_stp.shp", quiet = TRUE)
+
+
+elev_rast_P <- crop(elev_rast_STP, P)
+elev_rast_P <- raster::crop(elev_rast_P, as(P, "Spatial"))
+roads <- st_crop(roads, st_bbox(ST))
+protected_areas <- st_crop(protected_areas, st_bbox(P))
+
+elmat = raster_to_matrix(elev_rast_P)
+# elmat[which(elmat < 0)] <- -1
+
+# tt <- st_read("cao_grande.shp")
+# 
+# raster::extract(elev_rast_ST, data.frame(ddlon = 6.56593, ddlat = 0.1177704))
+# cells_cao <- raster::cellFromPolygon(elev_rast_ST, as(tt, "Spatial"))
+# elmat[cells_cao[[1]]] <- 620
+
+
+plot_shade <- elmat %>%
+  sphere_shade(sunangle = 45, texture = "bw") %>%
+  add_water(detect_water(elmat), color = "desert") %>% 
+  add_overlay(height_shade(elmat),alphalayer = 0.6) %>%
+ add_overlay(generate_polygon_overlay(protected_areas, palette = NA, linewidth=5,
+                                      linecolor = "darkred", 
+                        extent = attr(elev_rast_P,"extent"), heightmap = elmat),
+                        alphalayer = 1) %>%
+  add_overlay(generate_line_overlay(rivers,extent = attr(elev_rast_P, "extent"),
+                                    linewidth = 5, color="darkblue", 
+                                    heightmap = elmat))
+
+# plot_shade %>% 
+#   plot_map()
+# 
+# save_png(plot_shade, filename = "plot_shade_P.png")
+
+
+plot_shade %>%
+  plot_3d(elmat, windowsize = c(1083, 1489), zscale = zscale)
+render_label(
+  elmat,
+  lat = 1.579372,
+  long = 7.382035,
+  extent = attr(elev_rast_P, "extent"),
+  zscale = zscale,
+  text = "Pico do Príncipe (942 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 1,
+  linewidth = 3
+)
+render_label(
+  elmat,
+  lat = 1.610425,
+  long = 7.391784,
+  extent = attr(elev_rast_P, "extent"),
+  zscale = zscale,
+  text = "Pico papagayo (680 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 1,
+  linewidth = 3,
+  altitude = 1200
+)
+render_label(
+  elmat,
+  lat = 1.572143,
+  long = 7.347225,
+  extent = attr(elev_rast_P, "extent"),
+  zscale = zscale,
+  text = "Barrica franca (612 m)",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 1,
+  linewidth = 3,
+  altitude = 2000
+)
+render_label(
+  elmat,
+  lat = 1.640161,
+  long = 7.420986,
+  extent = attr(elev_rast_P, "extent"),
+  zscale = zscale,
+  text = "Santo Antonio",
+  textcolor = textcolor,
+  linecolor = linecolor,
+  textsize = 1,
+  linewidth = 3
+)
+
+render_camera(theta = 40, phi = 40, zoom = 0.6, fov = 10)
+# render_scalebar(limits=c(0, 2, 4),label_unit = "km", position = "W",
+#                 scale_length = c(0.33,1))
+render_compass(position = "E", compass_radius = 120)
+# render_snapshot(filename = "plot3d_ST.png")
+rayshader::render_highquality(
+  filename = "plot3d_P_PA_alt_no_labels.png",
+  parallel = TRUE,
+  samples = 1000,
+  line_radius = 6,
+  text_size = 25,
+  text_offset = c(0, 12, 0),
+  clamp_value = 10,
+  clear = TRUE,
+  width = 3500,
+  height = 1500,
+  lightdirection = 70,
+  lightaltitude = 40,
+  ground_material = rayrender::diffuse(checkerperiod = 30, checkercolor =
+                                         "white")
+)
+
+# 
+# plot_shade %>%
+#   plot_3d(elmat, windowsize = c(2240, 1631), zscale = zscale)
+# 
+# render_camera(theta = 60, phi = 30, zoom = 0.4, fov = 10)
+# # render_scalebar(limits=c(0, 2, 4),label_unit = "km", position = "W",
+# #                 scale_length = c(0.33,1))
+# render_compass(position = "E", compass_radius = 60)
+# # render_snapshot(filename = "plot3d_ST.png")
+# rayshader::render_highquality(
+#   filename = "plot3d_P_PA_alt.png",
+#   parallel = TRUE,
+#   samples = 1000,
+#   line_radius = 6,
+#   text_size = 40,
+#   text_offset = c(0, 12, 0),
+#   clamp_value = 10,
+#   clear = TRUE,
+#   width = 3500,
+#   height = 1500,
+#   lightdirection = 70,
+#   lightaltitude = 40,
+#   ground_material = rayrender::diffuse(checkerperiod = 30, checkercolor =
+#                                          "white")
+# )
+
+
+
+
+# mosa_agg  = stack("D:/MonDossierR/sao_tome_principe/image_ROI.tif")
+# mosa_agg <-
+#   stack("D:/MonDossierR/sao_tome_principe/image_ROI.envi")
+# 
+# mosa_agg = stack("data/rgb.tif")
+# dsm = raster("data/elev.tif")
+# 
+# tmp = values(dsm)
+# tmp[tmp > 810] = 810
+# dsm = setValues(dsm, tmp)
+# 
+# zion_r_cropped =
+#   scales::rescale(rayshader::raster_to_matrix(mosa_agg$Band.3), to = c(0, 255))/255
+# zion_g_cropped =
+#   scales::rescale(rayshader::raster_to_matrix(mosa_agg$Band.2), to = c(0, 255))/255
+# zion_b_cropped =
+#   scales::rescale(rayshader::raster_to_matrix(mosa_agg$Band.1), to = c(0, 255))/255
+# 
+# zionel_matrix = rayshader::raster_to_matrix(dsm)
+# 
+# zion_rgb_array = array(0,dim=c(nrow(zion_r_cropped),ncol(zion_r_cropped),3))
+# 
+# zion_rgb_array[,,1] = zion_r_cropped #Red layer
+# zion_rgb_array[,,2] = zion_g_cropped #Blue layer
+# zion_rgb_array[,,3] = zion_b_cropped #Green layer
+# 
+# zion_rgb_array = aperm(zion_rgb_array, c(2,1,3))
+# 
+# zion_rgb_contrast = scales::rescale(zion_rgb_array, to = c(0, 1))
+# 
+# plot_map(zion_rgb_contrast)
+
+
+
+
+
+```
+
+
+```{r generate-grid-map-ST, echo=FALSE, message=FALSE, warning=F, eval=FALSE}
 
 map_ST <-
   generate_grid_map(
@@ -173,11 +1088,13 @@ map_ST <-
     size.legend.txt = 50,
     st.size.bar = 30,
     margin.sz = 10,
-    field_name = n
+    field_name = n,
+    grid_data = grid_completed_ST_unproj, 
+    legend_title = "Number of \noccurrences"
   )
 
 ggsave(
-  "grid_map_ST_sampling.eps",
+  "fig4_grid_map_ST_sampling.eps",
   device = "eps",
   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
   dpi = 300,
@@ -186,22 +1103,24 @@ ggsave(
   height = 40
 )
 
-map_ST <-
-  generate_grid_map(
-    shape = ST,
-    size.legend.txt = 12,
-    st.size.bar = 6,
-    margin.sz = 1,
-    field_name = n
-  )
-
-ggsave(
-  "grid_map_ST_sampling.tiff",
-  device = "tiff",
-  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
-  dpi = 300,
-  plot = map_ST
-)
+# map_ST <-
+#   generate_grid_map(
+#     shape = ST,
+#     size.legend.txt = 6,
+#     st.size.bar = 5,
+#     margin.sz = 1,
+#     field_name = n,
+#     grid_data = grid_completed_ST_unproj, 
+#     legend_title = "Number of \noccurrences"
+#   )
+# 
+# ggsave(
+#   "grid_map_ST_sampling.tiff",
+#   device = "tiff",
+#   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+#   dpi = 300,
+#   plot = map_ST
+# )
 
 
 map_ST <-
@@ -210,11 +1129,13 @@ map_ST <-
     size.legend.txt = 60,
     st.size.bar = 30,
     margin.sz = 12,
-    field_name = nbe_threat_esp
+    field_name = nbe_esp, 
+    legend_title = "Number of \n species",
+    grid_data = grid_completed_ST_unproj
   )
 
 ggsave(
-  "grid_map_ST_nbe_threat_sp.eps",
+  "fig6_grid_map_ST_nbe_sp.eps",
   device = "eps",
   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
   plot = map_ST,
@@ -228,7 +1149,8 @@ map_ST <-
     size.legend.txt = 12,
     st.size.bar = 6,
     margin.sz = 1,
-    field_name = nbe_threat_esp
+    field_name = nbe_threat_esp,
+    grid_data = grid_completed_ST_unproj
   )
 
 ggsave(
@@ -248,11 +1170,13 @@ map_ST <-
     size.legend.txt = 60,
     st.size.bar = 30,
     margin.sz = 12,
-    field_name = nbe_end_esp
+    field_name = nbe_end_esp, 
+    grid_data = grid_completed_ST_unproj,
+    legend_title = "Number of \nendemic species"
   )
 
 ggsave(
-  "grid_map_ST_nbe_end_sp.eps",
+  "fig8_grid_map_ST_nbe_end_sp.eps",
   device = "eps",
   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
   plot = map_ST,
@@ -278,6 +1202,263 @@ ggsave(
 )
 
 ```
+
+
+```{r generate-grid-map-P, echo=FALSE, message=FALSE, warning=F, eval=FALSE}
+
+map_P <-
+  generate_grid_map(
+    lim_x = c(7.32, 7.49), 
+    lim_y = c(1.49, 1.71),
+    shape = P,
+    size.legend.txt = 50,
+    st.size.bar = 30,
+    margin.sz = 10,
+    field_name = n,
+    grid_data = grid_completed_P_unproj,
+    legend_title = "Number of \noccurrences"
+  )
+
+ggsave(
+  "fig5_grid_map_P_sampling.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_P,
+  width = 40,
+  height = 40
+)
+
+# map_P <-
+#   generate_grid_map(
+#     shape = P,
+#     size.legend.txt = 12,
+#     st.size.bar = 6,
+#     margin.sz = 1,
+#     field_name = n, 
+#     grid_data = grid_completed_P_unproj, 
+#     lim_x = c(7.32, 7.49), 
+#     lim_y = lim_y <- c(1.49, 1.71),
+#     
+#   )
+# 
+# ggsave(
+#   "grid_map_P_sampling.tiff",
+#   device = "tiff",
+#   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+#   dpi = 300,
+#   plot = map_P
+# )
+
+map_P <-
+  generate_grid_map(
+    lim_x = c(7.32, 7.49), 
+    lim_y = c(1.49, 1.71),
+    shape = P,
+    size.legend.txt = 50,
+    st.size.bar = 30,
+    margin.sz = 10,
+    field_name = nbe_esp,
+    grid_data = grid_completed_P_unproj,
+    legend_title = "Number of \nspecies"
+  )
+
+ggsave(
+ "fig7_grid_map_P_nbe_sp.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_P,
+  width = 40,
+  height = 40
+)
+
+# 
+# map_P <-
+#   generate_grid_map(
+#     shape = P,
+#     size.legend.txt = 12,
+#     st.size.bar = 6,
+#     margin.sz = 1,
+#     field_name = nbe_threat_esp, 
+#     grid_data = grid_completed_P_unproj, 
+#     lim_x = c(7.32, 7.47), 
+#     lim_y = lim_y <- c(1.49, 1.71)
+#   )
+# 
+# ggsave(
+#   "grid_map_P_nbe_threat_sp.tiff",
+#   device = "tiff",
+#   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+#   dpi = 300,
+#   plot = map_P
+# )
+
+map_P <-
+  generate_grid_map(
+    lim_x = c(7.32, 7.49), 
+    lim_y = c(1.49, 1.71),
+    shape = P,
+    size.legend.txt = 50,
+    st.size.bar = 30,
+    margin.sz = 10,
+    field_name = nbe_end_esp,
+    grid_data = grid_completed_P_unproj,
+    legend_title = "Number of \nendemic species"
+  )
+
+ggsave(
+ "fig9_grid_map_P_nbe_end_sp.eps",
+  device = "eps",
+  path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+  dpi = 300,
+  plot = map_P,
+  width = 40,
+  height = 40
+)
+
+
+# map_P <-
+#   generate_grid_map(
+#     shape = P,
+#     size.legend.txt = 12,
+#     st.size.bar = 6,
+#     margin.sz = 1,
+#     field_name = nbe_end_esp, 
+#     grid_data = grid_completed_P_unproj, 
+#     lim_x = c(7.32, 7.47), 
+#     lim_y = lim_y <- c(1.49, 1.71)
+#   )
+# 
+# ggsave(
+#   "grid_map_P_nbe_end_sp.tiff",
+#   device = "tiff",
+#   path = "C:/Users/dauby/Dropbox/Photos livre STP/introduction/",
+#   dpi = 300,
+#   plot = map_P
+# )
+
+```
+
+
+```{r eval=F}
+
+# grid_sel1 <- grid_completed_ST_unproj %>% 
+#   dplyr::select(nbe_threat_esp, x) %>% 
+#   filter(!is.na(nbe_threat_esp))
+# 
+# grid_sel2 <- grid_completed_ST_unproj %>% 
+#   dplyr::select(nbe_end_esp, x) %>% 
+#   filter(!is.na(nbe_end_esp))
+# 
+# stp_kba <- 
+#   read_sf("D:/SIG/Key_biodiversity_areas/São_Tomé_Príncipe_KBA/São_Tomé_Príncipe_KBA.shp")
+# stp_kba_CEPF <-
+#   stp_kba %>% 
+#   dplyr::filter(grepl("CEPF", ChangeBy))
+# 
+# ribeira_funda <- st_read("D:/SIG/SIG_STome/ribeira_funda.shp")
+# pico_area <- st_read("D:/SIG/SIG_STome/above_1900_ST.shp")
+# protected_areas <- st_read("obo_np_stp.shp")
+# 
+# occc <- 
+#   combined_dataset_sf_proj %>% 
+#   filter(!is.na(EndemicTS)) %>% 
+#   dplyr::select(idrb_n, colnam, nbr, coly, tax_infra_level, dety, detnam, accuracy_final, )
+# 
+# mapview(grid_sel)
+# 
+# library(mapedit)
+# 
+# ST_imp_areas <-
+#   mapedit::drawFeatures(
+#     map = mapview(grid_sel1) +
+#       mapview(grid_sel2) +
+#       mapview(stp_kba_CEPF, col.region = "red") +
+#       mapview(ribeira_funda, col.region = "red") +
+#       mapview(pico_area, col.region = "red") +
+#       mapview(occc)
+#   )
+# 
+# st_write(ST_imp_areas, "ST_imp_areas.shp", append=FALSE)
+# 
+# ST_imp_areas <- st_read("ST_imp_areas.shp")
+# 
+# ST_imp_areas <-
+#   ST_imp_areas %>%
+#   mutate(ID = 1:nrow(.)) %>%
+#   dplyr::select(-X_lflt_,-ftr_typ) %>%
+#   bind_rows(
+#     stp_kba_CEPF %>%
+#       filter(SitRecID == 6883) %>%
+#       dplyr::select(geometry) %>%
+#       mutate(ID = 14)
+#   ) %>% 
+#   bind_rows(
+#     ribeira_funda %>% 
+#       dplyr::select(-id) %>% 
+#       mutate(ID = 15)
+#   ) %>% 
+#   bind_rows(
+#     protected_areas %>% 
+#       slice(1) %>% 
+#       dplyr::select(-FID) %>% 
+#       mutate(ID = 16)
+#   ) %>% 
+#   bind_rows(
+#     pico_area %>% 
+#       dplyr::filter(id == 1800) %>% 
+#       dplyr::select(-id) %>% 
+#       mutate(ID = 17)
+#   )
+# 
+# 
+# 
+# 
+# grid_sel <- grid_completed_P_unproj %>% 
+#   dplyr::select(nbe_end_esp, x) %>% 
+#   filter(!is.na(nbe_end_esp))
+# 
+# mapview(grid_sel)
+# 
+# library(mapedit)
+# 
+# grid_sel1 <- grid_completed_P_unproj %>% 
+#   dplyr::select(nbe_threat_esp, x) %>% 
+#   filter(!is.na(nbe_threat_esp))
+# 
+# grid_sel2 <- grid_completed_P_unproj %>% 
+#   dplyr::select(nbe_end_esp, x) %>% 
+#   filter(!is.na(nbe_end_esp))
+# 
+# P_imp_areas <- 
+#   mapedit::drawFeatures(map = mapview(grid_sel1) + 
+#                           mapview(grid_sel2) + 
+#                           mapview(stp_kba_CEPF, col.region = "red") +
+#                         mapview(occc))
+# 
+# st_write(P_imp_areas, "P_imp_areas.shp", append=FALSE)
+# 
+# P_imp_areas <- st_read("P_imp_areas.shp")
+# 
+# obo_P <- st_read("D:/SIG/SIG_Principe/kba/PNP core.shp")
+# obo_P <- obo_P %>% 
+#   filter(FID == 0)
+# 
+# P_imp_areas <- 
+#   P_imp_areas %>% 
+#   mutate(ID = 1:nrow(.)) %>% 
+#   dplyr::select(-X_lflt_, -ftr_typ) %>% 
+#   bind_rows(obo_P %>% 
+#               dplyr::select(-FID) %>% 
+#               mutate(ID = 4))
+
+
+
+
+
+```
+
 
 
 ## Floristic diversity
@@ -482,6 +1663,148 @@ knitr::include_url(paste0("https://cepf-stp-threat-flora.netlify.app/img/leaflet
 
 
 
+```{r, eval=F, echo= F}
+
+
+libs <- c("elevatr", "rayshader", "tidyverse", 
+	"sf", "giscoR", "jsonlite", "httr", "png")
+
+installed_libs <- libs %in% rownames(installed.packages())
+if (any(installed_libs == F)) {
+  install.packages(libs[!installed_libs])
+}
+
+invisible(lapply(libs, library, character.only = T))
+
+ST <- st_read("ST_cast.shp", quiet = TRUE)
+
+
+get_elevation_data <- function(country_elevation, country_elevation_df) {
+
+	country_elevation <- get_elev_raster(
+		locations = ST, 
+		z = 11, 
+		clip = "locations")
+	
+	country_elevation <- calc(country_elevation, fun = function(x) ifelse(x >=0, x, NA))
+
+	elevation_mat <- raster_to_matrix(country_elevation)
+
+	return(elevation_mat)
+}
+
+ST_dem <- get_elevation_data()
+
+h <- 1245
+w <- 876
+
+
+bb <- st_bbox(st_buffer(ST, 0.1))
+type <- "World_Imagery"
+file <- NULL
+height <- h*6
+width <- w*6
+crs_bb <- 4326
+
+get_satellite_img <- function(url, params, res) {
+
+  url <- parse_url("https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task/execute")
+  
+  params <- list(
+    baseMap = list(
+      baseMapLayers = list(
+        list(url = unbox("https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"))
+      )
+    ),
+    exportOptions = list(
+      outputSize = c(width, height)
+    ),
+    mapOptions = list(
+      extent = list(
+        spatialReference = list(wkid = unbox(crs_bb)),
+        xmax = unbox(bb["xmax"]),
+        xmin = unbox(bb["xmin"]),
+        ymax = unbox(bb["ymax"]),
+        ymin = unbox(bb["ymin"])
+      )
+    )
+  )
+  
+  res <- GET(
+    url, 
+    query = list(
+      f = "json",
+      Format = "PNG32",
+      Layout_Template = "MAP_ONLY",
+      Web_Map_as_JSON = toJSON(params))
+  )
+
+	return(res)
+
+}
+
+res <- get_satellite_img()
+
+
+write_map_png <- function(res_body, img_res, img_bin, file) {
+
+	res_body <- content(res, type = "application/json")
+	img_res <- GET(res_body$results[[1]]$value$url)
+	img_bin <- content(img_res, "raw")
+	file <- paste0(getwd(), "/ST_image.png")
+	writeBin(img_bin, file)
+}
+
+write_map_png()
+
+get_map_png <- function(img_file, ST_img) {
+	
+	img_file <- "ST_image.png"
+	ST_img <- readPNG(img_file)
+
+	return(ST_img)
+}
+
+ST_img <- get_map_png()
+
+
+ST_dem %>%
+  sphere_shade(texture ="desert") %>%
+  add_overlay(ST_img, alphalayer = .99) %>%
+  plot_3d(ST_dem, 
+	zscale = 12, 
+	fov = 0, 
+	theta = 0, 
+	zoom = .55, 
+	phi = 75,
+	windowsize = c(h, w),
+	background="black")
+
+
+# render_highquality(filename="ST_dem.png",
+# 	lightintensity=1500,
+# 	lightaltitude=90,
+#   title_text=" ",
+#   title_font="ST",
+#   title_color="grey20",
+#   title_size=100,
+#   title_offset=c(360,180),
+# 	width=w*3, 
+# 	height=h*3)
+
+render_snapshot(filename = "test.png")
+
+render_highquality(
+  filename = "ST_dem_50_90_90_0_0_0.png",
+  width = w * 3,
+  height = h * 3,
+  lightintensity = 300,
+  lightaltitude = 90,
+  camera_location = c(50, 90, 90),
+  camera_lookat = c(0, 0, 0)
+)
+
+```
 
 
 

@@ -37,7 +37,7 @@ P <- st_read("P_cast.shp", quiet = TRUE)
 protected_areas <- st_read("obo_np_stp.shp", quiet = TRUE)
 
 combined_dataset <- 
-  readxl::read_excel("combined_dataset_2022-03-24.xlsx", guess_max = 40000)
+  readxl::read_excel("combined_dataset_2022-04-11.xlsx", guess_max = 40000)
 
 combined_dataset <- 
   combined_dataset %>% 
@@ -88,7 +88,7 @@ layers_env_P <- crop(layers_env, P)
 
 for (i in 132:nrow(endemic_list)) {
   
-  which(endemic_list$tax_infra_level == "Asplenium eurysorum")
+  which(endemic_list$tax_infra_level == "Diaphananthe acuta")
   
   taxa_name <- endemic_list %>% slice(i) %>% pull(tax_infra_level)
   

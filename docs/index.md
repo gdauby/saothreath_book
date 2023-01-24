@@ -5,7 +5,7 @@ author:
   - Davy U. Ikabanga
   - Anne-Hélène Paradis
   - Gilles Dauby
-date: "2022-03-24"
+date: "2023-01-24"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -30,8 +30,11 @@ rmd_files:
 
 
 
-
 # Editors and contributors {.unnumbered}
+
+
+<img src="images/front_page.png" alt="" width="350" height="450" align="middle">
+
 
 <a href="https://cepf-stp-threat-flora.netlify.app/">
 <img src="images/logo_post.png" alt="" width="250" height="250" align="middle">

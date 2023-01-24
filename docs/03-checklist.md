@@ -71,7 +71,7 @@ The species has been collected more in São Tomé than in Príncipe and Gabon wh
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Asplenium_eurysorum.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Asplenium_eurysorum.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-10)An interactive distribution map.</p>
 </div>
 
@@ -146,7 +146,7 @@ Population information is not precisely known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Asplenium_exhaustum.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Asplenium_exhaustum.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-23)An interactive distribution map.</p>
 </div>
 
@@ -210,7 +210,7 @@ Population information is not sufficiently documented for this species, but we s
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Alsophila_camerooniana_var._currorii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Alsophila_camerooniana_var._currorii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-37)An interactive distribution map.</p>
 </div>
 
@@ -271,7 +271,7 @@ Very widespread in São Tomé, the species seems to be very present in the cente
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Alsophila_welwitschii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Alsophila_welwitschii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-50)An interactive distribution map.</p>
 </div>
 
@@ -342,7 +342,7 @@ Population information is not sufficiently known for this species, but we sugges
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dryopteris_caperata.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dryopteris_caperata.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-64)An interactive distribution map.</p>
 </div>
 
@@ -403,7 +403,7 @@ The species has only been collected in São Tomé. Its current distribution repr
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dryopteris_cicatrica.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dryopteris_cicatrica.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-77)An interactive distribution map.</p>
 </div>
 
@@ -469,7 +469,7 @@ Population information is not sufficiently known for this species, but we sugges
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Grammitis_nigrocincta.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Grammitis_nigrocincta.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-91)An interactive distribution map.</p>
 </div>
 
@@ -544,7 +544,7 @@ Population information is not precisely known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Stenogrammitis_tomensis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Stenogrammitis_tomensis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-104)An interactive distribution map.</p>
 </div>
 
@@ -612,7 +612,7 @@ There are no known uses of this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Selaginella_mannii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Selaginella_mannii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-118)An interactive distribution map.</p>
 </div>
 
@@ -681,7 +681,7 @@ This species appears to be stream-dependent, so the four occurrences (two of whi
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Selaginella_monodii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Selaginella_monodii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-131)An interactive distribution map.</p>
 </div>
 
@@ -815,7 +815,7 @@ Population information is not very well known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Pseudophegopteris_henriquesii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Pseudophegopteris_henriquesii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-159)An interactive distribution map.</p>
 </div>
 
@@ -877,7 +877,7 @@ Population information is not precisely known for this subspecies.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Sphaerostephanos_elatus_subsp._thomensis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Sphaerostephanos_elatus_subsp._thomensis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-172)An interactive distribution map.</p>
 </div>
 
@@ -960,7 +960,7 @@ The population of this species is naturally small as it is confined to the ridge
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Afrocarpus_mannii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Afrocarpus_mannii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-187)An interactive distribution map.</p>
 </div>
 
@@ -1043,7 +1043,7 @@ Even if widespread in São Tomé, the species appears locally rare.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Brachystephanus_occidentalis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Brachystephanus_occidentalis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-202)An interactive distribution map.</p>
 </div>
 
@@ -1117,7 +1117,7 @@ The population of this species is unknown, but it is confined to a single mounta
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Heteradelphia_paulowilhelmia.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Heteradelphia_paulowilhelmia.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-215)An interactive distribution map.</p>
 </div>
 
@@ -1260,7 +1260,7 @@ The species is widespread in the lowland forest of São Tomé and Príncipe wher
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Anisophyllea_cabole.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Anisophyllea_cabole.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-242)An interactive distribution map.</p>
 </div>
 
@@ -1350,7 +1350,7 @@ Widespread and abundant on submontane and montane forest, mentioned as one of th
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tabernaemontana_stenosiphon.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tabernaemontana_stenosiphon.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-256)An interactive distribution map.</p>
 </div>
 
@@ -1426,7 +1426,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Impatiens_buccinalis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Impatiens_buccinalis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-270)An interactive distribution map.</p>
 </div>
 
@@ -1506,7 +1506,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Impatiens_manteroana.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Impatiens_manteroana.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-283)An interactive distribution map.</p>
 </div>
 
@@ -1584,7 +1584,7 @@ Population information is not precisely known for this species, but we consider 
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Impatiens_thomensis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Impatiens_thomensis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-296)An interactive distribution map.</p>
 </div>
 
@@ -1661,7 +1661,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_annobonensis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_annobonensis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-310)An interactive distribution map.</p>
 </div>
 
@@ -1754,7 +1754,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_baccata.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_baccata.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-323)An interactive distribution map.</p>
 </div>
 
@@ -1827,7 +1827,7 @@ Population information is not precisely known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_crateris.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_crateris.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-336)An interactive distribution map.</p>
 </div>
 
@@ -1903,7 +1903,7 @@ Population information is not precisely known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_fusialata_var._principensis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_fusialata_var._principensis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-349)An interactive distribution map.</p>
 </div>
 
@@ -1970,7 +1970,7 @@ Population information is not known for this subspecies, but the dispersal is as
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_loranthoides_subsp._loranthoides.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_loranthoides_subsp._loranthoides.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-362)An interactive distribution map.</p>
 </div>
 
@@ -2038,7 +2038,7 @@ There are no known uses of this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_molleri.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_molleri.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-375)An interactive distribution map.</p>
 </div>
 
@@ -2103,7 +2103,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_subalpestris.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_subalpestris.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-388)An interactive distribution map.</p>
 </div>
 
@@ -2182,7 +2182,7 @@ The species appears to be common but very localized, so we considered the existe
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_thomeana.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Begonia_thomeana.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-401)An interactive distribution map.</p>
 </div>
 
@@ -2266,7 +2266,7 @@ Information on population is lacking, but data suggest the existence of only one
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Ehretia_scrobiculata.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Ehretia_scrobiculata.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-415)An interactive distribution map.</p>
 </div>
 
@@ -2335,7 +2335,7 @@ It is not known if the species is used.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Lobelia_barnsii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Lobelia_barnsii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-429)An interactive distribution map.</p>
 </div>
 
@@ -2413,7 +2413,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Maytenus_monodii.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Maytenus_monodii.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-443)An interactive distribution map.</p>
 </div>
 
@@ -2484,7 +2484,7 @@ A recent account of the population gives a number of 400 mature individuals. In 
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Strephonema_sp.nov._Principe.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Strephonema_sp.nov._Principe.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-457)An interactive distribution map.</p>
 </div>
 
@@ -2559,7 +2559,7 @@ Population information is not known for this species, but the species is widespr
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Palisota_pedicellata.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Palisota_pedicellata.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-471)An interactive distribution map.</p>
 </div>
 
@@ -2639,7 +2639,7 @@ The caul has been used for renal infection and rheumatism.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Costus_giganteus.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Costus_giganteus.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-485)An interactive distribution map.</p>
 </div>
 
@@ -2717,7 +2717,7 @@ Population information is not sufficiently known for this species, but we sugges
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Principina_grandis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Principina_grandis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-499)An interactive distribution map.</p>
 </div>
 
@@ -2790,7 +2790,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dichapetalum_bocageanum.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Dichapetalum_bocageanum.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-513)An interactive distribution map.</p>
 </div>
 
@@ -2864,7 +2864,7 @@ No quantitative population data are available for *Erica thomensis*, but the hab
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Erica_thomensis.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Erica_thomensis.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-527)An interactive distribution map.</p>
 </div>
 
@@ -2943,7 +2943,7 @@ This species probably has a larger distribution in Príncipe, especially in the 
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Croton_stelluliferus.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Croton_stelluliferus.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-541)An interactive distribution map.</p>
 </div>
 
@@ -3015,7 +3015,7 @@ Population information is not known for this species.
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tristemma_mauritianum_var._rozeiranum.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tristemma_mauritianum_var._rozeiranum.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-555)An interactive distribution map.</p>
 </div>
 
@@ -3076,7 +3076,7 @@ Population information is not known for this species. We assume that the number 
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tristemma_mauritianum_var._thomense.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Tristemma_mauritianum_var._thomense.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-568)An interactive distribution map.</p>
 </div>
 
@@ -3145,7 +3145,7 @@ This species probably has a larger distribution on Príncipe but many individual
 
 
 <div class="figure">
-<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Carapa_gogo.html" width="672" height="400px"></iframe>
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Carapa_gogo.html" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">(\#fig:unnamed-chunk-582)An interactive distribution map.</p>
 </div>
 
@@ -3183,4 +3183,430 @@ This species probably has a larger distribution on Príncipe but many individual
 </div><div class="figure">
 <img src="./images//Carapa_gogo_4_Stévart.jpg" alt="Copyright Stévart" width="70%" />
 <p class="caption">(\#fig:unnamed-chunk-588-4)Copyright Stévart</p>
+</div>
+
+
+
+
+### ``Ochnaceae``
+
+
+
+
+#### ``Campylospermum nutans (Hiern) Biss.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+*Campylospermum nutans* was preliminary assessed as EN B1/B2(i,ii) based on 11 collections examined (Bissiengou 2014), but it was not published on the Red List. Since then, additional material was collected. The species is a treelet up to 4 m tall, endemic to Príncipe Island and found in old-growth and secondary forest between 9 and 910 m in elevation. It is known from 16 collections and 11 observations made between 1853 (Welwitsch, 4606) and 2021 (Transects Príncipe 755, 872), all within PNP or at least in the buffer zone, with one exception (Terra Prometida, Dias 183). These collections and observations represent 19 occurrences, none considered as extirpated. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 44 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 46 km2, below the upper threshold for CR status under subcriterion B1. The five occurrences around Praia Cará, Barriga Branca, (track to) Pico Mesa, Estrada Infante and the one near Santa Trindade were threatened by past plantations and represent one location. The five occurrences around Morro de Leste (behind Morro de Leste, Morro de Leste and between Oquê Pipi and Morro de Leste), Morro Fundão, and the one at Pico Mesa are not threatened and represent one location. The two occurrences at Pico Papagaio, the one at Oquê Pipi and the one at the top of Santa Joaquina are threatened by human disturbances (tourism) leading to a rapid degradation of its habitat and represent one location each. The location near Terra Prometida is threatened by housing expansion and represents one location, inferred to disappear in the near future. Therefore, these 19 occurrences represent six locations (sensu IUCN, 2019) with regard to the most serious plausible threats (housing expansion) and 1-7 subpopulations. Based on these threats, we infer past, current and future continuing decline in the extent and the quality of its habitat, and a decline in the number of mature individuals and disappearance of one location due to housing expansion. *Campylospermum nutans* is thus assessed as VU B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species occurs in old-growth and secondary forests, between 9 and 910 m in elevation.
+
+
+#### Use and trade {.unnumbered}
+It is not known if the species is used.
+
+#### Population {.unnumbered}
+Population information is not sufficiently documented for this species, but we suggest the existence of 1-7 subpopulations.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Campylospermum_nutans.html" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-596)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-599-1.png" alt="Occurrences of Campylospermum nutans in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-599)Occurrences of Campylospermum nutans in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Campylospermum_nutans_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-602-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Campylospermum_nutans_2_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-602-2)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Campylospermum_nutans_3_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-602-3)Copyright Lachenaud</p>
+</div>
+
+
+
+### ``Oleaceae``
+
+
+
+
+#### ``Jasminum thomense Exell``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+<img src="./images/EN.png" width="20%" />
+
+#### Rationale {.unnumbered}
+
+*Jasminum thomense* is a liana up to 1 m, known from dense humid forest and river bank, between 18 and 1,420 m in elevation. The species is endemic to São Tomé and is known from 16 collections made between 1905 (Chevalier s.n.) and 2020 (Lachenaud 3004; Eduardo 162). We excluded three collections made by Oliveira (1508; 169) and Chevalier (s.n.) because no locality information is provided. We consider the occurrence of Espirito Santo 176 made in 1949 as extirpated because the habitat of the species in Monté Café has been severely degraded. Therefore, these 12 collections represent ten occurrences and 1-2 subpopulations. Based on a 2 x 2 km cell size, the AOO of this species is estimated as 32 km2, below the upper threshold for EN status under subcriterion B2. The EOO is calculated as 114 km2, above the upper threshold for EN status under subcriteria B1. Five occurrences are located within the PNOST. Three of them are not threatened and represent one location. Two other occurrences are located along the touristic road. One occurrence near the PNOST is again located along the touristic road. We consider that these three occurrences could be threatened by tourism, and represent one location. Two occurrences located around Zampalma are threatened by small-scale agriculture and illegal logging forest. They represent one location. Two occurrences are located along the river Io Grande, one of which could be threatened by palm oil plantations. We consider that this occurrence will disappear in a near future by extension of palm oil plantation, and represents one location. The last occurrence is threatened by small-scale agriculture and represents one location. Therefore, ten occurrences represent 5 locations (sensu IUCN, 2019), with regard to the most serious plausible threat (small-scale agriculture). We thus infer a past, continuous and future decline in its AOO, its EOO, number of locations and mature individuals. Moreover, we infer a current and a future continuous decline in the extent and habitat quality. *Jasminum thomense* is thus assessed as EN B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v).
+
+
+
+
+#### Habitat and ecology {.unnumbered}
+
+The species is known from dense humid forest and river bank, between 18 and 1,420 m in elevation.
+
+
+
+#### Use and trade {.unnumbered}
+It is not known if the species is used.
+
+#### Population {.unnumbered}
+No quantitative population data are available for this species.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Jasminum_thomense.html" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-610)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-612-1.png" alt="Occurrences of Jasminum thomense in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-612)Occurrences of Jasminum thomense in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Jasminum_thomense_1_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-616-1)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Jasminum_thomense_2_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-616-2)Copyright Lachenaud</p>
+</div><div class="figure">
+<img src="./images//Jasminum_thomense_3_Lachenaud.jpg" alt="Copyright Lachenaud" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-616-3)Copyright Lachenaud</p>
+</div>
+
+
+### ``Orchidaceae``
+
+
+
+
+#### ``Aerangis flexuosa (Ridl.) Schltr.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+The species is assessed as EN. The EOO of *Aerangis flexuosa* cannot be estimated because the species is known from less than three collections. Its AOO is estimated to be 8 km2, which falls within the thresholds for CR status under criterion B2. The species is known from two subpopulations on São Tomé Island and these represent two locations, which falls within the limits for EN status under subcriterion B2a. *Aerangis flexuosa* has been collected in the northeastern part of the island, outside of the PNOST. The habitat of *A. flexuosa* is currently impacted by human disturbance since it is accessible to local residents. The main threats to the species are shifting agriculture and small-scale timber exploitation which are gradually transforming this area into secondary forest. We project that this degradation will continue in the future. The projected ongoing loss of its habitat leads us to predict a continuing decline in the number of subpopulations and mature individuals and thus its AOO. Considering all these facts, *A. flexuosa* is assigned a status of EN B2ab(ii,iii,iv,v).
+
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species is epiphyte in semi-deciduous forests from the coast to mid elevation. It was recently collected on a fallen tree in lowland semi-dry forests. It is found between sea level to 700 m elevation.
+
+
+
+#### Use and trade {.unnumbered}
+The species is not known to be used or traded, however, specialist collectors with an interest in collecting and growing epiphytes might be interested in the species.
+
+#### Population {.unnumbered}
+The population is currently declining because the habitat of one locality has completely disappeared and the other one is currently facing selective logging. The species is currently known from two subpopulations in the northern part of São Tomé Island. *Aerangis flexuosa* might be present in the forest occurring within the PNOST. The number of individuals of the species is not known and cannot be estimated since the species is epiphyte.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Aerangis_flexuosa.html" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-624)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-626-1.png" alt="Occurrences of Aerangis flexuosa in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-626)Occurrences of Aerangis flexuosa in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Aerangis_flexuosa_1_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-630)Copyright Stévart</p>
+</div>
+
+
+
+#### ``Afropectinariella doratophylla (Summerh.) M. Simo & Stévart``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+This species is given an IUCN Red List Category of EN (EN B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v)). The EOO of *Afropectinariella doratophylla* is estimated to be 714 km2 and its AOO is about 90 km2, both of which fall within the limits for EN status under criterion B. This species is endemic to the islands of São Tomé and Príncipe and it should be noted that the EOO contains a large area of ocean as the islands are separated from one another by more than 150 km. *Afropectinariella doratophylla* is known from nine subpopulations, one on Príncipe and eight on São Tomé, some of which occur within the protected part of the PNOST, while others are situated in portions of the park that are impacted by human disturbance and in the buffer zone, where there is no protection. These nine subpopulations represent a total of four locations, and thus *A. doratophylla* qualifies for EN status under both criterion B1a and B2a. The main threats to the species are deforestation for agriculture and logging. The latter results from a strong demand for timber used in the construction of houses, including from species on which it grows as an epiphyte. We anticipate that this pressure will continue in the future. The projected ongoing loss of its habitat leads us to predict a continuous decline in the number of subpopulations and mature individuals and thus, also of its EOO and AOO. In particular, the northern part of PNOST is accessible to local residents, and shifting agriculture and small-scale timber exploitation are gradually transforming this area into secondary forest. Some previously recorded subpopulations may have already disappeared due to increasing human pressure observed in the area since 1997 (Stévart pers. obs.).
+
+
+
+#### Habitat and ecology {.unnumbered}
+On São Tomé, *A. doratophylla* is found between 850 and 1,600 m, where it grows with Syzygium guineense, on the trunks and branches of trees in submontane and montane old-growth rain forests. The species is also found on isolated shade trees in old plantations or often growing together with *Bulbophyllum lizae* J. J. Verm. On Príncipe, *A. doratophylla* is found in old-growth shrubby vegetation on shallow soil, at around 300 m elevation.
+
+
+
+#### Use and trade {.unnumbered}
+The species is not known to be used or traded, however, specialist collectors with an interest in collecting and growing epiphytes might be interested in the species.
+
+#### Population {.unnumbered}
+The species is known from nine subpopulations, 1 on Príncipe and 8 on São Tomé. The current population trend is decreasing.
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Afropectinariella_doratophylla.html" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-637)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-639-1.png" alt="Occurrences of Afropectinariella doratophylla in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-639)Occurrences of Afropectinariella doratophylla in the climate conditions of São Tomé.</p>
+</div>
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-640-1.png" alt="Occurrences of Afropectinariella doratophylla in the climate conditions of Príncipe." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-640)Occurrences of Afropectinariella doratophylla in the climate conditions of Príncipe.</p>
+</div>
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Afropectinariella_doratophylla_1_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-643-1)Copyright Stévart</p>
+</div><div class="figure">
+<img src="./images//Afropectinariella_doratophylla_2_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-643-2)Copyright Stévart</p>
+</div>
+
+
+
+#### ``Angraecopsis dolabriformis (Rolfe) Schltr.``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+The species is presumed EX according to the IUCN Red List Guidelines (IUCN Standards and Petitions Subcommittee 2016). The EOO of *Angraecopsis dolabriformis* cannot be estimated because the species is only known from one collection. The species is thus known from one subpopulation and one location. No details of the preferred habitat of *A. dolabriformis* are available on the sheet of the specimen. A large part of the natural vegetation of the island was destroyed in the 19th and 20th centuries. Moreover, all remaining habitat on the island is now experiencing significant threats from industrial plantations, shifting agriculture, selective logging and wood cutting for small-scale subsistence use. Despite 18 months of intensive fieldwork on the island, collecting and growing orchids, no specimens were found that could be assigned to this species. Based on the information available, *A. dolabriformis* is assessed as EX.
+
+
+
+
+#### Habitat and ecology {.unnumbered}
+No details about the preferred habitat/ecology of *Angraecopsis dolabriformis* are available on the sheet of its only known specimen. Its precise elevation range is also unknown, but was presumably somewhere between 100 and 800 m.
+
+
+
+#### Use and trade {.unnumbered}
+The species is not known to be used or traded, however, specialist collectors with an interest in collecting and growing epiphytes might be interested in the species.
+
+#### Population {.unnumbered}
+The species was known only from the type specimen which represents one subpopulation.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Angraecopsis_dolabriformis.html" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-650)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-652-1.png" alt="Occurrences of Angraecopsis dolabriformis in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-652)Occurrences of Angraecopsis dolabriformis in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+#### ``Angraecopsis thomensis P.J.Cribb & Stévart``
+
+
+
+
+
+
+
+
+
+
+#### Status {.unnumbered}
+
+
+
+#### Rationale {.unnumbered}
+
+The species is assessed as CR. The EOO of *Angraecopsis thomensis* cannot be estimated because the species is only known from two collection sites. Its AOO is estimated to be 8 km², which falls within the thresholds for CR under criterion B2. The species is known from five specimens, representing two subpopulations in the southern part of the São Tomé Island, around the PNOST, where there is no protection. The two subpopulations represent one location, the requirement for CR status under subcriterion B2a. The species is epiphyte on old secondary forests with no current threats known, and its AOO is very restricted. However, the secondary forest where the species is recorded is planned to be transformed into industrial palm plantations, a situation that will threaten the species' habitat. It is anticipated that this predictable degradation in the quality of its habitat will lead to a decline in the AOO, number of locations and mature individuals of the species. For that reason *A. thomensis* is assessed as CR B2ab(ii,iii,iv,v).
+
+
+
+
+#### Habitat and ecology {.unnumbered}
+The species is epiphyte in old secondary lowland forests located in the southern part of the São Tomé Island, around the PNOST, between 200 and 500 m in elevation. The species was collected on *Bridelia micrantha* (Hochst.) Baill.
+
+
+
+#### Use and trade {.unnumbered}
+The species is not known to be used or traded, however, specialist collectors with an interest in collecting and growing epiphytes might be interested in the species.
+
+#### Population {.unnumbered}
+The current population trend is stable. Its number of individuals is not known and cannot be estimated since the species is epiphyte.
+
+
+
+
+
+
+<div class="figure">
+<iframe src="https://cepf-stp-threat-flora.netlify.app/img/leaflet_Angraecopsis_thomensis.html" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:unnamed-chunk-663)An interactive distribution map.</p>
+</div>
+
+
+
+
+
+<div class="figure">
+<img src="03-checklist_files/figure-html/unnamed-chunk-665-1.png" alt="Occurrences of Angraecopsis thomensis in the climate conditions of São Tomé." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-665)Occurrences of Angraecopsis thomensis in the climate conditions of São Tomé.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="figure">
+<img src="./images//Angraecopsis_thomensis_1_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-669-1)Copyright Stévart</p>
+</div><div class="figure">
+<img src="./images//Angraecopsis_thomensis_2_Stévart.jpg" alt="Copyright Stévart" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-669-2)Copyright Stévart</p>
 </div>
